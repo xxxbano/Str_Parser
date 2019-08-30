@@ -1,0 +1,7 @@
+vlib work
+#vlog hello.v
+#vsim -c hello -do 'run -all'
+vlog +acc=npr parser.v
+vlog +acc=npr parser_tb.v
+vsim -c parser_tb -do 'run -all'
+
