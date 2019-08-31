@@ -47,7 +47,7 @@ Dual channel interleaving output
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig6.png "Logo Title Text 1")
 4-byte tag test
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig7.png "Logo Title Text 1")
-Random test. 1~4-byte tag, 1~16-byte value
+Random test. 1-4-byte tag, 1-16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig8.png "Logo Title Text 1")
 
 ##### parser: Version 1
@@ -59,7 +59,7 @@ Random test. 1~4-byte tag, 1~16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig11.png "Logo Title Text 1")
 4-byte tag test
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig12.png "Logo Title Text 1")
-Random test. 1~4-byte tag, 1~16-byte value
+Random test. 1-4-byte tag, 1-16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig13.png "Logo Title Text 1")
 
 #### About UnitTest
