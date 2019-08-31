@@ -1,0 +1,9 @@
++incdir+/autofs/fs1.ece/fs1.eecg.roman/xia/Develop/vlab/Str_Parser/testbench
++incdir+/autofs/fs1.ece/fs1.eecg.roman/xia/Mybin/svunit-code/svunit_base
++incdir+/autofs/fs1.ece/fs1.eecg.roman/xia/Mybin/svunit-code/svunit_base/uvm-mock
+/autofs/fs1.ece/fs1.eecg.roman/xia/Mybin/svunit-code/svunit_base/svunit_pkg.sv
+/autofs/fs1.ece/fs1.eecg.roman/xia/Develop/vlab/Str_Parser/testbench/./parser_op_dual_unit_test.sv
+/autofs/fs1.ece/fs1.eecg.roman/xia/Develop/vlab/Str_Parser/testbench/./parser_op_unit_test.sv
++incdir+/autofs/fs1.ece/fs1.eecg.roman/xia/Develop/vlab/Str_Parser/testbench/.
+.__testsuite.sv
+.testrunner.sv

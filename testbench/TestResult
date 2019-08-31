@@ -1,0 +1,88 @@
+SVUNIT: Output File: ./.__testsuite.sv
+SVUNIT: Creating class __testsuite:
+SVUNIT: Creating instances for:
+SVUNIT:    parser_op_dual_unit_test
+SVUNIT:    parser_op_unit_test
+SVUNIT: Output File: testrunner.sv
+SVUNIT: Creating testrunner testrunner:
+SVUNIT: Creating instances for:
+SVUNIT:   __testsuite
+cd .; vlib work; vlog -l compile.log  -f .svunit.f +define+SVUNIT_VERSION='"SVUnit v3.26"' ; vsim -sdfnoerror -c -lib work -do "run -all; quit" -l run.log testrunner
+Model Technology ModelSim SE-64 vlog 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 03:08:53 on Aug 31,2019
+vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26" 
+-- Compiling package svunit_pkg
+-- Compiling module fifo
+-- Compiling module parser_op_dual
+-- Compiling module parser_op_dual_unit_test
+-- Importing package svunit_pkg
+** Warning: ** while parsing file included at /autofs/fs1.ece/fs1.eecg.roman/xia/Develop/vlab/Str_Parser/testbench/./parser_op_unit_test.sv(3)
+** at fifo.v(4): (vlog-2275) 'fifo' already exists and will be overwritten.
+-- Compiling module fifo
+-- Compiling module parser_op
+-- Compiling module parser_op_unit_test
+-- Compiling module __testsuite
+-- Compiling module testrunner
+
+Top level modules:
+	testrunner
+End time: 03:08:54 on Aug 31,2019
+Errors: 0, Warnings: 1
+Reading pref.tcl 
+
+# 10.3
+
+# vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
+# Start time: 03:08:55 on Aug 31,2019
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.svunit_pkg(fast)
+# Loading work.testrunner(fast)
+# run -all 
+# INFO:  [0][__ts]: Registering Unit Test Case parser_op_dual_ut
+# INFO:  [0][__ts]: Registering Unit Test Case parser_op_ut
+# INFO:  [0][testrunner]: Registering Test Suite __ts
+# INFO:  [0][__ts]: RUNNING
+# INFO:  [0][parser_op_dual_ut]: RUNNING
+# INFO:  [0][parser_op_dual_ut]: test_rst::RUNNING
+# INFO:  [40][parser_op_dual_ut]: test_rst::PASSED
+# INFO:  [40][parser_op_dual_ut]: test_8_bit_tag::RUNNING
+# INFO:  [90][parser_op_dual_ut]: test_8_bit_tag::PASSED
+# INFO:  [90][parser_op_dual_ut]: test_16_bit_tag::RUNNING
+# INFO:  [140][parser_op_dual_ut]: test_16_bit_tag::PASSED
+# INFO:  [140][parser_op_dual_ut]: test_24_bit_tag::RUNNING
+# INFO:  [210][parser_op_dual_ut]: test_24_bit_tag::PASSED
+# INFO:  [210][parser_op_dual_ut]: test_32_bit_tag::RUNNING
+# INFO:  [270][parser_op_dual_ut]: test_32_bit_tag::PASSED
+# INFO:  [270][parser_op_dual_ut]: test_random_400::RUNNING
+# INFO:  [7270][parser_op_dual_ut]: test_random_400::PASSED
+# INFO:  [7270][parser_op_ut]: RUNNING
+# INFO:  [7270][parser_op_ut]: test_rst::RUNNING
+# INFO:  [7310][parser_op_ut]: test_rst::PASSED
+# INFO:  [7310][parser_op_ut]: test_8_bit_tag::RUNNING
+# INFO:  [7370][parser_op_ut]: test_8_bit_tag::PASSED
+# INFO:  [7370][parser_op_ut]: test_16_bit_tag::RUNNING
+# INFO:  [7440][parser_op_ut]: test_16_bit_tag::PASSED
+# INFO:  [7440][parser_op_ut]: test_24_bit_tag::RUNNING
+# INFO:  [7510][parser_op_ut]: test_24_bit_tag::PASSED
+# INFO:  [7510][parser_op_ut]: test_32_bit_tag::RUNNING
+# INFO:  [7580][parser_op_ut]: test_32_bit_tag::PASSED
+# INFO:  [7580][parser_op_ut]: test_random_400::RUNNING
+# INFO:  [14610][parser_op_ut]: test_random_400::PASSED
+# INFO:  [14610][parser_op_dual_ut]: PASSED (6 of 6 tests passing)
+# INFO:  [14610][parser_op_ut]: PASSED (6 of 6 tests passing)
+# 
+# INFO:  [14610][__ts]: PASSED (2 of 2 testcases passing)
+# 
+# INFO:  [14610][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
+# ** Note: $finish    : .testrunner.sv(40)
+#    Time: 14610 ns  Iteration: 1  Instance: /testrunner
