@@ -5,8 +5,8 @@ Input a string, the parser based on '=',ascii'0x3d' and ' '(Space), ascii'0x20' 
 - Ouput1: out_tag:8, out_value:TXS.1; 
 - output2: out_tag:9,out_value:fsaft
 ##### Verilog files:
-- [parser_op_dual.v](rtl/parser_op_dual.v): Version 3 based on Version 2. dual channel mode. Constant 3 clk latency.
-- [parser_op.v](rtl/parser_op.v): Version 2. 64-bit write in, 64-bit read out. Constant 3 clk latency.
+- [parser_op_dual.v](rtl/parser_op_dual.v): Version 3 based on Version 2. dual channel mode. Low latency.
+- [parser_op.v](rtl/parser_op.v): Version 2. 64-bit write in, 64-bit read out. Low latency.
 - [parser.v](rtl/parser.v): Version 1. 64-bit write in, 8-bit read out.
 - [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 2 and 3.
 ##### UnitTest files:
