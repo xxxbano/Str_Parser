@@ -129,7 +129,7 @@ always @(posedge clk) begin
 		flg1_data<=0;
 		tmp1_data<=0;
 	end else begin
-		out1_valid <= 0; // output valid 
+		out1_valid <= 0; 
 		fifo1_rd<=0;
 		op1_cnt <= op1_cnt + 1; 
 		
@@ -143,8 +143,8 @@ always @(posedge clk) begin
 			end
 		S12: begin  // readout tag data
 			fifo1_rd <= 1;
-			flg1_data <= fifo1_rdata; // temp store flag data
-			tmp1_data[63:0] <= fifo1_rdata; // temp store flag data
+			flg1_data <= fifo1_rdata; // store 1st 64-bit for tag parser 
+			tmp1_data[63:0] <= fifo1_rdata;// store 1st 64-bit for value parser 
 			state1 <= S13;
 			if(space_check(fifo1_rdata)) begin
 				state1<=S11;
@@ -156,10 +156,10 @@ always @(posedge clk) begin
 		S13: begin // readout value data
 			fifo1_rd <= 1;
 			if(op1_cnt==0)
-				tmp1_data[127:64] <= fifo1_rdata; // temp store flag data
+				tmp1_data[127:64] <= fifo1_rdata; // store 2nd 64-bit for value parser
 			if(op1_cnt==1)
-				tmp1_data[191:128] <= fifo1_rdata; // temp store flag data
-			if(space_check(fifo1_rdata)) begin
+				tmp1_data[191:128] <= fifo1_rdata; // store 3rd 64-bit for value parser
+			if(space_check(fifo1_rdata)) begin // find 0x20 Spacer, go to idle 
 				state1<=S11;
 				out1_valid <= 1;
 				fifo1_rd <= 0;

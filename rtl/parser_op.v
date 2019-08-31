@@ -86,7 +86,6 @@ assign fifo_rdata = m[rd_cnt[MSIZE-1:0]];
 
 wire go_idle;
 wire go_s4;
-reg space_flag;
 reg [5:0] op_cnt;
 reg [63:0] flg_data;
 reg [191:0] tmp_data;
@@ -103,7 +102,6 @@ always @(posedge clk) begin
 		op_cnt<=0;
 		flg_data<=0;
 		tmp_data<=0;
-		space_flag <= 0; // output valid 
 	end else begin
 		out1_valid <= 0; // output valid 
 		fifo_rd<=0;
@@ -119,9 +117,8 @@ always @(posedge clk) begin
 			end
 		S2: begin  // readout flag
 			fifo_rd <= 1;
-			flg_data <= fifo_rdata; // temp store flag data
-			//tmp_data <= {tmp_data[127:0],fifo_rdata}; // temp store flag data
-			tmp_data[63:0] <= fifo_rdata; // temp store flag data
+			flg_data <= fifo_rdata; // store 1st 64-bit for tag parser 
+			tmp_data[63:0] <= fifo_rdata; // store 1st 64-bit for value parser 
 			state <= S3;
 			if(space_check(fifo_rdata)) begin
 				state<=S1;
@@ -133,12 +130,10 @@ always @(posedge clk) begin
 		S3: begin
 			fifo_rd <= 1;
 			if(op_cnt==0)
-				tmp_data[127:64] <= fifo_rdata; // temp store flag data
+				tmp_data[127:64] <= fifo_rdata; // store 2nd 64-bit for value parser
 			if(op_cnt==1)
-				tmp_data[191:128] <= fifo_rdata; // temp store flag data
-				//tmp_data <= {tmp_data[127:0],fifo_rdata}; // temp store flag data
-				//tmp_data <= {fifo_rdata, tmp_data[191:64]}; // temp store flag data
-			if(space_check(fifo_rdata)) begin
+				tmp_data[191:128] <= fifo_rdata; // store 3rd 64-bit for value parser
+			if(space_check(fifo_rdata)) begin // find 0x20 Spacer, go to idle 
 				state<=S1;
 				out1_valid <= 1;
 				fifo_rd <= 0;
@@ -152,10 +147,10 @@ end
 assign out1_tag = tag_parser(flg_data);
 assign out1_value = value_parser(tmp_data);
 
-wire flag;
-assign flag = space_check(fifo_rdata); 
+//wire flag;
+//assign flag = space_check(fifo_rdata); 
 
-// return tag_value 
+// return 32-bit tag_value from 64-bit data
 function [31:0] tag_parser;
 	input [63:0] wdata;
 	begin
@@ -169,7 +164,7 @@ function [31:0] tag_parser;
 	end
 endfunction
 
-// return out_value 
+// return 127-bit out_value  from 192-bit data
 function [127:0] value_parser;
 	input [191:0] wdata;
 	begin
