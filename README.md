@@ -27,7 +27,7 @@ Method: Randomly generate out_tag and out_value, and concatenate them to form a 
   - Test1: random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [TestResult](testbench/TestResult): Test Summary
 ##### ToDo:
-- 
+- Need to test more corner cases.
 
 #### Waveform from UnitTest
 ##### parser_op_dual: Version 3
