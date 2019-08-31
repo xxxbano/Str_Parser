@@ -1,7 +1,9 @@
 # Str_Parser
 Input a string, the parser based on '=',ascii'0x3d' and ' '(Space), ascii'0x20' output out_tag = left_side, out_value = right_side.
 ###### example
-Input:8=TXS.1 9=fsaft Ouput1: out_tag:8, out_value:TXS.1; output2: out_tag:9,out_value:fsaft
+- Input:8=TXS.1 9=fsaft 
+- Ouput1: out_tag:8, out_value:TXS.1; 
+- output2: out_tag:9,out_value:fsaft
 ##### Verilog files:
 - [parser_op_dual.v](rtl/parser_op_dual.v): Version 3 based on Version 2. dual channel mode.
 - [parser_op.v](rtl/parser_op.v): Version 2. 64-bit write in, 64-bit read out. Constant 3 clk latency.
