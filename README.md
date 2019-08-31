@@ -16,15 +16,15 @@ Method: Randomly generate out_tag and out_value, and concatenate them to form a 
   - Test2:2-Byte tag, random value (1~16-Byte), 
   - Test3:3-Byte tag, random value (1~16-Byte),
   - Test4:4-Byte tag, random value (1~16-Byte), 
-  - Test5: random tag (1~4-Byte), random value (1~16-Byte), 200 times
+  - Test5: random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [parser_op_unit_test.sv](testbench/parser_op_unit_test.sv): 
   - Test1:1-Byte tag, random value (1~16-Byte). 
   - Test2:2-Byte tag, random value (1~16-Byte), 
   - Test3:3-Byte tag, random value (1~16-Byte),
   - Test4:4-Byte tag, random value (1~16-Byte), 
-  - Test5: random tag (1~4-Byte), random value (1~16-Byte), 200 times
+  - Test5: random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [parser_op_dual_unit_test.sv](testbench/parser_op_dual_unit_test.sv): 
-  - Test1: random tag (1~4-Byte), random value (1~16-Byte), 200 times
+  - Test1: random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [TestResult](testbench/TestResult): Test Summary
 ##### ToDo:
 - 
