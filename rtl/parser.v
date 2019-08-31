@@ -37,7 +37,7 @@ wire empty;
 
 assign equal= wr_cnt[MSIZE-1:0] == rd_cnt[MSIZE-1:0]; 
 assign fifo_cnt= wr_cnt - rd_cnt;
-assign full = wr_cnt[MSIZE]^rd_cnt[MSIZE] & equal;
+assign full = (wr_cnt[MSIZE]^rd_cnt[MSIZE]) & equal;
 assign empty =~(wr_cnt[MSIZE]^rd_cnt[MSIZE]) & equal;
 assign fifo_wr =avl_st_rx_valid &(~full);
 
@@ -53,13 +53,6 @@ always @(*) begin
   3'b101: eog_wdata = avl_st_rx_data & 64'h0000000000ffffff;
   3'b110: eog_wdata = avl_st_rx_data & 64'h000000000000ffff;
   3'b111: eog_wdata = avl_st_rx_data & 64'h00000000000000ff;
-  //3'b001: eog_wdata = avl_st_rx_data & 64'hffffffff00ffffff;
-  //3'b010: eog_wdata = avl_st_rx_data & 64'hffffffff0000ffff;
-  //3'b011: eog_wdata = avl_st_rx_data & 64'hffffffff000000ff;
-  //3'b100: eog_wdata = avl_st_rx_data & 64'hffffffff00000000;
-  //3'b101: eog_wdata = avl_st_rx_data & 64'h00ffffff00000000;
-  //3'b110: eog_wdata = avl_st_rx_data & 64'h0000ffff00000000;
-  //3'b111: eog_wdata = avl_st_rx_data & 64'h000000ff00000000;
   endcase
 end
 
@@ -98,14 +91,13 @@ assign fifo_rdata = m[rd_cnt[MSIZE-1:0]];
 wire go_idle;
 wire go_s4;
 reg space_flag;
-reg [5:0] op_cnt;
+reg [6:0] op_cnt;
 reg [31:0] flg_data;
 reg [127:0] val_data;
-reg [3:0] state;
-localparam S1= 4'b0001;
-localparam S2= 4'b0010;
-localparam S3= 4'b0100;
-localparam S4= 4'b1000;
+reg [2:0] state;
+localparam S1= 3'b001;
+localparam S2= 3'b010;
+localparam S3= 3'b100;
 
 always @(posedge clk) begin
 	if(rst) begin
@@ -127,46 +119,37 @@ always @(posedge clk) begin
 				state<=S2;
 				fifo_rd <= 1;
 				op_cnt <= 0; // count for flag data
+				out1_value <= 0;
+				space_flag=0;
 				end
 			end
 		S2: begin  // readout flag
 			fifo_rd <= 1;
-			if(fifo_rdata!=8'h3d ) begin
+			if(fifo_rdata!=8'h3d) begin
 				flg_data <= {flg_data[23:0],fifo_rdata}; // temp store flag data
 				end else begin
-				if(op_cnt==4) state<=S4; // flag > 32 bit
 				out1_tag<=flg_data; // store flag data in output
 				state<=S3; // check = '0x3d', go to value parser
-				op_cnt <= 0; // count for flag data
+				out1_value <= 0;
 				end
 			end
 		S3: begin
 			fifo_rd <= 1;
-			val_data <= {val_data[119:0],fifo_rdata}; // temp store value data
-			out1_value <= val_data;
-			if(go_s4) begin
-				state<=S4;  // if value 128 bit go to S4
-				out1_valid <= 1; // output valid 
-				op_cnt <= 0; // count for flag data
-				if(fifo_rdata == 8'h20)
-					space_flag <= 1;
-				end 
-			end
-		S4: begin
+			if(fifo_rdata == 8'h20) space_flag <= 1; 
 			if(go_idle) begin
-				state<=S1;  // find space, got back to idle
-				space_flag=0;
-				end else begin
-				fifo_rd <= 1;
-				end
-			if(fifo_rdata==8'h20) space_flag <= 1;
+				fifo_rd <= 0;
+				out1_valid <= 1; // output valid 
+				state<=S1;  
+			end else begin
+				if(~(fifo_rdata == 8'h20 || space_flag))
+					out1_value <= {out1_value[119:0],fifo_rdata}; // temp store value data
+			end
 			end
 		default: state<=S1;
 		endcase
 	end
 end
 
-assign go_idle = (rd_cnt+1)%8 == 0 && space_flag==1;
-assign go_s4 = op_cnt==16 || fifo_rdata == 8'h20;
+assign go_idle = rd_cnt%8 == 7 && (fifo_rdata == 8'h20 || space_flag);
 
 endmodule

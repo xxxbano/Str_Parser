@@ -50,20 +50,20 @@ wire fifo2_empty;
 // each package data steer to different fifos
 // for 2-channel operation
 ////////////////////////////
-//reg steer;
-//always @(posedge clk) begin
-//	if(rst) begin
-//		steer <= 0;
-//	end else begin
-//		if(avl_st_rx_eop) steer <= ~steer;
-//	end
-//end
-//assign fifo1_wr = (steer)? 0:avl_st_rx_valid;
-//assign fifo2_wr = (steer)? avl_st_rx_valid:0;
+reg steer;
+always @(posedge clk) begin
+	if(rst) begin
+		steer <= 0;
+	end else begin
+		if(avl_st_rx_eop) steer <= ~steer;
+	end
+end
+assign fifo1_wr = (steer)? 0:avl_st_rx_valid;
+assign fifo2_wr = (steer)? avl_st_rx_valid:0;
 
 // for testing
-assign fifo1_wr = avl_st_rx_valid;
-assign fifo2_wr = avl_st_rx_valid;
+//assign fifo1_wr = avl_st_rx_valid;
+//assign fifo2_wr = avl_st_rx_valid;
 
 assign fifo_wdata = (avl_st_rx_eop)? eog_wdata:avl_st_rx_data;
 

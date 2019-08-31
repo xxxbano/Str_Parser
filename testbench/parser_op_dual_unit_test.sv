@@ -118,222 +118,222 @@ module parser_op_dual_unit_test;
   `SVTEST_END
 
 
-  `SVTEST(test_8_bit_tag)
-	// initial test data
-	//while(eq_pos<1) eq_pos = $random%4; 
-	eq_pos = 0; sp_pos = 0; 
-	while(eq_pos<1) eq_pos = 1; 
-	while(sp_pos<1) sp_pos = $random%16; 
-	res_tag = 0; res_value = 0; rd_cnt=0;
-	for(i=0;i<eq_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_tag={tmp8,res_tag[31:8]};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
-  //wdata={8'h3d,wdata[32*8-1:8]};
-	for(i=0;i<sp_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_value={tmp8,res_value[127:8]};
-		//res_value={res_value[119:0],tmp8};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
-	wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
-	//wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // `SVTEST(test_8_bit_tag)
+ // // initial test data
+ // //while(eq_pos<1) eq_pos = $random%4; 
+ // eq_pos = 0; sp_pos = 0; 
+ // while(eq_pos<1) eq_pos = 1; 
+ // while(sp_pos<1) sp_pos = $random%16; 
+ // res_tag = 0; res_value = 0; rd_cnt=0;
+ // for(i=0;i<eq_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_tag={tmp8,res_tag[31:8]};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
+ // //wdata={8'h3d,wdata[32*8-1:8]};
+ // for(i=0;i<sp_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_value={tmp8,res_value[127:8]};
+ // 	//res_value={res_value[119:0],tmp8};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
+ // wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // //wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
 
-	// setup first write 
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
-	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	if(rd_cnt >= sp_pos+eq_pos+2) begin
-		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-	end
-	// setup first write 
-	while(rd_cnt < sp_pos+eq_pos +2) begin
-		step(1); nextSamplePoint(); 
-		avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
-		avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-		if(rd_cnt >= sp_pos+eq_pos+2) begin
-			avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-		end
-	end
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	while(out1_valid!=1) step(1);
-	`FAIL_UNLESS_EQUAL(out1_valid,1);
-	`FAIL_UNLESS_EQUAL(out1_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out1_value,res_value);
-	`FAIL_UNLESS_EQUAL(out2_valid,1);
-	`FAIL_UNLESS_EQUAL(out2_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out2_value,res_value);
-  `SVTEST_END
+ // // setup first write 
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
+ // avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 	avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // end
+ // // setup first write 
+ // while(rd_cnt < sp_pos+eq_pos +2) begin
+ // 	step(1); nextSamplePoint(); 
+ // 	avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
+ // 	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // 	if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // 	end
+ // end
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
+ // while(out1_valid!=1) step(1);
+ // `FAIL_UNLESS_EQUAL(out1_valid,1);
+ // `FAIL_UNLESS_EQUAL(out1_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out1_value,res_value);
+ // `FAIL_UNLESS_EQUAL(out2_valid,1);
+ // `FAIL_UNLESS_EQUAL(out2_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out2_value,res_value);
+ // `SVTEST_END
 
-  `SVTEST(test_16_bit_tag)
-	// initial test data
-	//while(eq_pos<1) eq_pos = $random%4; 
-	eq_pos = 0; sp_pos = 0; 
-	while(eq_pos<1) eq_pos = 2; 
-	while(sp_pos<1) sp_pos = $random%16; 
-	res_tag = 0; res_value = 0; rd_cnt=0;
-	for(i=0;i<eq_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_tag={tmp8,res_tag[31:8]};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
-  //wdata={8'h3d,wdata[32*8-1:8]};
-	for(i=0;i<sp_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_value={tmp8,res_value[127:8]};
-		//res_value={res_value[119:0],tmp8};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
-	wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
-	//wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // `SVTEST(test_16_bit_tag)
+ // // initial test data
+ // //while(eq_pos<1) eq_pos = $random%4; 
+ // eq_pos = 0; sp_pos = 0; 
+ // while(eq_pos<1) eq_pos = 2; 
+ // while(sp_pos<1) sp_pos = $random%16; 
+ // res_tag = 0; res_value = 0; rd_cnt=0;
+ // for(i=0;i<eq_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_tag={tmp8,res_tag[31:8]};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
+ // //wdata={8'h3d,wdata[32*8-1:8]};
+ // for(i=0;i<sp_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_value={tmp8,res_value[127:8]};
+ // 	//res_value={res_value[119:0],tmp8};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
+ // wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // //wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
 
-	// setup first write 
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
-	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	if(rd_cnt >= sp_pos+eq_pos+2) begin
-		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-	end
-	// setup first write 
-	while(rd_cnt < sp_pos+eq_pos +2) begin
-		step(1); nextSamplePoint(); 
-		avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
-		avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-		if(rd_cnt >= sp_pos+eq_pos+2) begin
-			avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-		end
-	end
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	while(out1_valid!=1) step(1);
-	`FAIL_UNLESS_EQUAL(out1_valid,1);
-	`FAIL_UNLESS_EQUAL(out1_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out1_value,res_value);
-	`FAIL_UNLESS_EQUAL(out2_valid,1);
-	`FAIL_UNLESS_EQUAL(out2_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out2_value,res_value);
-  `SVTEST_END
+ // // setup first write 
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
+ // avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 	avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // end
+ // // setup first write 
+ // while(rd_cnt < sp_pos+eq_pos +2) begin
+ // 	step(1); nextSamplePoint(); 
+ // 	avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
+ // 	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // 	if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // 	end
+ // end
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
+ // while(out1_valid!=1) step(1);
+ // `FAIL_UNLESS_EQUAL(out1_valid,1);
+ // `FAIL_UNLESS_EQUAL(out1_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out1_value,res_value);
+ // `FAIL_UNLESS_EQUAL(out2_valid,1);
+ // `FAIL_UNLESS_EQUAL(out2_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out2_value,res_value);
+ // `SVTEST_END
 
-  `SVTEST(test_24_bit_tag)
-	// initial test data
-	//while(eq_pos<1) eq_pos = $random%4; 
-	eq_pos = 0; sp_pos = 0; 
-	while(eq_pos<1) eq_pos = 3; 
-	while(sp_pos<1) sp_pos = $random%16; 
-	res_tag = 0; res_value = 0; rd_cnt=0;
-	for(i=0;i<eq_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_tag={tmp8,res_tag[31:8]};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
-  //wdata={8'h3d,wdata[32*8-1:8]};
-	for(i=0;i<sp_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_value={tmp8,res_value[127:8]};
-		//res_value={res_value[119:0],tmp8};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
-	wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
-	//wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // `SVTEST(test_24_bit_tag)
+ // // initial test data
+ // //while(eq_pos<1) eq_pos = $random%4; 
+ // eq_pos = 0; sp_pos = 0; 
+ // while(eq_pos<1) eq_pos = 3; 
+ // while(sp_pos<1) sp_pos = $random%16; 
+ // res_tag = 0; res_value = 0; rd_cnt=0;
+ // for(i=0;i<eq_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_tag={tmp8,res_tag[31:8]};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
+ // //wdata={8'h3d,wdata[32*8-1:8]};
+ // for(i=0;i<sp_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_value={tmp8,res_value[127:8]};
+ // 	//res_value={res_value[119:0],tmp8};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
+ // wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // //wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
 
-	// setup first write 
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
-	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	if(rd_cnt >= sp_pos+eq_pos+2) begin
-		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-	end
-	// setup first write 
-	while(rd_cnt < sp_pos+eq_pos +2) begin
-		step(1); nextSamplePoint(); 
-		avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
-		avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-		if(rd_cnt >= sp_pos+eq_pos+2) begin
-			avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-		end
-	end
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	while(out1_valid!=1) step(1);
-	`FAIL_UNLESS_EQUAL(out1_valid,1);
-	`FAIL_UNLESS_EQUAL(out1_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out1_value,res_value);
-	`FAIL_UNLESS_EQUAL(out2_valid,1);
-	`FAIL_UNLESS_EQUAL(out2_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out2_value,res_value);
-  `SVTEST_END
+ // // setup first write 
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
+ // avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 	avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // end
+ // // setup first write 
+ // while(rd_cnt < sp_pos+eq_pos +2) begin
+ // 	step(1); nextSamplePoint(); 
+ // 	avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
+ // 	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // 	if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // 	end
+ // end
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
+ // while(out1_valid!=1) step(1);
+ // `FAIL_UNLESS_EQUAL(out1_valid,1);
+ // `FAIL_UNLESS_EQUAL(out1_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out1_value,res_value);
+ // `FAIL_UNLESS_EQUAL(out2_valid,1);
+ // `FAIL_UNLESS_EQUAL(out2_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out2_value,res_value);
+ // `SVTEST_END
 
-  `SVTEST(test_32_bit_tag)
-	// initial test data
-	//while(eq_pos<1) eq_pos = $random%4; 
-	eq_pos = 0; sp_pos = 0; 
-	while(eq_pos<1) eq_pos = 4; 
-	while(sp_pos<1) sp_pos = $random%16; 
-	res_tag = 0; res_value = 0; rd_cnt=0;
-	for(i=0;i<eq_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_tag={tmp8,res_tag[31:8]};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
-  //wdata={8'h3d,wdata[32*8-1:8]};
-	for(i=0;i<sp_pos;i=i+1) begin
-		tmp8=$random;
-		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-		res_value={tmp8,res_value[127:8]};
-		//res_value={res_value[119:0],tmp8};
-		wdata={tmp8,wdata[32*8-1:8]};
-	end
-  res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
-	wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
-	//wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // `SVTEST(test_32_bit_tag)
+ // // initial test data
+ // //while(eq_pos<1) eq_pos = $random%4; 
+ // eq_pos = 0; sp_pos = 0; 
+ // while(eq_pos<1) eq_pos = 4; 
+ // while(sp_pos<1) sp_pos = $random%16; 
+ // res_tag = 0; res_value = 0; rd_cnt=0;
+ // for(i=0;i<eq_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_tag={tmp8,res_tag[31:8]};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
+ // //wdata={8'h3d,wdata[32*8-1:8]};
+ // for(i=0;i<sp_pos;i=i+1) begin
+ // 	tmp8=$random;
+ // 	while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
+ // 	res_value={tmp8,res_value[127:8]};
+ // 	//res_value={res_value[119:0],tmp8};
+ // 	wdata={tmp8,wdata[32*8-1:8]};
+ // end
+ // res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
+ // wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
+ // //wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
 
-	// setup first write 
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
-	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	if(rd_cnt >= sp_pos+eq_pos+2) begin
-		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-	end
-	// setup first write 
-	while(rd_cnt < sp_pos+eq_pos +2) begin
-		step(1); nextSamplePoint(); 
-		avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
-		avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-		if(rd_cnt >= sp_pos+eq_pos+2) begin
-			avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-		end
-	end
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	while(out1_valid!=1) step(1);
-	`FAIL_UNLESS_EQUAL(out1_valid,1);
-	`FAIL_UNLESS_EQUAL(out1_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out1_value,res_value);
-	`FAIL_UNLESS_EQUAL(out2_valid,1);
-	`FAIL_UNLESS_EQUAL(out2_tag,res_tag);
-	`FAIL_UNLESS_EQUAL(out2_value,res_value);
-  `SVTEST_END
+ // // setup first write 
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
+ // avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 	avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // end
+ // // setup first write 
+ // while(rd_cnt < sp_pos+eq_pos +2) begin
+ // 	step(1); nextSamplePoint(); 
+ // 	avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
+ // 	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+ // 	if(rd_cnt >= sp_pos+eq_pos+2) begin
+ // 		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
+ // 	end
+ // end
+ // step(1); nextSamplePoint(); 
+ // avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
+ // while(out1_valid!=1) step(1);
+ // `FAIL_UNLESS_EQUAL(out1_valid,1);
+ // `FAIL_UNLESS_EQUAL(out1_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out1_value,res_value);
+ // `FAIL_UNLESS_EQUAL(out2_valid,1);
+ // `FAIL_UNLESS_EQUAL(out2_tag,res_tag);
+ // `FAIL_UNLESS_EQUAL(out2_value,res_value);
+ // `SVTEST_END
 
   `SVTEST(test_random_400)
 	// initial test data
 	//while(eq_pos<1) eq_pos = $random%4; 
-	for(j=0;j<100;j=j+1) begin
+	for(j=0;j<200;j=j+1) begin
 		eq_pos = 0; sp_pos = 0; 
 		while(eq_pos<1) eq_pos = $random%5; 
 		while(sp_pos<1) sp_pos = $random%16; 
@@ -375,13 +375,17 @@ module parser_op_dual_unit_test;
 		end
 		step(1); nextSamplePoint(); 
 		avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
+		if(j%2) begin
+		while(out2_valid!=1) step(1);
+	  `FAIL_UNLESS_EQUAL(out2_valid,1);
+	  `FAIL_UNLESS_EQUAL(out2_tag,res_tag);
+	  `FAIL_UNLESS_EQUAL(out2_value,res_value);
+		end else begin
 		while(out1_valid!=1) step(1);
 		`FAIL_UNLESS_EQUAL(out1_valid,1);
 		`FAIL_UNLESS_EQUAL(out1_tag,res_tag);
 		`FAIL_UNLESS_EQUAL(out1_value,res_value);
-	  `FAIL_UNLESS_EQUAL(out2_valid,1);
-	  `FAIL_UNLESS_EQUAL(out2_tag,res_tag);
-	  `FAIL_UNLESS_EQUAL(out2_value,res_value);
+		end
 		step(1);
 	end
   `SVTEST_END

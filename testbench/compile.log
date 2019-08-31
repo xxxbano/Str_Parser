@@ -1,4 +1,4 @@
-Start time: 03:10:33 on Aug 31,2019
+Start time: 10:44:31 on Aug 31,2019
 /CMC/tools/mentor/modelsim.10.3/modeltech/bin/../linux_x86_64/vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26" 
 -- Compiling package svunit_pkg
 -- Compiling module fifo
@@ -10,9 +10,11 @@ Start time: 03:10:33 on Aug 31,2019
 -- Compiling module fifo
 -- Compiling module parser_op
 -- Compiling module parser_op_unit_test
+-- Compiling module parser
+-- Compiling module parser_unit_test
 -- Compiling module __testsuite
 -- Compiling module testrunner
 
 Top level modules:
 	testrunner
-End time: 03:10:33 on Aug 31,2019
+End time: 10:44:31 on Aug 31,2019
