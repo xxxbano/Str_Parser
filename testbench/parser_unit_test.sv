@@ -408,13 +408,13 @@ module parser_unit_test;
 
   `SVUNIT_TESTS_END
 
-//	initial begin
-//		//$monitor("%d, %b, %x, %x, %x, %x,%d,%d",$stime,clk, res_tag, res_value, wdata,tmp8,eq_pos,sp_pos);
-//		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%d,%x,%x,%d,%d,%d",$stime,my_parser.clk, my_parser.rst, my_parser.avl_st_rx_valid,my_parser.avl_st_rx_data,my_parser.avl_st_rx_sop,my_parser.avl_st_rx_eop,my_parser.avl_st_rx_empty,my_parser.out1_valid,my_parser.out1_tag,my_parser.out1_value,my_parser.out2_valid,my_parser.out2_tag,my_parser.out2_value, rd_cnt,my_parser.state,my_parser.op_cnt,my_parser.rd_cnt,my_parser.fifo_rdata,res_tag,my_parser.flg_data,rd_cnt,eq_pos,my_parser.space_flag);
-//		//$monitor("%d, %b, %b, %b, %b",$stime,clk, rst, en,wr);
-//		$dumpfile("parser.vcd");
-//		$dumpvars(0,parser_unit_test.my_parser);
-//		$dumpvars;
-//	end
+	initial begin
+		//$monitor("%d, %b, %x, %x, %x, %x,%d,%d",$stime,clk, res_tag, res_value, wdata,tmp8,eq_pos,sp_pos);
+		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%d,%x,%x,%d,%d,%d",$stime,my_parser.clk, my_parser.rst, my_parser.avl_st_rx_valid,my_parser.avl_st_rx_data,my_parser.avl_st_rx_sop,my_parser.avl_st_rx_eop,my_parser.avl_st_rx_empty,my_parser.out1_valid,my_parser.out1_tag,my_parser.out1_value,my_parser.out2_valid,my_parser.out2_tag,my_parser.out2_value, rd_cnt,my_parser.state,my_parser.op_cnt,my_parser.rd_cnt,my_parser.fifo_rdata,res_tag,my_parser.flg_data,rd_cnt,eq_pos,my_parser.space_flag);
+		//$monitor("%d, %b, %b, %b, %b",$stime,clk, rst, en,wr);
+		$dumpfile("parser.vcd");
+		$dumpvars(0,parser_unit_test.my_parser);
+		$dumpvars;
+	end
 
 endmodule
