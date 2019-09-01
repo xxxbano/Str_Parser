@@ -12,11 +12,13 @@ let's say $ => ascii'0x01'. The string is terminated with a $.
 - [parser_op.v](rtl/parser_op.v)
   - Version 2. 64-bit write in, 64-bit read out. 
   - Low latency. 
-  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
+  - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf")
+  - The input has a complex combinatin logic. Should be took care in a real project.
 - [parser_op_dual.v](rtl/parser_op_dual.v): 
   - Version 3 based on Version 2. dual channel mode. 
   - Low latency. 
-  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
+  - But, based on old Version 2. Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
+  - The dual channel mode idea can be applied on Version 1 and 2.
 - [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 3.
 ##### UnitTest files:
 Random Test Method: Randomly generate out_tag and out_value, and concatenate them to form a string package by following the parsing rules. Then, input the string package to the target parser. At last, verify the output with the generated result.
@@ -31,17 +33,20 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
   - test_2_continus_case_2nd_ignore_17B_value: Input 2 grps of dat, 2nd grp dat has 17-byte val, ignore byte [16~]
   - test_random_200: Input 1 groups of data, random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [parser_op_unit_test.sv](testbench/parser_op_unit_test.sv): 
-  - Test1:1-Byte tag, random value (1~16-Byte). 
-  - Test2:2-Byte tag, random value (1~16-Byte), 
-  - Test3:3-Byte tag, random value (1~16-Byte),
-  - Test4:4-Byte tag, random value (1~16-Byte), 
-  - Test5: random tag (1-4-Byte), random value (1-16-Byte), 200 times
+  - test_rst: reset test
+  - test_2_continus_case_empty_0: Input 2 groups of data, the last 8-byte has 0-byte empty  
+  - test_2_continus_case_empty_1: Input 2 groups of data, the last 8-byte has 1-byte empty 
+  - test_2_continus_case_empty_3: Input 2 groups of data, the last 8-byte has 3-byte empty
+  - test_2_continus_case_ignore_1st_for_5B_tag: Input 2 grps of dat, 1st grp dat has 5-byte tag, ignore 1st grp dat.
+  - test_2_continus_case_ignore_2nd_for_5B_tag: Input 2 grps of dat, 2nd grp dat has 5-byte tag, ignore 2nd grp dat.
+  - test_2_continus_case_1st_ignore_17B_value: Input 2 grps of dat, 1st grp dat has 17-byte val, ignore byte [16~]
+  - test_2_continus_case_2nd_ignore_17B_value: Input 2 grps of dat, 2nd grp dat has 17-byte val, ignore byte [16~]
 - [parser_op_dual_unit_test.sv](testbench/parser_op_dual_unit_test.sv): 
   - Test1: random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [TestResult](testbench/TestResult): Test Summary
 ##### ToDo:
 - Need to test more corner cases.
-- How to make Version 2 handle general string case?
+- Implement dual mode for Version 1 and 2.
 
 #### Waveform from UnitTest
 ##### [parser_op.v](rtl/parser_op.v): Version 2
