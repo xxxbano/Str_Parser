@@ -3,20 +3,20 @@ Input is a string. The parser parse a group of data in a string which has an asc
 ###### example
 let's say $ => ascii'0x01'. The string is terminated with a $.
 - Input: string "8=TXS.1$9=fsaft$"
-- Ouput1: out_tag:8, out_value:TXS.1
-- output2: out_tag:9,out_value:fsaft
+- 1st output: out_tag: 8, out_value: TXS.1
+- 2nd output: out_tag: 9, out_value: fsaft
 ##### Verilog files:
 - [parser.v](rtl/parser.v)
   - Version 1. 64-bit write in, 8-bit read out. 
-  - Handle general string input. (e.g. "8=TXS.1 9=fsaft fsda=ffteaf 78=fsaf")
+  - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf")
 - [parser_op.v](rtl/parser_op.v)
   - Version 2. 64-bit write in, 64-bit read out. 
   - Low latency. 
-  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1" "9=fsaft" "fsda=ffteaf") 
+  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
 - [parser_op_dual.v](rtl/parser_op_dual.v): 
   - Version 3 based on Version 2. dual channel mode. 
   - Low latency. 
-  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1" "9=fsaft" "fsda=ffteaf") 
+  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
 - [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 3.
 ##### UnitTest files:
 Random Test Method: Randomly generate out_tag and out_value, and concatenate them to form a string package by following the parsing rules. Then, input the string package to the target parser. At last, verify the output with the generated result.
@@ -46,6 +46,9 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
 #### Waveform from UnitTest
 ##### parser: Version 1
 test_2_continus_case_empty_0. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef1123456789abcdef 3d 1234 01 1123456789abcdef1123456789abcdef 3d 12345678
+- 1st output: tag: 12345678 value: 1123456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0000456789abcdef1123456789abcdef
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig9.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig10.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig11.png "Logo Title Text 1")
