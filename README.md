@@ -12,11 +12,11 @@ let's say $ => ascii'0x01'. The string is terminated with a $.
 - [parser_op.v](rtl/parser_op.v)
   - Version 2. 64-bit write in, 64-bit read out. 
   - Low latency. 
-  - Handle fomualized string input. (e.g. "8=TXS.1" "9=fsaft" "fsda=ffteaf" "78=fsaf") 
+  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1" "9=fsaft" "fsda=ffteaf") 
 - [parser_op_dual.v](rtl/parser_op_dual.v): 
   - Version 3 based on Version 2. dual channel mode. 
   - Low latency. 
-  - Handle formulaized string input. (e.g. "8=TXS.1" "9=fsaft" "fsda=ffteaf" "78=fsaf") 
+  - Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1" "9=fsaft" "fsda=ffteaf") 
 - [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 3.
 ##### UnitTest files:
 Random Test Method: Randomly generate out_tag and out_value, and concatenate them to form a string package by following the parsing rules. Then, input the string package to the target parser. At last, verify the output with the generated result.
