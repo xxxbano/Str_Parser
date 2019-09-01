@@ -25,10 +25,10 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
   - test_2_continus_case_empty_0: Input 2 groups of data, the last 8-byte has 0-byte empty  
   - test_2_continus_case_empty_1: Input 2 groups of data, the last 8-byte has 1-byte empty 
   - test_2_continus_case_empty_3: Input 2 groups of data, the last 8-byte has 3-byte empty
-  - test_2_continus_case_ignore_1st_for_5B_tag: Input 2 grps of data, 1st grp data has 5-byte tag, ignore 1st grp data.
-  - test_2_continus_case_ignore_2nd_for_5B_tag: Input 2 grps of data, 2nd grp data has 5-byte tag, ignore 2nd grp data.
-  - test_2_continus_case_1st_ignore_17B_value: Input 2 grps of data, 1st grp data has 17-byte value, ignore extra byte [16~]
-  - test_2_continus_case_2nd_ignore_17B_value: Input 2 grps of data, 2nd grp data has 17-byte value, ignore extra byte [16~]
+  - test_2_continus_case_ignore_1st_for_5B_tag: Input 2 grps of dat, 1st grp dat has 5-byte tag, ignore 1st grp dat.
+  - test_2_continus_case_ignore_2nd_for_5B_tag: Input 2 grps of dat, 2nd grp dat has 5-byte tag, ignore 2nd grp dat.
+  - test_2_continus_case_1st_ignore_17B_value: Input 2 grps of dat, 1st grp dat has 17-byte val, ignore byte [16~]
+  - test_2_continus_case_2nd_ignore_17B_value: Input 2 grps of dat, 2nd grp dat has 17-byte val, ignore byte [16~]
   - test_random_200: Input 1 groups of data, random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [parser_op_unit_test.sv](testbench/parser_op_unit_test.sv): 
   - Test1:1-Byte tag, random value (1~16-Byte). 
