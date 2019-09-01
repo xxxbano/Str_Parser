@@ -87,7 +87,7 @@ always @(posedge clk) begin
  //fifo_rdata <= m[rd_cnt[MSIZE-1:0]];
 end
 	
-// for endian convertion
+// for output alinement
 reg [6:0] t_len; 
 reg [6:0] v_len; 
 reg [31:0] t_tmp;
@@ -126,7 +126,7 @@ always @(posedge clk) begin
 		S2: begin  // readout flag
 			fifo_rd <= 1;
 			if(fifo_rdata==8'h00) begin // if readout 0x00, do nothing
-					op_cnt <= 0; // count for flag data
+					op_cnt <= 0;            // clean up 0x00 for previous string package
 					if(fifo_cnt==1) begin
 						state <= S1; // if no data, go to idle
 						fifo_rd <= 0;
@@ -178,6 +178,7 @@ end
 	assign out1_tag = t_conv(t_tmp,t_len);
 	assign out1_value = v_conv(v_tmp,v_len);
 
+// aline tag value function
 	function [31:0] t_conv;
 		input [31:0] in;
 		input [6:0] len;
@@ -189,6 +190,7 @@ end
 		endcase
 	endfunction
 
+// aline value value function
 	function [127:0] v_conv;
 		input [127:0] in;
 		input [6:0] len;
