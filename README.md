@@ -5,10 +5,10 @@ Input a string, the parser based on '=',ascii'0x3d' and ' '(Space), ascii'0x20' 
 - Ouput1: out_tag:8, out_value:TXS.1; 
 - output2: out_tag:9,out_value:fsaft
 ##### Verilog files:
-- [parser_op_dual.v](rtl/parser_op_dual.v): Version 3 based on Version 2. dual channel mode. Constant 3 clk latency.
-- [parser_op.v](rtl/parser_op.v): Version 2. 64-bit write in, 64-bit read out. Constant 3 clk latency.
+- [parser_op_dual.v](rtl/parser_op_dual.v): Version 3 based on Version 2. dual channel mode. Low latency.
+- [parser_op.v](rtl/parser_op.v): Version 2. 64-bit write in, 64-bit read out. Low latency.
 - [parser.v](rtl/parser.v): Version 1. 64-bit write in, 8-bit read out.
-- [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 2 and 3.
+- [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 3.
 ##### UnitTest files:
 Method: Randomly generate out_tag and out_value, and concatenate them to form a string package by following the parsing rules. Then, input the string package to the target parser. At last, verify the output with the generated result.
 - [parser_unit_test.sv](testbench/parser_unit_test.sv): 
@@ -27,7 +27,7 @@ Method: Randomly generate out_tag and out_value, and concatenate them to form a 
   - Test1: random tag (1-4-Byte), random value (1-16-Byte), 200 times
 - [TestResult](testbench/TestResult): Test Summary
 ##### ToDo:
-- 
+- Need to test more corner cases.
 
 #### Waveform from UnitTest
 ##### parser_op_dual: Version 3
@@ -47,7 +47,7 @@ Dual channel interleaving output
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig6.png "Logo Title Text 1")
 4-byte tag test
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig7.png "Logo Title Text 1")
-Random test. 1~4-byte tag, 1~16-byte value
+Random test. 1-4-byte tag, 1-16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig8.png "Logo Title Text 1")
 
 ##### parser: Version 1
@@ -59,7 +59,7 @@ Random test. 1~4-byte tag, 1~16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig11.png "Logo Title Text 1")
 4-byte tag test
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig12.png "Logo Title Text 1")
-Random test. 1~4-byte tag, 1~16-byte value
+Random test. 1-4-byte tag, 1-16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig13.png "Logo Title Text 1")
 
 #### About UnitTest
