@@ -10,7 +10,7 @@ SVUNIT: Creating instances for:
 SVUNIT:   __testsuite
 cd .; vlib work; vlog -l compile.log  -f .svunit.f +define+SVUNIT_VERSION='"SVUnit v3.26"' ; vsim -sdfnoerror -c -lib work -do "run -all; quit" -l run.log testrunner
 Model Technology ModelSim SE-64 vlog 10.3 Compiler 2014.01 Jan  6 2014
-Start time: 10:44:31 on Aug 31,2019
+Start time: 11:57:43 on Sep 01,2019
 vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26" 
 -- Compiling package svunit_pkg
 -- Compiling module fifo
@@ -29,14 +29,14 @@ vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26"
 
 Top level modules:
 	testrunner
-End time: 10:44:31 on Aug 31,2019
+End time: 11:57:44 on Sep 01,2019
 Errors: 0, Warnings: 1
 Reading pref.tcl 
 
 # 10.3
 
 # vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
-# Start time: 10:44:32 on Aug 31,2019
+# Start time: 11:57:45 on Sep 01,2019
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
 # //
@@ -77,22 +77,28 @@ Reading pref.tcl
 # INFO:  [21240][parser_ut]: RUNNING
 # INFO:  [21240][parser_ut]: test_rst::RUNNING
 # INFO:  [21280][parser_ut]: test_rst::PASSED
-# INFO:  [21280][parser_ut]: test_8_bit_tag::RUNNING
-# INFO:  [21480][parser_ut]: test_8_bit_tag::PASSED
-# INFO:  [21480][parser_ut]: test_16_bit_tag::RUNNING
-# INFO:  [21680][parser_ut]: test_16_bit_tag::PASSED
-# INFO:  [21680][parser_ut]: test_24_bit_tag::RUNNING
-# INFO:  [21880][parser_ut]: test_24_bit_tag::PASSED
-# INFO:  [21880][parser_ut]: test_32_bit_tag::RUNNING
-# INFO:  [22000][parser_ut]: test_32_bit_tag::PASSED
-# INFO:  [22000][parser_ut]: test_random_200::RUNNING
-# INFO:  [62960][parser_ut]: test_random_200::PASSED
-# INFO:  [62960][parser_op_dual_ut]: PASSED (2 of 2 tests passing)
-# INFO:  [62960][parser_op_ut]: PASSED (6 of 6 tests passing)
-# INFO:  [62960][parser_ut]: PASSED (6 of 6 tests passing)
+# INFO:  [21280][parser_ut]: test_2_continus_case_empty_0::RUNNING
+# INFO:  [21730][parser_ut]: test_2_continus_case_empty_0::PASSED
+# INFO:  [21730][parser_ut]: test_2_continus_case_empty_1::RUNNING
+# INFO:  [22170][parser_ut]: test_2_continus_case_empty_1::PASSED
+# INFO:  [22170][parser_ut]: test_2_continus_case_empty_3::RUNNING
+# INFO:  [22590][parser_ut]: test_2_continus_case_empty_3::PASSED
+# INFO:  [22590][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
+# INFO:  [23030][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
+# INFO:  [23030][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
+# INFO:  [23540][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
+# INFO:  [23540][parser_ut]: test_2_continus_case_1st_ignore_9B_value::RUNNING
+# INFO:  [24010][parser_ut]: test_2_continus_case_1st_ignore_9B_value::PASSED
+# INFO:  [24010][parser_ut]: test_2_continus_case_2nd_ignore_9B_value::RUNNING
+# INFO:  [24500][parser_ut]: test_2_continus_case_2nd_ignore_9B_value::PASSED
+# INFO:  [24500][parser_ut]: test_random_200::RUNNING
+# INFO:  [61890][parser_ut]: test_random_200::PASSED
+# INFO:  [61890][parser_op_dual_ut]: PASSED (2 of 2 tests passing)
+# INFO:  [61890][parser_op_ut]: PASSED (6 of 6 tests passing)
+# INFO:  [61890][parser_ut]: PASSED (9 of 9 tests passing)
 # 
-# INFO:  [62960][__ts]: PASSED (3 of 3 testcases passing)
+# INFO:  [61890][__ts]: PASSED (3 of 3 testcases passing)
 # 
-# INFO:  [62960][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
+# INFO:  [61890][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
 # ** Note: $finish    : .testrunner.sv(40)
-#    Time: 62960 ns  Iteration: 1  Instance: /testrunner
+#    Time: 61890 ns  Iteration: 1  Instance: /testrunner

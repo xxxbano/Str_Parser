@@ -1,5 +1,8 @@
 
-module parser(
+module parser #(
+	parameter MSIZE = 8,
+	parameter SMARK = 8'h01
+)(
   input wire clk,
   input wire rst,
 
@@ -10,16 +13,13 @@ module parser(
   input wire [2:0] avl_st_rx_empty,
   
   output reg   out1_valid,
-  output reg [ 31:0]  out1_tag,
-  output reg [127:0]  out1_value,
+  output wire [ 31:0]  out1_tag,
+  output wire [127:0]  out1_value,
   output reg   out2_valid,
-  output reg [ 31:0]  out2_tag,
-  output reg [127:0]  out2_value
+  output wire [ 31:0]  out2_tag,
+  output wire [127:0]  out2_value
 
 );
-
-parameter MSIZE = 8;
-
 
 // fifo signal 
 wire [MSIZE:0] fifo_cnt;
@@ -34,12 +34,6 @@ reg fifo_rd;
 wire equal;  
 wire full;  
 wire empty;  
-
-assign equal= wr_cnt[MSIZE-1:0] == rd_cnt[MSIZE-1:0]; 
-assign fifo_cnt= wr_cnt - rd_cnt;
-assign full = (wr_cnt[MSIZE]^rd_cnt[MSIZE]) & equal;
-assign empty =~(wr_cnt[MSIZE]^rd_cnt[MSIZE]) & equal;
-assign fifo_wr =avl_st_rx_valid &(~full);
 
 
 //masked data for eop
@@ -56,6 +50,17 @@ always @(*) begin
   endcase
 end
 
+// fifo status signal
+assign equal= wr_cnt[MSIZE-1:0] == rd_cnt[MSIZE-1:0]; 
+assign full = (wr_cnt[MSIZE]^rd_cnt[MSIZE]) & equal;
+assign empty =~(wr_cnt[MSIZE]^rd_cnt[MSIZE]) & equal;
+assign fifo_cnt= wr_cnt - rd_cnt;
+
+// fifo wr/rd signal
+assign fifo_wr =avl_st_rx_valid &(~full);
+assign fifo_wdata = (avl_st_rx_eop)? eog_wdata:avl_st_rx_data;
+assign fifo_rdata = m[rd_cnt[MSIZE-1:0]];
+
 // fifo write control
 always @(posedge clk) begin
 	if(rst) begin
@@ -67,9 +72,7 @@ always @(posedge clk) begin
 	end
 end
 
-assign fifo_wdata = (avl_st_rx_eop)? eog_wdata:avl_st_rx_data;
-
-// fifo 
+// fifo 64-bit write in 8-bit read out
 always @(posedge clk) begin
  if(fifo_wr) begin
  	 m[wr_cnt[MSIZE-1:0]+0] <= fifo_wdata[ 7:0 ];
@@ -83,32 +86,29 @@ always @(posedge clk) begin
  end
  //fifo_rdata <= m[rd_cnt[MSIZE-1:0]];
 end
-
-assign fifo_rdata = m[rd_cnt[MSIZE-1:0]];
-
-
-
-wire go_idle;
-wire go_s4;
-reg space_flag;
-reg [6:0] op_cnt;
-reg [31:0] flg_data;
-reg [127:0] val_data;
-reg [2:0] state;
-localparam S1= 3'b001;
-localparam S2= 3'b010;
-localparam S3= 3'b100;
+	
+// for endian convertion
+reg [6:0] t_len; 
+reg [6:0] v_len; 
+reg [31:0] t_tmp;
+reg [127:0] v_tmp;
+// state machine for parser
+reg [6:0] op_cnt; // count operation
+reg [3:0] state;
+localparam S1= 4'b0001;
+localparam S2= 4'b0010;
+localparam S3= 4'b0100;
+localparam S4= 4'b1000; // go find SMARK
 
 always @(posedge clk) begin
 	if(rst) begin
 		state<=S1;
-		rd_cnt<=0;
 		op_cnt<=0;
-		flg_data<=0;
-		space_flag <= 0; // output valid 
+		t_tmp <= 0;
+		v_tmp <= 0;
+		t_len <= 0;
+		v_len <= 0;
 	end else begin
-		flg_data<=0;
-		val_data<=0;
 		out1_valid <= 0; // output valid 
 		fifo_rd<=0;
 		op_cnt <= op_cnt + 1; 
@@ -119,30 +119,55 @@ always @(posedge clk) begin
 				state<=S2;
 				fifo_rd <= 1;
 				op_cnt <= 0; // count for flag data
-				out1_value <= 0;
-				space_flag=0;
+				t_tmp <= 0;
+				v_tmp <= 0;
 				end
 			end
 		S2: begin  // readout flag
 			fifo_rd <= 1;
-			if(fifo_rdata!=8'h3d) begin
-				flg_data <= {flg_data[23:0],fifo_rdata}; // temp store flag data
+			if(fifo_rdata==8'h00) begin // if readout 0x00, do nothing
+					op_cnt <= 0; // count for flag data
+					if(fifo_cnt==1) begin
+						state <= S1; // if no data, go to idle
+						fifo_rd <= 0;
+					end
 				end else begin
-				out1_tag<=flg_data; // store flag data in output
-				state<=S3; // check = '0x3d', go to value parser
-				out1_value <= 0;
-				end
+					if(fifo_rdata==8'h3d) begin // find '0x3d', go to value parser
+						state<=S3; 
+						op_cnt <= 0; 
+				  	t_len <= op_cnt;
+					end else begin
+						if(op_cnt>3) begin // tag > 32-bit, ignore it, go to S4  
+							state<=S4;       
+						end else begin  // store tag value
+							//out1_tag <= {out1_tag[23:0],fifo_rdata}; // temp store flag data
+							t_tmp <= {fifo_rdata,t_tmp[31:8]}; // temp store flag data
+						end
+					end
 			end
+		end
 		S3: begin
 			fifo_rd <= 1;
-			if(fifo_rdata == 8'h20) space_flag <= 1; 
-			if(go_idle) begin
+			if(fifo_rdata == SMARK) begin // find SMARK, go to idle
 				fifo_rd <= 0;
-				out1_valid <= 1; // output valid 
+				v_len <= op_cnt;
 				state<=S1;  
+				out1_valid <= 1; // output valid 
 			end else begin
-				if(~(fifo_rdata == 8'h20 || space_flag))
-					out1_value <= {out1_value[119:0],fifo_rdata}; // temp store value data
+				if(op_cnt > 15) begin  // not find SMARK, but enough value data
+					out1_valid <= 1; // output valid 
+					v_len <= op_cnt;
+					state<=S4;  
+				end else begin  // store value
+					v_tmp <= {fifo_rdata,v_tmp[127:8]}; 
+				end
+			end
+			end
+		S4: begin
+			fifo_rd <= 1;
+			if(fifo_rdata == SMARK) begin // find space SMARK, go to idle
+				state <= S1; 
+				fifo_rd <= 0;
 			end
 			end
 		default: state<=S1;
@@ -150,6 +175,41 @@ always @(posedge clk) begin
 	end
 end
 
-assign go_idle = rd_cnt%8 == 7 && (fifo_rdata == 8'h20 || space_flag);
+	assign out1_tag = t_conv(t_tmp,t_len);
+	assign out1_value = v_conv(v_tmp,v_len);
+
+	function [31:0] t_conv;
+		input [31:0] in;
+		input [6:0] len;
+		case(len)
+			7'b0000001: t_conv = in >> 3*8;
+			7'b0000010: t_conv = in >> 2*8;
+			7'b0000011: t_conv = in >> 1*8;
+				 default: t_conv = in >> 0*8;
+		endcase
+	endfunction
+
+	function [127:0] v_conv;
+		input [127:0] in;
+		input [6:0] len;
+		case(len)
+			7'b0000001: v_conv = in >> 15*8;
+			7'b0000010: v_conv = in >> 14*8;
+			7'b0000011: v_conv = in >> 13*8;
+			7'b0000100: v_conv = in >> 12*8;
+			7'b0000101: v_conv = in >> 11*8;
+			7'b0000110: v_conv = in >> 10*8;
+			7'b0000111: v_conv = in >>  9*8;
+			7'b0001000: v_conv = in >>  8*8;
+			7'b0001001: v_conv = in >>  7*8;
+			7'b0001010: v_conv = in >>  6*8;
+			7'b0001011: v_conv = in >>  5*8;
+			7'b0001100: v_conv = in >>  4*8;
+			7'b0001101: v_conv = in >>  3*8;
+			7'b0001110: v_conv = in >>  2*8;
+			7'b0001111: v_conv = in >>  1*8;
+				 default: v_conv = in >>  0*8;
+		endcase
+	endfunction
 
 endmodule
