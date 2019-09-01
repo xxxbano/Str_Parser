@@ -94,8 +94,8 @@ always @(posedge clk) begin
 		wr_cnt<=0;
 		rd_cnt<=0;
 	end else begin
-		if(fifo_wr) wr_cnt <= wr_cnt + 8 + pos;
 		if(fifo_wr_dummy) wr_cnt <= wr_cnt + ext_fill+1; // last dummy write
+		else if(fifo_wr) wr_cnt <= wr_cnt + 8 + pos;
 		if(fifo_rd) rd_cnt <= rd_cnt + 8;
 	end
 end
