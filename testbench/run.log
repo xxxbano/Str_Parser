@@ -1,5 +1,5 @@
 # vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
-# Start time: 13:16:30 on Sep 01,2019
+# Start time: 18:31:46 on Sep 01,2019
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
 # //
@@ -27,41 +27,45 @@
 # INFO:  [13990][parser_op_ut]: RUNNING
 # INFO:  [13990][parser_op_ut]: test_rst::RUNNING
 # INFO:  [14030][parser_op_ut]: test_rst::PASSED
-# INFO:  [14030][parser_op_ut]: test_8_bit_tag::RUNNING
-# INFO:  [14090][parser_op_ut]: test_8_bit_tag::PASSED
-# INFO:  [14090][parser_op_ut]: test_16_bit_tag::RUNNING
-# INFO:  [14140][parser_op_ut]: test_16_bit_tag::PASSED
-# INFO:  [14140][parser_op_ut]: test_24_bit_tag::RUNNING
-# INFO:  [14210][parser_op_ut]: test_24_bit_tag::PASSED
-# INFO:  [14210][parser_op_ut]: test_32_bit_tag::RUNNING
-# INFO:  [14280][parser_op_ut]: test_32_bit_tag::PASSED
-# INFO:  [14280][parser_op_ut]: test_random_400::RUNNING
-# INFO:  [21240][parser_op_ut]: test_random_400::PASSED
-# INFO:  [21240][parser_ut]: RUNNING
-# INFO:  [21240][parser_ut]: test_rst::RUNNING
-# INFO:  [21280][parser_ut]: test_rst::PASSED
-# INFO:  [21280][parser_ut]: test_2_continus_case_empty_0::RUNNING
-# INFO:  [21730][parser_ut]: test_2_continus_case_empty_0::PASSED
-# INFO:  [21730][parser_ut]: test_2_continus_case_empty_1::RUNNING
-# INFO:  [22170][parser_ut]: test_2_continus_case_empty_1::PASSED
-# INFO:  [22170][parser_ut]: test_2_continus_case_empty_3::RUNNING
-# INFO:  [22590][parser_ut]: test_2_continus_case_empty_3::PASSED
-# INFO:  [22590][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
-# INFO:  [23030][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
-# INFO:  [23030][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
-# INFO:  [23540][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
-# INFO:  [23540][parser_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
-# INFO:  [24010][parser_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
-# INFO:  [24010][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
-# INFO:  [24500][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
-# INFO:  [24500][parser_ut]: test_random_200::RUNNING
-# INFO:  [61890][parser_ut]: test_random_200::PASSED
-# INFO:  [61890][parser_op_dual_ut]: PASSED (2 of 2 tests passing)
-# INFO:  [61890][parser_op_ut]: PASSED (6 of 6 tests passing)
-# INFO:  [61890][parser_ut]: PASSED (9 of 9 tests passing)
+# INFO:  [14030][parser_op_ut]: test_2_continus_case_empty_0::RUNNING
+# INFO:  [14140][parser_op_ut]: test_2_continus_case_empty_0::PASSED
+# INFO:  [14140][parser_op_ut]: test_2_continus_case_empty_1::RUNNING
+# INFO:  [14250][parser_op_ut]: test_2_continus_case_empty_1::PASSED
+# INFO:  [14250][parser_op_ut]: test_2_continus_case_empty_3::RUNNING
+# INFO:  [14350][parser_op_ut]: test_2_continus_case_empty_3::PASSED
+# INFO:  [14350][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
+# INFO:  [14460][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
+# INFO:  [14460][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
+# INFO:  [14560][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
+# INFO:  [14560][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
+# INFO:  [14670][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
+# INFO:  [14670][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
+# INFO:  [14780][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
+# INFO:  [14780][parser_ut]: RUNNING
+# INFO:  [14780][parser_ut]: test_rst::RUNNING
+# INFO:  [14820][parser_ut]: test_rst::PASSED
+# INFO:  [14820][parser_ut]: test_2_continus_case_empty_0::RUNNING
+# INFO:  [15270][parser_ut]: test_2_continus_case_empty_0::PASSED
+# INFO:  [15270][parser_ut]: test_2_continus_case_empty_1::RUNNING
+# INFO:  [15710][parser_ut]: test_2_continus_case_empty_1::PASSED
+# INFO:  [15710][parser_ut]: test_2_continus_case_empty_3::RUNNING
+# INFO:  [16130][parser_ut]: test_2_continus_case_empty_3::PASSED
+# INFO:  [16130][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
+# INFO:  [16570][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
+# INFO:  [16570][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
+# INFO:  [17080][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
+# INFO:  [17080][parser_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
+# INFO:  [17550][parser_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
+# INFO:  [17550][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
+# INFO:  [18040][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
+# INFO:  [18040][parser_ut]: test_random_200::RUNNING
+# INFO:  [54790][parser_ut]: test_random_200::PASSED
+# INFO:  [54790][parser_op_dual_ut]: PASSED (2 of 2 tests passing)
+# INFO:  [54790][parser_op_ut]: PASSED (8 of 8 tests passing)
+# INFO:  [54790][parser_ut]: PASSED (9 of 9 tests passing)
 # 
-# INFO:  [61890][__ts]: PASSED (3 of 3 testcases passing)
+# INFO:  [54790][__ts]: PASSED (3 of 3 testcases passing)
 # 
-# INFO:  [61890][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
+# INFO:  [54790][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
 # ** Note: $finish    : .testrunner.sv(40)
-#    Time: 61890 ns  Iteration: 1  Instance: /testrunner
+#    Time: 54790 ns  Iteration: 1  Instance: /testrunner
