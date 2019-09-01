@@ -44,7 +44,56 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
 - How to make Version 2 handle general string case?
 
 #### Waveform from UnitTest
-##### parser: Version 1
+##### [parser_op.v](rtl/parser_op.v): Version 2
+###### test_2_continus_case_empty_0. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef1123456789abcdef 3d 1234 01 1123456789abcdef1123456789abcdef 3d 12345678
+- 1st output: tag: 12345678 value: 1123456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0001456789abcdef1123456789abcdef
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig31.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig32.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig33.png "Logo Title Text 1")
+###### test_2_continus_case_empty_1. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678
+- 1st output: tag: 12345678 value: 0123456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0001456789abcdef1123456789abcdef
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig34.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig35.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig36.png "Logo Title Text 1")
+###### test_2_continus_case_empty_3. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 89abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678;
+- 1st output: tag: 12345678 value: 0123456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0000000189abcdef1123456789abcdef
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig37.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig38.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig39.png "Logo Title Text 1")
+###### test_2_continus_case_ignore_1st_for_5B_tag. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef2123456789abcdef 3d 1234 01 23456789abcdef2123456789abcd 3d ef12345678;;
+- 1st output: ignored
+- 2nd output: tag: 00001234 value: 0001456789abcdef1123456789abcdef
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig40.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig41.png "Logo Title Text 1")
+###### test_2_continus_case_ignore_2nd_for_5B_tag. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef1123456789abcd 3d ef12345678 01 23456789abcdef1123456789abcdef 3d 1234;
+- 1st output: tag: 00001234 value: 0123456789abcdef1123456789abcdef
+- 2nd output: ignored
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig42.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig43.png "Logo Title Text 1")
+###### test_2_continus_case_1st_ignore_17B_value. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 23456789abcdef1123456789abcdef 3d 1234 01 ff1123456789abcdef1123456789abcdef 3d 12345678;
+- 1st output: tag: 12345678 value: 1123456789abcdef1123456789abcdef, ignored 'ff'
+- 2nd output: tag: 00001234 value: 0123456789abcdef1123456789abcdef
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig44.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig45.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig46.png "Logo Title Text 1")
+###### test_2_continus_case_2nd_ignore_17B_value. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 ff1123456789abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678;;
+- 1st output: tag: 12345678 value: 0123456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 1123456789abcdef1123456789abcdef, ignored 'ff'
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig47.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig48.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig49.png "Logo Title Text 1")
+
+##### [parser.v](rtl/parser.v): Version 1
 ###### test_2_continus_case_empty_0. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
 - Input: 01 456789abcdef1123456789abcdef 3d 1234 01 1123456789abcdef1123456789abcdef 3d 12345678
 - 1st output: tag: 12345678 value: 1123456789abcdef1123456789abcdef
@@ -97,18 +146,6 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig29.png "Logo Title Text 1")
 ###### Random test. 1-4-byte tag, 1-16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig30.png "Logo Title Text 1")
-
-##### parser_op: Version 2
-###### 1-byte tag test
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig4.png "Logo Title Text 1")
-###### 2-byte tag test
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig5.png "Logo Title Text 1")
-###### 3-byte tag test
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig6.png "Logo Title Text 1")
-###### 4-byte tag test
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig7.png "Logo Title Text 1")
-###### Random test. 1-4-byte tag, 1-16-byte value
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig8.png "Logo Title Text 1")
 
 ##### parser_op_dual: Version 3
 Input Hex: 000000000000208F 1277E5AAC5C6F98C ED760D013D12658D; '='='3D',' '='20' => out_tag=12658D,out_value=0000208F 1277E5AAC5C6F98C ED760D01
