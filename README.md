@@ -53,24 +53,42 @@ test_2_continus_case_empty_0. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd o
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig10.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig11.png "Logo Title Text 1")
 test_2_continus_case_empty_1. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678
+- 1st output: tag: 12345678 value: 0023456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0000456789abcdef1123456789abcdef
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig12.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig13.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig14.png "Logo Title Text 1")
 test_2_continus_case_empty_3. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 89abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678;
+- 1st output: tag: 12345678 value: 0023456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0000000089abcdef1123456789abcdef
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig15.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig16.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig17.png "Logo Title Text 1")
 test_2_continus_case_ignore_1st_for_5B_tag. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef2123456789abcdef 3d 1234 01 23456789abcdef2123456789abcd 3d ef12345678;;
+- 1st output: ignored
+- 2nd output: tag: 00001234 value: 0000456789abcdef1123456789abcdef
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig18.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig19.png "Logo Title Text 1")
 test_2_continus_case_ignore_2nd_for_5B_tag. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 456789abcdef1123456789abcd 3d ef12345678 01 23456789abcdef1123456789abcdef 3d 1234;
+- 1st output: tag: 00001234 value: 0023456789abcdef1123456789abcdef
+- 2nd output: ignored
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig20.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig21.png "Logo Title Text 1")
 test_2_continus_case_1st_ignore_17B_value. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 23456789abcdef1123456789abcdef 3d 1234 01 ff1123456789abcdef1123456789abcdef 3d 12345678;
+- 1st output: tag: 12345678 value: 1123456789abcdef1123456789abcdef, ignored 'ff'
+- 2nd output: tag: 00001234 value: 0023456789abcdef1123456789abcdef
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig22.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig23.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig24.png "Logo Title Text 1")
 test_2_continus_case_2nd_ignore_17B_value. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
+- Input: 01 ff1123456789abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678;;
+- 1st output: tag: 12345678 value: 0023456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 1123456789abcdef1123456789abcdef, ignored 'ff'
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig25.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig26.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig27.png "Logo Title Text 1")
