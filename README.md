@@ -15,7 +15,7 @@ let's say $ => ascii'0x01'. The string is terminated with a $.
   - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf")
   - The input has a complex combinatin logic. Should be took care in a real project.
 - [parser_op_dual.v](rtl/parser_op_dual.v): 
-  - Version 3 based on Version 2. dual channel mode. 
+  - Version 3 based on a old Version 2. dual channel mode. 
   - Low latency. 
   - But, based on old Version 2. Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
   - The dual channel mode idea can be applied on Version 1 and 2.
