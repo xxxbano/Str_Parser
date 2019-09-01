@@ -299,7 +299,7 @@ module parser_unit_test;
   step(28);
   `SVTEST_END
 
-  `SVTEST(test_2_continus_case_1st_ignore_9B_value)
+  `SVTEST(test_2_continus_case_1st_ignore_17B_value)
 	// initial test data
 	res_t0 = 32'h12345678; 
 	res_v0 = 128'h1123456789abcdef1123456789abcdef; 
@@ -339,7 +339,7 @@ module parser_unit_test;
 	`FAIL_UNLESS_EQUAL(out1_value,res_v1);
   `SVTEST_END
 
-  `SVTEST(test_2_continus_case_2nd_ignore_9B_value)
+  `SVTEST(test_2_continus_case_2nd_ignore_17B_value)
 	// initial test data
 	res_t0 = 32'h12345678; 
 	res_v0 = 128'h0023456789abcdef1123456789abcdef;

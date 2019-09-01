@@ -1,5 +1,5 @@
 # vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
-# Start time: 11:58:41 on Sep 01,2019
+# Start time: 13:16:30 on Sep 01,2019
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
 # //
@@ -50,10 +50,10 @@
 # INFO:  [23030][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
 # INFO:  [23030][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
 # INFO:  [23540][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
-# INFO:  [23540][parser_ut]: test_2_continus_case_1st_ignore_9B_value::RUNNING
-# INFO:  [24010][parser_ut]: test_2_continus_case_1st_ignore_9B_value::PASSED
-# INFO:  [24010][parser_ut]: test_2_continus_case_2nd_ignore_9B_value::RUNNING
-# INFO:  [24500][parser_ut]: test_2_continus_case_2nd_ignore_9B_value::PASSED
+# INFO:  [23540][parser_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
+# INFO:  [24010][parser_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
+# INFO:  [24010][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
+# INFO:  [24500][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
 # INFO:  [24500][parser_ut]: test_random_200::RUNNING
 # INFO:  [61890][parser_ut]: test_random_200::PASSED
 # INFO:  [61890][parser_op_dual_ut]: PASSED (2 of 2 tests passing)
