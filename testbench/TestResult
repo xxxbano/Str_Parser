@@ -10,7 +10,7 @@ SVUNIT: Creating instances for:
 SVUNIT:   __testsuite
 cd .; vlib work; vlog -l compile.log  -f .svunit.f +define+SVUNIT_VERSION='"SVUnit v3.26"' ; vsim -sdfnoerror -c -lib work -do "run -all; quit" -l run.log testrunner
 Model Technology ModelSim SE-64 vlog 10.3 Compiler 2014.01 Jan  6 2014
-Start time: 01:02:42 on Sep 02,2019
+Start time: 10:12:58 on Sep 02,2019
 vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26" 
 -- Compiling package svunit_pkg
 -- Compiling module fifo
@@ -29,14 +29,14 @@ vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26"
 
 Top level modules:
 	testrunner
-End time: 01:02:43 on Sep 02,2019
+End time: 10:12:58 on Sep 02,2019
 Errors: 0, Warnings: 1
 Reading pref.tcl 
 
 # 10.3
 
 # vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
-# Start time: 01:02:45 on Sep 02,2019
+# Start time: 10:13:01 on Sep 02,2019
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
 # //
@@ -65,44 +65,44 @@ Reading pref.tcl
 # INFO:  [13990][parser_op_ut]: test_rst::RUNNING
 # INFO:  [14030][parser_op_ut]: test_rst::PASSED
 # INFO:  [14030][parser_op_ut]: test_2_continus_case_empty_0::RUNNING
-# INFO:  [14140][parser_op_ut]: test_2_continus_case_empty_0::PASSED
-# INFO:  [14140][parser_op_ut]: test_2_continus_case_empty_1::RUNNING
-# INFO:  [14250][parser_op_ut]: test_2_continus_case_empty_1::PASSED
-# INFO:  [14250][parser_op_ut]: test_2_continus_case_empty_3::RUNNING
-# INFO:  [14350][parser_op_ut]: test_2_continus_case_empty_3::PASSED
-# INFO:  [14350][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
-# INFO:  [14480][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
-# INFO:  [14480][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
-# INFO:  [14580][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
-# INFO:  [14580][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
-# INFO:  [14690][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
-# INFO:  [14690][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
-# INFO:  [14850][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
-# INFO:  [14850][parser_ut]: RUNNING
-# INFO:  [14850][parser_ut]: test_rst::RUNNING
-# INFO:  [14890][parser_ut]: test_rst::PASSED
-# INFO:  [14890][parser_ut]: test_2_continus_case_empty_0::RUNNING
-# INFO:  [15340][parser_ut]: test_2_continus_case_empty_0::PASSED
-# INFO:  [15340][parser_ut]: test_2_continus_case_empty_1::RUNNING
-# INFO:  [15780][parser_ut]: test_2_continus_case_empty_1::PASSED
-# INFO:  [15780][parser_ut]: test_2_continus_case_empty_3::RUNNING
-# INFO:  [16200][parser_ut]: test_2_continus_case_empty_3::PASSED
-# INFO:  [16200][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
-# INFO:  [16640][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
-# INFO:  [16640][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
-# INFO:  [17150][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
-# INFO:  [17150][parser_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
-# INFO:  [17620][parser_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
-# INFO:  [17620][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
-# INFO:  [18110][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
-# INFO:  [18110][parser_ut]: test_random_200::RUNNING
-# INFO:  [54860][parser_ut]: test_random_200::PASSED
-# INFO:  [54860][parser_op_dual_ut]: PASSED (2 of 2 tests passing)
-# INFO:  [54860][parser_op_ut]: PASSED (8 of 8 tests passing)
-# INFO:  [54860][parser_ut]: PASSED (9 of 9 tests passing)
+# INFO:  [14150][parser_op_ut]: test_2_continus_case_empty_0::PASSED
+# INFO:  [14150][parser_op_ut]: test_2_continus_case_empty_1::RUNNING
+# INFO:  [14270][parser_op_ut]: test_2_continus_case_empty_1::PASSED
+# INFO:  [14270][parser_op_ut]: test_2_continus_case_empty_3::RUNNING
+# INFO:  [14410][parser_op_ut]: test_2_continus_case_empty_3::PASSED
+# INFO:  [14410][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
+# INFO:  [14530][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
+# INFO:  [14530][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
+# INFO:  [14650][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
+# INFO:  [14650][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
+# INFO:  [14770][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
+# INFO:  [14770][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
+# INFO:  [14890][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
+# INFO:  [14890][parser_ut]: RUNNING
+# INFO:  [14890][parser_ut]: test_rst::RUNNING
+# INFO:  [14930][parser_ut]: test_rst::PASSED
+# INFO:  [14930][parser_ut]: test_2_continus_case_empty_0::RUNNING
+# INFO:  [15380][parser_ut]: test_2_continus_case_empty_0::PASSED
+# INFO:  [15380][parser_ut]: test_2_continus_case_empty_1::RUNNING
+# INFO:  [15820][parser_ut]: test_2_continus_case_empty_1::PASSED
+# INFO:  [15820][parser_ut]: test_2_continus_case_empty_3::RUNNING
+# INFO:  [16240][parser_ut]: test_2_continus_case_empty_3::PASSED
+# INFO:  [16240][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
+# INFO:  [16680][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
+# INFO:  [16680][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
+# INFO:  [17190][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
+# INFO:  [17190][parser_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
+# INFO:  [17660][parser_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
+# INFO:  [17660][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
+# INFO:  [18150][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
+# INFO:  [18150][parser_ut]: test_random_200::RUNNING
+# INFO:  [54900][parser_ut]: test_random_200::PASSED
+# INFO:  [54900][parser_op_dual_ut]: PASSED (2 of 2 tests passing)
+# INFO:  [54900][parser_op_ut]: PASSED (8 of 8 tests passing)
+# INFO:  [54900][parser_ut]: PASSED (9 of 9 tests passing)
 # 
-# INFO:  [54860][__ts]: PASSED (3 of 3 testcases passing)
+# INFO:  [54900][__ts]: PASSED (3 of 3 testcases passing)
 # 
-# INFO:  [54860][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
+# INFO:  [54900][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
 # ** Note: $finish    : .testrunner.sv(40)
-#    Time: 54860 ns  Iteration: 1  Instance: /testrunner
+#    Time: 54900 ns  Iteration: 1  Instance: /testrunner

@@ -21,7 +21,7 @@ module parser_op_unit_test;
   logic avl_st_rx_sop;
   logic avl_st_rx_eop;
   logic [2:0] avl_st_rx_empty;
-  logic   rdy;
+  //logic   rdy;
   
   logic   out1_valid;
   logic [ 31:0]  out1_tag;
@@ -328,13 +328,13 @@ module parser_op_unit_test;
 	step(1); nextSamplePoint(); 
 	avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 1; 
 	avl_st_rx_data = wdata[63:0]; 
+	step(1); nextSamplePoint(); 
+	avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
 	while(out1_valid!=1) step(1);
 	`FAIL_UNLESS_EQUAL(out1_valid,1);
 	`FAIL_UNLESS_EQUAL(out1_tag,res_t0);
 	`FAIL_UNLESS_EQUAL(out1_value,res_v0);
-	step(1); nextSamplePoint(); 
-	avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	step(1);
+	step(2);
 	while(out1_valid!=1) step(1);
 	`FAIL_UNLESS_EQUAL(out1_valid,1);
 	`FAIL_UNLESS_EQUAL(out1_tag,res_t1);
@@ -343,7 +343,7 @@ module parser_op_unit_test;
 
   `SVTEST(test_2_continus_case_2nd_ignore_17B_value)
 	// initial test data
-	while(rdy!=1) step(1);
+	//while(rdy!=1) step(1);
 	res_t0 = 32'h12345678; 
 	res_v0 = 128'h0123456789abcdef1123456789abcdef;
 	res_t1 = 32'h00001234; 
@@ -386,7 +386,7 @@ module parser_op_unit_test;
 
 //	initial begin
 //		//$monitor("%d, %b, %x, %x, %x, %x,%d,%d",$stime,clk, res_tag, res_value, wdata,tmp8,eq_pos,sp_pos);
-//		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%x,%x,%d,%x,%x,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",$stime,my_parser_op.clk, my_parser_op.rst, my_parser_op.avl_st_rx_valid,my_parser_op.avl_st_rx_data,my_parser_op.avl_st_rx_sop,my_parser_op.avl_st_rx_eop,my_parser_op.avl_st_rx_empty,my_parser_op.out1_valid,my_parser_op.out1_tag,my_parser_op.out1_value,my_parser_op.out2_valid,my_parser_op.out2_tag,my_parser_op.out2_value, rd_cnt,my_parser_op.state,my_parser_op.op_cnt,my_parser_op.rd_cnt,my_parser_op.buf_rdata,my_parser_op.buf_wdata,my_parser_op.tmp_data,res_tag,res_value,my_parser_op.buf_wr,my_parser_op.buf_rd,my_parser_op.pos,my_parser_op.fifo_wdata,my_parser_op.wr_cnt,my_parser_op.buf_idata,my_parser_op.fifo_cnt,my_parser_op.buf_count,my_parser_op.rdy,my_parser_op.mem_zero);
+//		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%x,%x,%d,%x,%x,%d,%d,%d,%d,%d,%d,%d,%dd",$stime,my_parser_op.clk, my_parser_op.rst, my_parser_op.avl_st_rx_valid,my_parser_op.avl_st_rx_data,my_parser_op.avl_st_rx_sop,my_parser_op.avl_st_rx_eop,my_parser_op.avl_st_rx_empty,my_parser_op.out1_valid,my_parser_op.out1_tag,my_parser_op.out1_value,my_parser_op.out2_valid,my_parser_op.out2_tag,my_parser_op.out2_value, rd_cnt,my_parser_op.state,my_parser_op.op_cnt,my_parser_op.rd_cnt,my_parser_op.buf_rdata,my_parser_op.buf_wdata,my_parser_op.tmp_data,res_tag,res_value,my_parser_op.buf_wr,my_parser_op.buf_rd,my_parser_op.pos,my_parser_op.fifo_wdata,my_parser_op.wr_cnt,my_parser_op.fifo_cnt,my_parser_op.buf_count,my_parser_op.mem_zero);
 //		//$monitor("%d, %b, %b, %b, %b",$stime,clk, rst, en,wr);
 //		$dumpfile("parser.vcd");
 //		$dumpvars(0,parser_op_unit_test.my_parser_op);

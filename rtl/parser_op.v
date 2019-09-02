@@ -15,7 +15,6 @@ module parser_op #(
 )(
   input wire clk,
   input wire rst,
-  output wire rdy,
 
   input wire avl_st_rx_valid,
   input wire [63:0] avl_st_rx_data,
@@ -83,8 +82,7 @@ assign cur_data[47:40]=m[rd_cnt[MSIZE-1:0]+5];
 assign cur_data[55:48]=m[rd_cnt[MSIZE-1:0]+6];
 assign cur_data[63:56]=m[rd_cnt[MSIZE-1:0]+7];
 assign pos = sm_pos(cur_data);// check SMARK position 
-assign mem_zero=m[rd_cnt[MSIZE-1:0]]===0;// check mem data is zero
-assign rdy = ~full && ~mem_zero; // while fifo full and clean up zero, parser is not ready
+assign mem_zero = m[rd_cnt[MSIZE-1:0]]===0;// check mem data is zero
 
 // fifo write control
 always @(posedge clk) begin
@@ -209,7 +207,7 @@ fifo #(.DSIZE(64), .MSIZE(8)) i_buf(
 
 
 reg [5:0] op_cnt;
-reg [63:0] flg_data;
+reg [63:0] tag_data;
 reg [191:0] tmp_data;
 reg [3:0] state;
 localparam S1= 4'b0001;
@@ -222,7 +220,7 @@ always @(posedge clk) begin
 		state<=S1;
 		op_cnt<=0;
 		buf_rd<=0;
-		flg_data<=0;
+		tag_data<=0;
 		tmp_data<=0;
 	end else begin
 		out1_valid <= 0; // output valid 
@@ -231,7 +229,7 @@ always @(posedge clk) begin
 		
 		case(state)
 		S1: begin  // idle
-			if(fifo_cnt) begin
+			if(buf_count && ~mem_zero) begin
 				state<=S2;
 				buf_rd <= 1;
 				tmp_data <= 0;
@@ -240,20 +238,15 @@ always @(posedge clk) begin
 		S2: begin  // readout flag
 			buf_rd <= 1;
 			op_cnt <= 0; 
-			flg_data <= buf_rdata; // store 1st 64-bit for tag parser 
+			tag_data <= buf_rdata; // store 1st 64-bit for tag parser 
 			tmp_data[63:0] <= buf_rdata; // store 1st 64-bit for value parser 
 
 			if(eq_pos(buf_rdata)>5) begin // invalid tag length
-				if(fifo_cnt==8) begin
-					state <= S1; // last data, go to idle 
-					buf_rd <= 0;
-				end else begin
-					state <= S4; // no SMARK, go to S4 clean up
-				end
-
 				if(sm_check(buf_rdata)) begin // if has SMARK, go to idle
 					state<=S1;
 					buf_rd <= 0;
+				end else begin
+					state <= S4; // no SMARK, go to S4 clean up
 				end
 			end else begin  // valid tag length
 				state <= S3;
@@ -281,7 +274,7 @@ always @(posedge clk) begin
 		end
 		S4: begin
 			buf_rd <= 1;
-			if(sm_check(buf_rdata) || fifo_cnt==8) begin // find SMARK, go to idle 
+			if(sm_check(buf_rdata) || mem_zero) begin // find SMARK, go to idle 
 				state<=S1;
 				buf_rd <= 0;
 			end
@@ -291,7 +284,7 @@ always @(posedge clk) begin
 	end
 end
 
-assign out1_tag = tag_parser(flg_data);
+assign out1_tag = tag_parser(tag_data);
 assign out1_value = value_parser(tmp_data);
 	
 // return position of SMARK
