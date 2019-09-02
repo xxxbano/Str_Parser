@@ -4,7 +4,7 @@
 // 
 // Two layers of buffer
 // 1st layer store raw data
-// 2st layer receiver arranged data by parsing SMARK
+// 2st layer receive arranged data by parsing SMARK
 // At last, be able to parse data in 64-bit length
 //////////////////////////////////
 
