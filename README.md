@@ -18,7 +18,7 @@ let's say $ => ascii'0x01'. The string is terminated with a $.
   - Low latency. 
   - But, based on old Version 2. Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
   - The dual channel mode idea can be applied on Version 1 and 2.
-- [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 3.
+- [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 2 and 3.
 ##### UnitTest files:
 Random Test Method: Randomly generate out_tag and out_value, and concatenate them to form a string package by following the parsing rules. Then, input the string package to the target parser. At last, verify the output with the generated result.
 - [parser_unit_test.sv](testbench/parser_unit_test.sv): 
