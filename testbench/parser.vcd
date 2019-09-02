@@ -1,5 +1,5 @@
 $date
-	Sun Sep  1 18:10:54 2019
+	Mon Sep  2 00:51:28 2019
 $end
 $version
 	ModelSim Version 10.3
@@ -17,156 +17,105 @@ $scope module parser_op_ut $end
 $scope module my_parser_op $end
 $var wire 1 ! clk $end
 $var wire 1 " rst $end
-$var wire 1 # avl_st_rx_valid $end
-$var wire 1 $ avl_st_rx_data [63] $end
-$var wire 1 % avl_st_rx_data [62] $end
-$var wire 1 & avl_st_rx_data [61] $end
-$var wire 1 ' avl_st_rx_data [60] $end
-$var wire 1 ( avl_st_rx_data [59] $end
-$var wire 1 ) avl_st_rx_data [58] $end
-$var wire 1 * avl_st_rx_data [57] $end
-$var wire 1 + avl_st_rx_data [56] $end
-$var wire 1 , avl_st_rx_data [55] $end
-$var wire 1 - avl_st_rx_data [54] $end
-$var wire 1 . avl_st_rx_data [53] $end
-$var wire 1 / avl_st_rx_data [52] $end
-$var wire 1 0 avl_st_rx_data [51] $end
-$var wire 1 1 avl_st_rx_data [50] $end
-$var wire 1 2 avl_st_rx_data [49] $end
-$var wire 1 3 avl_st_rx_data [48] $end
-$var wire 1 4 avl_st_rx_data [47] $end
-$var wire 1 5 avl_st_rx_data [46] $end
-$var wire 1 6 avl_st_rx_data [45] $end
-$var wire 1 7 avl_st_rx_data [44] $end
-$var wire 1 8 avl_st_rx_data [43] $end
-$var wire 1 9 avl_st_rx_data [42] $end
-$var wire 1 : avl_st_rx_data [41] $end
-$var wire 1 ; avl_st_rx_data [40] $end
-$var wire 1 < avl_st_rx_data [39] $end
-$var wire 1 = avl_st_rx_data [38] $end
-$var wire 1 > avl_st_rx_data [37] $end
-$var wire 1 ? avl_st_rx_data [36] $end
-$var wire 1 @ avl_st_rx_data [35] $end
-$var wire 1 A avl_st_rx_data [34] $end
-$var wire 1 B avl_st_rx_data [33] $end
-$var wire 1 C avl_st_rx_data [32] $end
-$var wire 1 D avl_st_rx_data [31] $end
-$var wire 1 E avl_st_rx_data [30] $end
-$var wire 1 F avl_st_rx_data [29] $end
-$var wire 1 G avl_st_rx_data [28] $end
-$var wire 1 H avl_st_rx_data [27] $end
-$var wire 1 I avl_st_rx_data [26] $end
-$var wire 1 J avl_st_rx_data [25] $end
-$var wire 1 K avl_st_rx_data [24] $end
-$var wire 1 L avl_st_rx_data [23] $end
-$var wire 1 M avl_st_rx_data [22] $end
-$var wire 1 N avl_st_rx_data [21] $end
-$var wire 1 O avl_st_rx_data [20] $end
-$var wire 1 P avl_st_rx_data [19] $end
-$var wire 1 Q avl_st_rx_data [18] $end
-$var wire 1 R avl_st_rx_data [17] $end
-$var wire 1 S avl_st_rx_data [16] $end
-$var wire 1 T avl_st_rx_data [15] $end
-$var wire 1 U avl_st_rx_data [14] $end
-$var wire 1 V avl_st_rx_data [13] $end
-$var wire 1 W avl_st_rx_data [12] $end
-$var wire 1 X avl_st_rx_data [11] $end
-$var wire 1 Y avl_st_rx_data [10] $end
-$var wire 1 Z avl_st_rx_data [9] $end
-$var wire 1 [ avl_st_rx_data [8] $end
-$var wire 1 \ avl_st_rx_data [7] $end
-$var wire 1 ] avl_st_rx_data [6] $end
-$var wire 1 ^ avl_st_rx_data [5] $end
-$var wire 1 _ avl_st_rx_data [4] $end
-$var wire 1 ` avl_st_rx_data [3] $end
-$var wire 1 a avl_st_rx_data [2] $end
-$var wire 1 b avl_st_rx_data [1] $end
-$var wire 1 c avl_st_rx_data [0] $end
-$var wire 1 d avl_st_rx_sop $end
-$var wire 1 e avl_st_rx_eop $end
-$var wire 1 f avl_st_rx_empty [2] $end
-$var wire 1 g avl_st_rx_empty [1] $end
-$var wire 1 h avl_st_rx_empty [0] $end
-$var reg 1 i out1_valid $end
-$var reg 32 j out1_tag [31:0] $end
-$var reg 128 k out1_value [127:0] $end
-$var reg 1 l out2_valid $end
-$var reg 32 m out2_tag [31:0] $end
-$var reg 128 n out2_value [127:0] $end
-$var reg 10 o rd_cnt [9:0] $end
-$var wire 1 p fifo_rdata [63] $end
-$var wire 1 q fifo_rdata [62] $end
-$var wire 1 r fifo_rdata [61] $end
-$var wire 1 s fifo_rdata [60] $end
-$var wire 1 t fifo_rdata [59] $end
-$var wire 1 u fifo_rdata [58] $end
-$var wire 1 v fifo_rdata [57] $end
-$var wire 1 w fifo_rdata [56] $end
-$var wire 1 x fifo_rdata [55] $end
-$var wire 1 y fifo_rdata [54] $end
-$var wire 1 z fifo_rdata [53] $end
-$var wire 1 { fifo_rdata [52] $end
-$var wire 1 | fifo_rdata [51] $end
-$var wire 1 } fifo_rdata [50] $end
-$var wire 1 ~ fifo_rdata [49] $end
-$var wire 1 !! fifo_rdata [48] $end
-$var wire 1 "! fifo_rdata [47] $end
-$var wire 1 #! fifo_rdata [46] $end
-$var wire 1 $! fifo_rdata [45] $end
-$var wire 1 %! fifo_rdata [44] $end
-$var wire 1 &! fifo_rdata [43] $end
-$var wire 1 '! fifo_rdata [42] $end
-$var wire 1 (! fifo_rdata [41] $end
-$var wire 1 )! fifo_rdata [40] $end
-$var wire 1 *! fifo_rdata [39] $end
-$var wire 1 +! fifo_rdata [38] $end
-$var wire 1 ,! fifo_rdata [37] $end
-$var wire 1 -! fifo_rdata [36] $end
-$var wire 1 .! fifo_rdata [35] $end
-$var wire 1 /! fifo_rdata [34] $end
-$var wire 1 0! fifo_rdata [33] $end
-$var wire 1 1! fifo_rdata [32] $end
-$var wire 1 2! fifo_rdata [31] $end
-$var wire 1 3! fifo_rdata [30] $end
-$var wire 1 4! fifo_rdata [29] $end
-$var wire 1 5! fifo_rdata [28] $end
-$var wire 1 6! fifo_rdata [27] $end
-$var wire 1 7! fifo_rdata [26] $end
-$var wire 1 8! fifo_rdata [25] $end
-$var wire 1 9! fifo_rdata [24] $end
-$var wire 1 :! fifo_rdata [23] $end
-$var wire 1 ;! fifo_rdata [22] $end
-$var wire 1 <! fifo_rdata [21] $end
-$var wire 1 =! fifo_rdata [20] $end
-$var wire 1 >! fifo_rdata [19] $end
-$var wire 1 ?! fifo_rdata [18] $end
-$var wire 1 @! fifo_rdata [17] $end
-$var wire 1 A! fifo_rdata [16] $end
-$var wire 1 B! fifo_rdata [15] $end
-$var wire 1 C! fifo_rdata [14] $end
-$var wire 1 D! fifo_rdata [13] $end
-$var wire 1 E! fifo_rdata [12] $end
-$var wire 1 F! fifo_rdata [11] $end
-$var wire 1 G! fifo_rdata [10] $end
-$var wire 1 H! fifo_rdata [9] $end
-$var wire 1 I! fifo_rdata [8] $end
-$var wire 1 J! fifo_rdata [7] $end
-$var wire 1 K! fifo_rdata [6] $end
-$var wire 1 L! fifo_rdata [5] $end
-$var wire 1 M! fifo_rdata [4] $end
-$var wire 1 N! fifo_rdata [3] $end
-$var wire 1 O! fifo_rdata [2] $end
-$var wire 1 P! fifo_rdata [1] $end
-$var wire 1 Q! fifo_rdata [0] $end
-$var wire 1 R! fifo_wr $end
-$var wire 1 S! equal $end
-$var wire 1 T! full $end
-$var wire 1 U! empty $end
-$var reg 6 V! op_cnt [5:0] $end
-$var reg 192 W! tmp_data [191:0] $end
-$var reg 4 X! state [3:0] $end
+$var wire 1 # rdy $end
+$var wire 1 $ avl_st_rx_valid $end
+$var wire 1 % avl_st_rx_data [63] $end
+$var wire 1 & avl_st_rx_data [62] $end
+$var wire 1 ' avl_st_rx_data [61] $end
+$var wire 1 ( avl_st_rx_data [60] $end
+$var wire 1 ) avl_st_rx_data [59] $end
+$var wire 1 * avl_st_rx_data [58] $end
+$var wire 1 + avl_st_rx_data [57] $end
+$var wire 1 , avl_st_rx_data [56] $end
+$var wire 1 - avl_st_rx_data [55] $end
+$var wire 1 . avl_st_rx_data [54] $end
+$var wire 1 / avl_st_rx_data [53] $end
+$var wire 1 0 avl_st_rx_data [52] $end
+$var wire 1 1 avl_st_rx_data [51] $end
+$var wire 1 2 avl_st_rx_data [50] $end
+$var wire 1 3 avl_st_rx_data [49] $end
+$var wire 1 4 avl_st_rx_data [48] $end
+$var wire 1 5 avl_st_rx_data [47] $end
+$var wire 1 6 avl_st_rx_data [46] $end
+$var wire 1 7 avl_st_rx_data [45] $end
+$var wire 1 8 avl_st_rx_data [44] $end
+$var wire 1 9 avl_st_rx_data [43] $end
+$var wire 1 : avl_st_rx_data [42] $end
+$var wire 1 ; avl_st_rx_data [41] $end
+$var wire 1 < avl_st_rx_data [40] $end
+$var wire 1 = avl_st_rx_data [39] $end
+$var wire 1 > avl_st_rx_data [38] $end
+$var wire 1 ? avl_st_rx_data [37] $end
+$var wire 1 @ avl_st_rx_data [36] $end
+$var wire 1 A avl_st_rx_data [35] $end
+$var wire 1 B avl_st_rx_data [34] $end
+$var wire 1 C avl_st_rx_data [33] $end
+$var wire 1 D avl_st_rx_data [32] $end
+$var wire 1 E avl_st_rx_data [31] $end
+$var wire 1 F avl_st_rx_data [30] $end
+$var wire 1 G avl_st_rx_data [29] $end
+$var wire 1 H avl_st_rx_data [28] $end
+$var wire 1 I avl_st_rx_data [27] $end
+$var wire 1 J avl_st_rx_data [26] $end
+$var wire 1 K avl_st_rx_data [25] $end
+$var wire 1 L avl_st_rx_data [24] $end
+$var wire 1 M avl_st_rx_data [23] $end
+$var wire 1 N avl_st_rx_data [22] $end
+$var wire 1 O avl_st_rx_data [21] $end
+$var wire 1 P avl_st_rx_data [20] $end
+$var wire 1 Q avl_st_rx_data [19] $end
+$var wire 1 R avl_st_rx_data [18] $end
+$var wire 1 S avl_st_rx_data [17] $end
+$var wire 1 T avl_st_rx_data [16] $end
+$var wire 1 U avl_st_rx_data [15] $end
+$var wire 1 V avl_st_rx_data [14] $end
+$var wire 1 W avl_st_rx_data [13] $end
+$var wire 1 X avl_st_rx_data [12] $end
+$var wire 1 Y avl_st_rx_data [11] $end
+$var wire 1 Z avl_st_rx_data [10] $end
+$var wire 1 [ avl_st_rx_data [9] $end
+$var wire 1 \ avl_st_rx_data [8] $end
+$var wire 1 ] avl_st_rx_data [7] $end
+$var wire 1 ^ avl_st_rx_data [6] $end
+$var wire 1 _ avl_st_rx_data [5] $end
+$var wire 1 ` avl_st_rx_data [4] $end
+$var wire 1 a avl_st_rx_data [3] $end
+$var wire 1 b avl_st_rx_data [2] $end
+$var wire 1 c avl_st_rx_data [1] $end
+$var wire 1 d avl_st_rx_data [0] $end
+$var wire 1 e avl_st_rx_sop $end
+$var wire 1 f avl_st_rx_eop $end
+$var wire 1 g avl_st_rx_empty [2] $end
+$var wire 1 h avl_st_rx_empty [1] $end
+$var wire 1 i avl_st_rx_empty [0] $end
+$var reg 1 j out1_valid $end
+$var reg 32 k out1_tag [31:0] $end
+$var reg 128 l out1_value [127:0] $end
+$var reg 1 m out2_valid $end
+$var reg 32 n out2_tag [31:0] $end
+$var reg 128 o out2_value [127:0] $end
+$var wire 10 p fifo_cnt [9:0] $end
+$var reg 10 q wr_cnt [9:0] $end
+$var reg 10 r rd_cnt [9:0] $end
+$var wire 64 s fifo_wdata [63:0] $end
+$var wire 1 t full $end
+$var wire 1 u empty $end
+$var wire 4 v pos [3:0] $end
+$var wire 1 w mem_zero $end
+$var reg 64 x buf_wdata [63:0] $end
+$var reg 64 y buf_idata [63:0] $end
+$var wire 64 z buf_rdata [63:0] $end
+$var wire 9 { buf_count [8:0] $end
+$var wire 1 | buf_wr $end
+$var reg 1 } buf_rd $end
+$var reg 6 ~ op_cnt [5:0] $end
+$var reg 192 !! tmp_data [191:0] $end
+$var reg 4 "! state [3:0] $end
 
 $scope function sm_check $end
+$upscope $end
+
+$scope module i_buf $end
 $upscope $end
 $upscope $end
 $upscope $end
@@ -184,52 +133,6 @@ $scope function build $end
 $upscope $end
 
 $scope task run $end
-$upscope $end
-
-$scope module parser_op_dual_ut $end
-
-$scope task step $end
-$upscope $end
-
-$scope task nextSamplePoint $end
-$upscope $end
-
-$scope task reset $end
-$upscope $end
-
-$scope function build $end
-$upscope $end
-
-$scope task setup $end
-$upscope $end
-
-$scope task teardown $end
-$upscope $end
-
-$scope task run $end
-
-$scope begin test_rst $end
-$upscope $end
-
-$scope begin test_random_400 $end
-$upscope $end
-$upscope $end
-
-$scope module my_parser_op_dual $end
-$var wire 1 Y! fifo1_full $end
-$var wire 1 Z! fifo1_empty $end
-$var wire 1 [! fifo2_full $end
-$var wire 1 \! fifo2_empty $end
-
-$scope function space_check $end
-$upscope $end
-
-$scope module i_f1 $end
-$upscope $end
-
-$scope module i_f2 $end
-$upscope $end
-$upscope $end
 $upscope $end
 
 $scope module parser_op_ut $end
@@ -282,203 +185,87 @@ $upscope $end
 $scope module my_parser_op $end
 $var wire 1 ! clk $end
 $var wire 1 " rst $end
-$var wire 1 # avl_st_rx_valid $end
-$var wire 1 $ avl_st_rx_data [63] $end
-$var wire 1 % avl_st_rx_data [62] $end
-$var wire 1 & avl_st_rx_data [61] $end
-$var wire 1 ' avl_st_rx_data [60] $end
-$var wire 1 ( avl_st_rx_data [59] $end
-$var wire 1 ) avl_st_rx_data [58] $end
-$var wire 1 * avl_st_rx_data [57] $end
-$var wire 1 + avl_st_rx_data [56] $end
-$var wire 1 , avl_st_rx_data [55] $end
-$var wire 1 - avl_st_rx_data [54] $end
-$var wire 1 . avl_st_rx_data [53] $end
-$var wire 1 / avl_st_rx_data [52] $end
-$var wire 1 0 avl_st_rx_data [51] $end
-$var wire 1 1 avl_st_rx_data [50] $end
-$var wire 1 2 avl_st_rx_data [49] $end
-$var wire 1 3 avl_st_rx_data [48] $end
-$var wire 1 4 avl_st_rx_data [47] $end
-$var wire 1 5 avl_st_rx_data [46] $end
-$var wire 1 6 avl_st_rx_data [45] $end
-$var wire 1 7 avl_st_rx_data [44] $end
-$var wire 1 8 avl_st_rx_data [43] $end
-$var wire 1 9 avl_st_rx_data [42] $end
-$var wire 1 : avl_st_rx_data [41] $end
-$var wire 1 ; avl_st_rx_data [40] $end
-$var wire 1 < avl_st_rx_data [39] $end
-$var wire 1 = avl_st_rx_data [38] $end
-$var wire 1 > avl_st_rx_data [37] $end
-$var wire 1 ? avl_st_rx_data [36] $end
-$var wire 1 @ avl_st_rx_data [35] $end
-$var wire 1 A avl_st_rx_data [34] $end
-$var wire 1 B avl_st_rx_data [33] $end
-$var wire 1 C avl_st_rx_data [32] $end
-$var wire 1 D avl_st_rx_data [31] $end
-$var wire 1 E avl_st_rx_data [30] $end
-$var wire 1 F avl_st_rx_data [29] $end
-$var wire 1 G avl_st_rx_data [28] $end
-$var wire 1 H avl_st_rx_data [27] $end
-$var wire 1 I avl_st_rx_data [26] $end
-$var wire 1 J avl_st_rx_data [25] $end
-$var wire 1 K avl_st_rx_data [24] $end
-$var wire 1 L avl_st_rx_data [23] $end
-$var wire 1 M avl_st_rx_data [22] $end
-$var wire 1 N avl_st_rx_data [21] $end
-$var wire 1 O avl_st_rx_data [20] $end
-$var wire 1 P avl_st_rx_data [19] $end
-$var wire 1 Q avl_st_rx_data [18] $end
-$var wire 1 R avl_st_rx_data [17] $end
-$var wire 1 S avl_st_rx_data [16] $end
-$var wire 1 T avl_st_rx_data [15] $end
-$var wire 1 U avl_st_rx_data [14] $end
-$var wire 1 V avl_st_rx_data [13] $end
-$var wire 1 W avl_st_rx_data [12] $end
-$var wire 1 X avl_st_rx_data [11] $end
-$var wire 1 Y avl_st_rx_data [10] $end
-$var wire 1 Z avl_st_rx_data [9] $end
-$var wire 1 [ avl_st_rx_data [8] $end
-$var wire 1 \ avl_st_rx_data [7] $end
-$var wire 1 ] avl_st_rx_data [6] $end
-$var wire 1 ^ avl_st_rx_data [5] $end
-$var wire 1 _ avl_st_rx_data [4] $end
-$var wire 1 ` avl_st_rx_data [3] $end
-$var wire 1 a avl_st_rx_data [2] $end
-$var wire 1 b avl_st_rx_data [1] $end
-$var wire 1 c avl_st_rx_data [0] $end
-$var wire 1 d avl_st_rx_sop $end
-$var wire 1 e avl_st_rx_eop $end
-$var wire 1 f avl_st_rx_empty [2] $end
-$var wire 1 g avl_st_rx_empty [1] $end
-$var wire 1 h avl_st_rx_empty [0] $end
-$var wire 1 p fifo_rdata [63] $end
-$var wire 1 q fifo_rdata [62] $end
-$var wire 1 r fifo_rdata [61] $end
-$var wire 1 s fifo_rdata [60] $end
-$var wire 1 t fifo_rdata [59] $end
-$var wire 1 u fifo_rdata [58] $end
-$var wire 1 v fifo_rdata [57] $end
-$var wire 1 w fifo_rdata [56] $end
-$var wire 1 x fifo_rdata [55] $end
-$var wire 1 y fifo_rdata [54] $end
-$var wire 1 z fifo_rdata [53] $end
-$var wire 1 { fifo_rdata [52] $end
-$var wire 1 | fifo_rdata [51] $end
-$var wire 1 } fifo_rdata [50] $end
-$var wire 1 ~ fifo_rdata [49] $end
-$var wire 1 !! fifo_rdata [48] $end
-$var wire 1 "! fifo_rdata [47] $end
-$var wire 1 #! fifo_rdata [46] $end
-$var wire 1 $! fifo_rdata [45] $end
-$var wire 1 %! fifo_rdata [44] $end
-$var wire 1 &! fifo_rdata [43] $end
-$var wire 1 '! fifo_rdata [42] $end
-$var wire 1 (! fifo_rdata [41] $end
-$var wire 1 )! fifo_rdata [40] $end
-$var wire 1 *! fifo_rdata [39] $end
-$var wire 1 +! fifo_rdata [38] $end
-$var wire 1 ,! fifo_rdata [37] $end
-$var wire 1 -! fifo_rdata [36] $end
-$var wire 1 .! fifo_rdata [35] $end
-$var wire 1 /! fifo_rdata [34] $end
-$var wire 1 0! fifo_rdata [33] $end
-$var wire 1 1! fifo_rdata [32] $end
-$var wire 1 2! fifo_rdata [31] $end
-$var wire 1 3! fifo_rdata [30] $end
-$var wire 1 4! fifo_rdata [29] $end
-$var wire 1 5! fifo_rdata [28] $end
-$var wire 1 6! fifo_rdata [27] $end
-$var wire 1 7! fifo_rdata [26] $end
-$var wire 1 8! fifo_rdata [25] $end
-$var wire 1 9! fifo_rdata [24] $end
-$var wire 1 :! fifo_rdata [23] $end
-$var wire 1 ;! fifo_rdata [22] $end
-$var wire 1 <! fifo_rdata [21] $end
-$var wire 1 =! fifo_rdata [20] $end
-$var wire 1 >! fifo_rdata [19] $end
-$var wire 1 ?! fifo_rdata [18] $end
-$var wire 1 @! fifo_rdata [17] $end
-$var wire 1 A! fifo_rdata [16] $end
-$var wire 1 B! fifo_rdata [15] $end
-$var wire 1 C! fifo_rdata [14] $end
-$var wire 1 D! fifo_rdata [13] $end
-$var wire 1 E! fifo_rdata [12] $end
-$var wire 1 F! fifo_rdata [11] $end
-$var wire 1 G! fifo_rdata [10] $end
-$var wire 1 H! fifo_rdata [9] $end
-$var wire 1 I! fifo_rdata [8] $end
-$var wire 1 J! fifo_rdata [7] $end
-$var wire 1 K! fifo_rdata [6] $end
-$var wire 1 L! fifo_rdata [5] $end
-$var wire 1 M! fifo_rdata [4] $end
-$var wire 1 N! fifo_rdata [3] $end
-$var wire 1 O! fifo_rdata [2] $end
-$var wire 1 P! fifo_rdata [1] $end
-$var wire 1 Q! fifo_rdata [0] $end
-$var wire 1 R! fifo_wr $end
-$var wire 1 S! equal $end
-$var wire 1 T! full $end
-$var wire 1 U! empty $end
+$var wire 1 # rdy $end
+$var wire 1 $ avl_st_rx_valid $end
+$var wire 1 % avl_st_rx_data [63] $end
+$var wire 1 & avl_st_rx_data [62] $end
+$var wire 1 ' avl_st_rx_data [61] $end
+$var wire 1 ( avl_st_rx_data [60] $end
+$var wire 1 ) avl_st_rx_data [59] $end
+$var wire 1 * avl_st_rx_data [58] $end
+$var wire 1 + avl_st_rx_data [57] $end
+$var wire 1 , avl_st_rx_data [56] $end
+$var wire 1 - avl_st_rx_data [55] $end
+$var wire 1 . avl_st_rx_data [54] $end
+$var wire 1 / avl_st_rx_data [53] $end
+$var wire 1 0 avl_st_rx_data [52] $end
+$var wire 1 1 avl_st_rx_data [51] $end
+$var wire 1 2 avl_st_rx_data [50] $end
+$var wire 1 3 avl_st_rx_data [49] $end
+$var wire 1 4 avl_st_rx_data [48] $end
+$var wire 1 5 avl_st_rx_data [47] $end
+$var wire 1 6 avl_st_rx_data [46] $end
+$var wire 1 7 avl_st_rx_data [45] $end
+$var wire 1 8 avl_st_rx_data [44] $end
+$var wire 1 9 avl_st_rx_data [43] $end
+$var wire 1 : avl_st_rx_data [42] $end
+$var wire 1 ; avl_st_rx_data [41] $end
+$var wire 1 < avl_st_rx_data [40] $end
+$var wire 1 = avl_st_rx_data [39] $end
+$var wire 1 > avl_st_rx_data [38] $end
+$var wire 1 ? avl_st_rx_data [37] $end
+$var wire 1 @ avl_st_rx_data [36] $end
+$var wire 1 A avl_st_rx_data [35] $end
+$var wire 1 B avl_st_rx_data [34] $end
+$var wire 1 C avl_st_rx_data [33] $end
+$var wire 1 D avl_st_rx_data [32] $end
+$var wire 1 E avl_st_rx_data [31] $end
+$var wire 1 F avl_st_rx_data [30] $end
+$var wire 1 G avl_st_rx_data [29] $end
+$var wire 1 H avl_st_rx_data [28] $end
+$var wire 1 I avl_st_rx_data [27] $end
+$var wire 1 J avl_st_rx_data [26] $end
+$var wire 1 K avl_st_rx_data [25] $end
+$var wire 1 L avl_st_rx_data [24] $end
+$var wire 1 M avl_st_rx_data [23] $end
+$var wire 1 N avl_st_rx_data [22] $end
+$var wire 1 O avl_st_rx_data [21] $end
+$var wire 1 P avl_st_rx_data [20] $end
+$var wire 1 Q avl_st_rx_data [19] $end
+$var wire 1 R avl_st_rx_data [18] $end
+$var wire 1 S avl_st_rx_data [17] $end
+$var wire 1 T avl_st_rx_data [16] $end
+$var wire 1 U avl_st_rx_data [15] $end
+$var wire 1 V avl_st_rx_data [14] $end
+$var wire 1 W avl_st_rx_data [13] $end
+$var wire 1 X avl_st_rx_data [12] $end
+$var wire 1 Y avl_st_rx_data [11] $end
+$var wire 1 Z avl_st_rx_data [10] $end
+$var wire 1 [ avl_st_rx_data [9] $end
+$var wire 1 \ avl_st_rx_data [8] $end
+$var wire 1 ] avl_st_rx_data [7] $end
+$var wire 1 ^ avl_st_rx_data [6] $end
+$var wire 1 _ avl_st_rx_data [5] $end
+$var wire 1 ` avl_st_rx_data [4] $end
+$var wire 1 a avl_st_rx_data [3] $end
+$var wire 1 b avl_st_rx_data [2] $end
+$var wire 1 c avl_st_rx_data [1] $end
+$var wire 1 d avl_st_rx_data [0] $end
+$var wire 1 e avl_st_rx_sop $end
+$var wire 1 f avl_st_rx_eop $end
+$var wire 1 g avl_st_rx_empty [2] $end
+$var wire 1 h avl_st_rx_empty [1] $end
+$var wire 1 i avl_st_rx_empty [0] $end
+$var wire 1 t full $end
+$var wire 1 u empty $end
+$var wire 1 w mem_zero $end
+$var wire 1 | buf_wr $end
 
 $scope function sm_check $end
 $upscope $end
-$upscope $end
-$upscope $end
 
-$scope module parser_ut $end
-
-$scope task step $end
+$scope module i_buf $end
 $upscope $end
-
-$scope task nextSamplePoint $end
-$upscope $end
-
-$scope task reset $end
-$upscope $end
-
-$scope function build $end
-$upscope $end
-
-$scope task setup $end
-$upscope $end
-
-$scope task teardown $end
-$upscope $end
-
-$scope task run $end
-
-$scope begin test_rst $end
-$upscope $end
-
-$scope begin test_2_continus_case_empty_0 $end
-$upscope $end
-
-$scope begin test_2_continus_case_empty_1 $end
-$upscope $end
-
-$scope begin test_2_continus_case_empty_3 $end
-$upscope $end
-
-$scope begin test_2_continus_case_igonore_1st_for_5B_tag $end
-$upscope $end
-
-$scope begin test_2_continus_case_igonore_2nd_for_5B_tag $end
-$upscope $end
-
-$scope begin test_2_continus_case_1st_ignore_17B_value $end
-$upscope $end
-
-$scope begin test_2_continus_case_2nd_ignore_17B_value $end
-$upscope $end
-
-$scope begin test_random_200 $end
-$upscope $end
-$upscope $end
-
-$scope module my_parser $end
-$var reg 9 ]! wr_cnt [8:0] $end
-$var reg 9 ^! rd_cnt [8:0] $end
 $upscope $end
 $upscope $end
 $upscope $end
@@ -492,25 +279,30 @@ $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-0i
-b0 j
+0j
 b0 k
-xl
-bx m
+b0 l
+xm
 bx n
 bx o
-bx V!
-bx W!
-b1 X!
-bx ]!
-bx ^!
-xY!
-xZ!
-x[!
-x\!
+bx q
+bx r
+bx x
+bx y
+0}
+bx ~
+bx !!
+b1 "!
+bx p
+b0 s
+b1000 v
+bx z
+bx {
 1!
 0"
-0#
+x#
+0$
+0d
 0c
 0b
 0a
@@ -574,11702 +366,2317 @@ x\!
 0'
 0&
 0%
-0$
-0d
 0e
+0f
+0i
 0h
 0g
-0f
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-xw
-xv
-xu
 xt
-xs
-xr
-xq
-xp
-0R!
-xS!
-xT!
-xU!
+xu
+0w
+x|
 $end
-#10
-0[!
-0Y!
-1Z!
-1\!
-#60
-0Z!
-#100
-1Z!
-#140
-0\!
-#170
-1\!
-#210
-0Z!
-#230
-1Z!
-#270
-0\!
-#300
-1\!
-#340
-0Z!
-#370
-1Z!
-#410
-0\!
-#440
-1\!
-#480
-0Z!
-#510
-1Z!
-#550
-0\!
-#570
-1\!
-#610
-0Z!
-#640
-1Z!
-#680
-0\!
-#700
-1\!
-#740
-0Z!
-#770
-1Z!
-#810
-0\!
-#840
-1\!
-#880
-0Z!
-#910
-1Z!
-#950
-0\!
-#980
-1\!
-#1020
-0Z!
-#1060
-1Z!
-#1100
-0\!
-#1130
-1\!
-#1170
-0Z!
-#1200
-1Z!
-#1240
-0\!
-#1260
-1\!
-#1300
-0Z!
-#1330
-1Z!
-#1370
-0\!
-#1410
-1\!
-#1450
-0Z!
-#1470
-1Z!
-#1510
-0\!
-#1540
-1\!
-#1580
-0Z!
-#1610
-1Z!
-#1650
-0\!
-#1680
-1\!
-#1720
-0Z!
-#1750
-1Z!
-#1790
-0\!
-#1810
-1\!
-#1850
-0Z!
-#1890
-1Z!
-#1930
-0\!
-#1960
-1\!
-#2000
-0Z!
-#2030
-1Z!
-#2070
-0\!
-#2100
-1\!
-#2140
-0Z!
-#2170
-1Z!
-#2210
-0\!
-#2240
-1\!
-#2280
-0Z!
-#2310
-1Z!
-#2350
-0\!
-#2380
-1\!
-#2420
-0Z!
-#2440
-1Z!
-#2480
-0\!
-#2520
-1\!
-#2560
-0Z!
-#2590
-1Z!
-#2630
-0\!
-#2660
-1\!
-#2700
-0Z!
-#2730
-1Z!
-#2770
-0\!
-#2810
-1\!
-#2850
-0Z!
-#2880
-1Z!
-#2920
-0\!
-#2950
-1\!
-#2990
-0Z!
-#3030
-1Z!
-#3070
-0\!
-#3100
-1\!
-#3140
-0Z!
-#3180
-1Z!
-#3220
-0\!
-#3260
-1\!
-#3300
-0Z!
-#3340
-1Z!
-#3380
-0\!
-#3410
-1\!
-#3450
-0Z!
-#3480
-1Z!
-#3520
-0\!
-#3560
-1\!
-#3600
-0Z!
-#3630
-1Z!
-#3670
-0\!
-#3690
-1\!
-#3730
-0Z!
-#3760
-1Z!
-#3800
-0\!
-#3830
-1\!
-#3870
-0Z!
-#3890
-1Z!
-#3930
-0\!
-#3960
-1\!
-#4000
-0Z!
-#4020
-1Z!
-#4060
-0\!
-#4090
-1\!
-#4130
-0Z!
-#4150
-1Z!
-#4190
-0\!
-#4220
-1\!
-#4260
-0Z!
-#4280
-1Z!
-#4320
-0\!
-#4360
-1\!
-#4400
-0Z!
-#4430
-1Z!
-#4470
-0\!
-#4510
-1\!
-#4550
-0Z!
-#4580
-1Z!
-#4620
-0\!
-#4650
-1\!
-#4690
-0Z!
-#4710
-1Z!
-#4750
-0\!
-#4780
-1\!
-#4820
-0Z!
-#4840
-1Z!
-#4880
-0\!
-#4920
-1\!
-#4960
-0Z!
-#4990
-1Z!
-#5030
-0\!
-#5050
-1\!
-#5090
-0Z!
-#5120
-1Z!
-#5160
-0\!
-#5190
-1\!
-#5230
-0Z!
-#5260
-1Z!
-#5300
-0\!
-#5330
-1\!
-#5370
-0Z!
-#5390
-1Z!
-#5430
-0\!
-#5470
-1\!
-#5510
-0Z!
-#5540
-1Z!
-#5580
-0\!
-#5610
-1\!
-#5650
-0Z!
-#5670
-1Z!
-#5710
-0\!
-#5740
-1\!
-#5780
-0Z!
-#5820
-1Z!
-#5860
-0\!
-#5890
-1\!
-#5930
-0Z!
-#5960
-1Z!
-#6000
-0\!
-#6030
-1\!
-#6070
-0Z!
-#6100
-1Z!
-#6140
-0\!
-#6170
-1\!
-#6210
-0Z!
-#6240
-1Z!
-#6280
-0\!
-#6310
-1\!
-#6350
-0Z!
-#6390
-1Z!
-#6430
-0\!
-#6460
-1\!
-#6500
-0Z!
-#6530
-1Z!
-#6570
-0\!
-#6600
-1\!
-#6640
-0Z!
-#6660
-1Z!
-#6700
-0\!
-#6720
-1\!
-#6760
-0Z!
-#6790
-1Z!
-#6830
-0\!
-#6850
-1\!
-#6890
-0Z!
-#6930
-1Z!
-#6970
-0\!
-#6990
-1\!
-#7030
-0Z!
-#7060
-1Z!
-#7100
-0\!
-#7140
-1\!
-#7180
-0Z!
-#7220
-1Z!
-#7260
-0\!
-#7280
-1\!
-#7320
-0Z!
-#7350
-1Z!
-#7390
-0\!
-#7430
-1\!
-#7470
-0Z!
-#7490
-1Z!
-#7530
-0\!
-#7560
-1\!
-#7600
-0Z!
-#7620
-1Z!
-#7660
-0\!
-#7690
-1\!
-#7730
-0Z!
-#7770
-1Z!
-#7810
-0\!
-#7840
-1\!
-#7880
-0Z!
-#7900
-1Z!
-#7940
-0\!
-#7980
-1\!
-#8020
-0Z!
-#8050
-1Z!
-#8090
-0\!
-#8110
-1\!
-#8150
-0Z!
-#8190
-1Z!
-#8230
-0\!
-#8250
-1\!
-#8290
-0Z!
-#8320
-1Z!
-#8360
-0\!
-#8400
-1\!
-#8440
-0Z!
-#8460
-1Z!
-#8500
-0\!
-#8520
-1\!
-#8560
-0Z!
-#8580
-1Z!
-#8620
-0\!
-#8660
-1\!
-#8700
-0Z!
-#8740
-1Z!
-#8780
-0\!
-#8810
-1\!
-#8850
-0Z!
-#8880
-1Z!
-#8920
-0\!
-#8960
-1\!
-#9000
-0Z!
-#9020
-1Z!
-#9060
-0\!
-#9080
-1\!
-#9120
-0Z!
-#9140
-1Z!
-#9180
-0\!
-#9210
-1\!
-#9250
-0Z!
-#9280
-1Z!
-#9320
-0\!
-#9340
-1\!
-#9380
-0Z!
-#9410
-1Z!
-#9450
-0\!
-#9480
-1\!
-#9520
-0Z!
-#9560
-1Z!
-#9600
-0\!
-#9630
-1\!
-#9670
-0Z!
-#9710
-1Z!
-#9750
-0\!
-#9780
-1\!
-#9820
-0Z!
-#9860
-1Z!
-#9900
-0\!
-#9940
-1\!
-#9980
-0Z!
-#10010
-1Z!
-#10050
-0\!
-#10080
-1\!
-#10120
-0Z!
-#10150
-1Z!
-#10190
-0\!
-#10220
-1\!
-#10260
-0Z!
-#10280
-1Z!
-#10320
-0\!
-#10350
-1\!
-#10390
-0Z!
-#10410
-1Z!
-#10450
-0\!
-#10480
-1\!
-#10520
-0Z!
-#10540
-1Z!
-#10580
-0\!
-#10600
-1\!
-#10640
-0Z!
-#10680
-1Z!
-#10720
-0\!
-#10750
-1\!
-#10790
-0Z!
-#10820
-1Z!
-#10860
-0\!
-#10890
-1\!
-#10930
-0Z!
-#10960
-1Z!
-#11000
-0\!
-#11020
-1\!
-#11060
-0Z!
-#11090
-1Z!
-#11130
-0\!
-#11170
-1\!
-#11210
-0Z!
-#11230
-1Z!
-#11270
-0\!
-#11290
-1\!
-#11330
-0Z!
-#11350
-1Z!
-#11390
-0\!
-#11430
-1\!
-#11470
-0Z!
-#11500
-1Z!
-#11540
-0\!
-#11580
-1\!
-#11620
-0Z!
-#11650
-1Z!
-#11690
-0\!
-#11710
-1\!
-#11750
-0Z!
-#11790
-1Z!
-#11830
-0\!
-#11860
-1\!
-#11900
-0Z!
-#11940
-1Z!
-#11980
-0\!
-#12010
-1\!
-#12050
-0Z!
-#12070
-1Z!
-#12110
-0\!
-#12130
-1\!
-#12170
-0Z!
-#12200
-1Z!
-#12240
-0\!
-#12280
-1\!
-#12320
-0Z!
-#12350
-1Z!
-#12390
-0\!
-#12420
-1\!
-#12460
-0Z!
-#12490
-1Z!
-#12530
-0\!
-#12560
-1\!
-#12600
-0Z!
-#12630
-1Z!
-#12670
-0\!
-#12700
-1\!
-#12740
-0Z!
-#12770
-1Z!
-#12810
-0\!
-#12840
-1\!
-#12880
-0Z!
-#12920
-1Z!
-#12960
-0\!
-#12980
-1\!
-#13020
-0Z!
-#13050
-1Z!
-#13090
-0\!
-#13120
-1\!
-#13160
-0Z!
-#13200
-1Z!
-#13240
-0\!
-#13260
-1\!
-#13300
-0Z!
-#13330
-1Z!
-#13370
-0\!
-#13400
-1\!
-#13440
-0Z!
-#13470
-1Z!
-#13510
-0\!
-#13530
-1\!
-#13570
-0Z!
-#13590
-1Z!
-#13630
-0\!
-#13660
-1\!
-#13700
-0Z!
-#13740
-1Z!
-#13780
-0\!
-#13810
-1\!
-#13850
-0Z!
-#13890
-1Z!
-#13930
-0\!
-#13970
-1\!
-#13995
+#5
 0!
-#14000
+#10
 1"
 1!
-b0 o
-b0 V!
-b0 W!
-0T!
-1S!
-1U!
-#14005
+b0 q
+b0 r
+b0 ~
+b0 !!
+0t
+1#
+b0 p
+1u
+0|
+b0 {
+#15
 0!
-#14010
+#20
 1!
-#14015
+#25
 0!
-#14020
+#30
 0"
 1!
-b1 V!
-#14025
+b1 ~
+#35
 0!
-#14030
+#40
 1!
-b10 V!
-#14035
+b10 ~
+#45
 0!
-#14040
+#50
 1!
-b11 V!
-#14041
-1#
-1d
-1R!
+b11 ~
+#51
+1$
+1e
+1a
 1`
 1_
 1^
-1]
+1[
 1Z
-1Y
-1W
-1U
-1Q
+1X
+1V
+1R
+1P
 1O
-1N
-1J
-1G
-1C
+1K
+1H
+1D
+1B
 1A
 1@
 1?
-1>
+1<
 1;
 1:
 19
-18
+17
 16
 15
 14
-13
+12
 11
-10
+1.
 1-
 1,
 1+
-1*
-1(
-1&
-1$
-#14045
+1)
+1'
+1%
+b1010101111001101111011110011110100010010001101000101011001111000 s
+#55
 0!
-#14050
+#60
 1!
-b100 V!
-0S!
-0Q!
-0P!
-0O!
-1N!
-1M!
-1L!
-1K!
-0J!
-1w
-1v
+b1000 q
+b100 ~
+b1000 p
 0u
-1t
-0s
-1r
-0q
-1p
-1!!
-0~
-1}
 1|
-0{
-0z
-1y
-1x
-1)!
-1(!
-1'!
-1&!
-0%!
-1$!
-1#!
-1"!
-11!
-00!
-1/!
-1.!
-1-!
-1,!
-0+!
-0*!
-09!
-18!
-07!
-06!
-15!
-04!
-03!
-02!
-0A!
-0@!
-1?!
-0>!
-1=!
-1<!
-0;!
-0:!
-0I!
-1H!
-1G!
-0F!
-1E!
-0D!
-1C!
-0B!
-0U!
-#14051
-0d
-1c
+bx01111000 x
+bx0101011001111000 x
+bx001101000101011001111000 x
+bx00010010001101000101011001111000 x
+bx0011110100010010001101000101011001111000 x
+bx111011110011110100010010001101000101011001111000 x
+bx11001101111011110011110100010010001101000101011001111000 x
+b1010101111001101111011110011110100010010001101000101011001111000 x
+#61
+0e
+1d
+0`
 0_
 0^
-0]
+1]
 1\
-1[
-0W
-1V
-1S
+0X
+1W
+1T
+0P
 0O
-0N
-1M
-1K
-0G
-1F
+1N
+1L
+0H
+1G
+0B
 0A
-0@
-0>
-#14055
+0?
+b1010101111001101111011110001000100100011010001010110011110001001 s
+#65
 0!
-#14060
+#70
 1!
-b101 V!
-b10 X!
-#14061
+b101 ~
+b10 "!
+1}
+b10000 q
+b1000 r
+b1010101111001101111011110011110100010010001101000101011001111000 z
+b1 {
+b1010101111001101111011110011110100010010001101000101011010001001 x
+b1010101111001101111011110011110100010010001101000110011110001001 x
+b1010101111001101111011110011110100010010010001010110011110001001 x
+b1010101111001101111011110011110100100011010001010110011110001001 x
+b1010101111001101111011110001000100100011010001010110011110001001 x
+#71
+0;
 0:
 09
-08
+07
 06
 05
 04
-03
-00
+01
+10
 1/
-1.
+0.
 0-
 0,
-0+
+0)
+1(
+0'
+0%
+b1001000110100000000010001000100100011010001010110011110001001 s
+#75
+0!
+#80
+1!
+b11000 q
+b10000 r
+0}
+b110 ~
+1}
+b0 ~
+b1010101111001101111011110011110100010010001101000101011001111000 !!
+b100 "!
+b101010111100110111101111 l
+b10010001101000101011001111000 k
+b1010101111001101111011110001000100100011010001010110011110001001 z
+b110 v
+b1010101111001101000000010001000100100011010001010110011110001001 x
+b10001000100100011010001010110011110001001 x
+#81
+1b
+1`
+1_
+0]
+1Y
+1U
+1Q
+1M
+1I
+1E
+1A
+0@
+1=
+1;
+1:
+17
+16
+14
+00
+0/
+1.
+1,
 0(
 1'
-0&
-0$
-#14065
+b10001101000101011001111000100110101011110011011110111100111101 s
+#85
 0!
-#14070
+#90
 1!
-b1000 o
-b110 V!
-b0 V!
-b1010101111001101111011110011110100010010001101000101011001111000 W!
-b100 X!
-b101010111100110111101111 k
-b10010001101000101011001111000 j
-1Q!
-0M!
-0L!
-0K!
-1J!
-0/!
-0.!
-0,!
-19!
-05!
-14!
-1A!
-0=!
-0<!
-1;!
-1I!
-0E!
-1D!
-#14071
+b100000 q
+b10110 r
+0}
+b1 ~
+1}
+b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b1010 p
+b10001000100100011010001010110011110001001 z
+b1000 v
+b10001000100100011010001010110011100110100 x
+b10001000100100011010001010001001000110100 x
+b10001000100100011001111010001001000110100 x
+b10001000111101111001111010001001000110100 x
+b11100110111101111001111010001001000110100 x
+b101010111100110111101111001111010001001000110100 x
+b10001001101010111100110111101111001111010001001000110100 x
+b110011110001001101010111100110111101111001111010001001000110100 x
+#91
+1f
+0b
+0a
+0_
+0+
+0'
+b101000101011001111000100110101011110011011110111100010001 s
+#95
+0!
+#100
+1!
+b101000 q
+b11110 r
+0}
+b10 ~
+1}
+b1000100010010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+1j
+b1000 "!
+b1 "!
+0}
+b10001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b110011110001001101010111100110111101111001111010001001000110100 z
+b110011110001001101010111100110111101111001111010001001001000101 x
+b110011110001001101010111100110111101111001111010010001101000101 x
+b110011110001001101010111100110111101111000100010010001101000101 x
+#101
+0$
+0f
+#105
+0!
+#110
+1!
+b100110 r
+0j
+b11 ~
+b10 "!
+1}
+b0 !!
+b0 l
+b10 p
+b10 {
+b10 v
+b110011110001001101010111100110111101111000100010000000101000101 x
+b101000101 x
+#115
+0!
+#120
+1!
+0}
+b100 ~
+1}
+b0 ~
+b110011110001001101010111100110111101111001111010001001000110100 !!
+b100 "!
+b101000 r
+b110011110001001101010111100110111101111 l
+b1001000110100 k
+1u
+b110011110001001101010111100110111101111000100010010001101000101 z
+b0 p
+0|
+b1000 v
+b1xxxxxxxx x
+b0xxxxxxxxxxxxxxxx x
+b0xxxxxxxxxxxxxxxxxxxxxxxx x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x
+bx x
+#125
+0!
+#130
+1!
+0}
+b1 ~
+1}
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b101000101 z
+b1 {
+#135
+0!
+#140
+1!
+0}
+b10 ~
+1}
+b10100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+1j
+b1000 "!
+b1 "!
+0}
+b10100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+bx z
+b0 {
+#145
+0!
+#150
+1i
+1!
+0j
+b11 ~
+#155
+0!
+#160
+1!
+b100 ~
+#161
+1$
+1e
+0d
 1a
 1_
 1^
 0\
+0Y
 1X
-1T
+0W
+0U
+0T
+0Q
 1P
-1L
+1O
+0N
+0M
+0L
+0I
 1H
-1D
+0G
+0E
+1B
 1@
-0?
-1<
-1:
+1?
+0=
 19
-16
 15
-13
-0/
-0.
+11
 1-
 1+
-0'
-1&
-#14075
+1)
+1'
+1%
+b1010101111001101111011110011110100010010001101000101011001111000 s
+#165
 0!
-#14080
+#170
 1!
-b10000 o
-b1 V!
-b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0w
-0v
-0t
-0r
-0p
-0!!
-0}
-0|
-0y
-0x
-0(!
-0'!
-0&!
-0$!
-0#!
-0"!
-#14081
-1e
-0a
-0`
-0^
-0*
-0&
-#14085
-0!
-#14090
-1!
-b11000 o
-b10 V!
-b1000100010010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-1i
-b1000 X!
-b1 X!
-b10001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-1O!
-0N!
-1M!
-1L!
-0J!
-1w
-1v
-1u
-1r
-1q
-1!!
+b110000 q
+b101 ~
+b1000 p
+0u
 1|
-1x
-1(!
-1&!
-1$!
-1"!
-1/!
-1.!
-0-!
-1+!
-1*!
-17!
-16!
-13!
-12!
-1>!
-1=!
-1<!
-0;!
-0I!
-0G!
-1E!
-0D!
-0C!
-#14091
-0#
+bx01111000 x
+bx0101011001111000 x
+bx001101000101011001111000 x
+bx00010010001101000101011001111000 x
+bx0011110100010010001101000101011001111000 x
+bx111011110011110100010010001101000101011001111000 x
+bx11001101111011110011110100010010001101000101011001111000 x
+b1010101111001101111011110011110100010010001101000101011001111000 x
+#171
 0e
-0R!
-#14095
+1d
+0`
+0_
+0^
+1]
+1\
+0X
+1W
+1T
+0P
+0O
+1N
+1L
+0H
+1G
+0B
+0A
+0?
+b1010101111001101111011110001000100100011010001010110011110001001 s
+#175
 0!
-#14100
+#180
 1!
-0i
-b11 V!
-b10 X!
-b0 W!
-b0 k
-#14105
+b110 ~
+b10 "!
+1}
+b0 !!
+b111000 q
+b110000 r
+b0 l
+b1010101111001101111011110011110100010010001101000101011001111000 z
+b1 {
+b1010101111001101111011110011110100010010001101000101011010001001 x
+b1010101111001101111011110011110100010010001101000110011110001001 x
+b1010101111001101111011110011110100010010010001010110011110001001 x
+b1010101111001101111011110011110100100011010001010110011110001001 x
+b1010101111001101111011110001000100100011010001010110011110001001 x
+#181
+0@
+0<
+0;
+09
+18
+06
+05
+04
+13
+02
+01
+10
+0.
+0-
+0+
+1*
+1(
+0%
+b11110100010010001101000000000100100011010001010110011110001001 s
+#185
 0!
-#14110
+#190
 1!
-b100 V!
-b0 V!
-b110011110001001101010111100110111101111001111010001001000110100 W!
-b100 X!
-b100000 o
-b110011110001001101010111100110111101111 k
-b1001000110100 j
-1Q!
-0M!
-0L!
-1K!
-0?!
-0>!
-0<!
-1I!
-0E!
-1D!
-#14115
+b1000000 q
+b111000 r
+0}
+b111 ~
+1}
+b0 ~
+b1010101111001101111011110011110100010010001101000101011001111000 !!
+b100 "!
+b101010111100110111101111 l
+b10010001101000101011001111000 k
+b1010101111001101111011110001000100100011010001010110011110001001 z
+b101 v
+b1010101111001101111011110000000100100011010001010110011110001001 x
+b100100011010001010110011110001001 x
+#191
+1c
+1b
+1_
+1^
+0[
+1Y
+0W
+1U
+1S
+0R
+1Q
+1O
+0N
+1M
+0K
+1I
+0G
+1E
+1C
+1B
+1?
+1>
+1<
+08
+07
+16
+14
+00
+1/
+0*
+0)
+0'
+b1000100100011010001010110011110001001101010111100110111101111 s
+#195
 0!
-#14120
+#200
 1!
-b101000 o
-b1 V!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-xw
-xv
-xu
-xt
-xs
-xr
-xq
-xp
-0!!
+b1001000 q
+b111101 r
+0}
+b1 ~
+1}
+b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b1011 p
+b100100011010001010110011110001001 z
+b1000 v
+b100100011010001010110011100110100 x
+b100100011010001010001001000110100 x
+b100100011001111010001001000110100 x
+b111101111001111010001001000110100 x
+b1100110111101111001111010001001000110100 x
+b101010111100110111101111001111010001001000110100 x
+b10001001101010111100110111101111001111010001001000110100 x
+b110011110001001101010111100110111101111001111010001001000110100 x
+#201
+1f
+b100011010001010110011110001001101010111100110111101111 s
+03
+0/
+0,
+0(
+b1010001010110011110001001101010111100110111101111 s
+#205
+0!
+#210
+1!
+b1010000 q
+b1000101 r
+0}
+b10 ~
+1}
+b10010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+1j
+b1000 "!
+b1 "!
+0}
+b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b110011110001001101010111100110111101111001111010001001000110100 z
+b110011110001001101010111100110111101111001111010001001001000101 x
+b110011110001001101010111100110111101111001111010010001101000101 x
+b110011110001001101010111100110111101111000100010010001101000101 x
+#211
+0$
+0f
+#215
+0!
+#220
+1!
+b1001101 r
+0j
+b11 ~
+b10 "!
+1}
+b0 !!
+b0 l
+b11 p
+b10 {
+b10 v
+b110011110001001101010111100110111101111000100010000000101000101 x
+b101000101 x
+#225
+0!
+#230
+1!
+0}
+b100 ~
+1}
+b0 ~
+b110011110001001101010111100110111101111001111010001001000110100 !!
+b100 "!
+b1001111 r
+b110011110001001101010111100110111101111 l
+b1001000110100 k
+1w
+b110011110001001101010111100110111101111000100010010001101000101 z
+b1 p
+0#
 0|
-0x
-0)!
-0(!
-0&!
-0$!
-0"!
-01!
-0/!
-0.!
-0+!
-0*!
-09!
-08!
-07!
-06!
-04!
-03!
-02!
-0A!
-0=!
-0H!
-0D!
-#14125
+b1000 v
+b100000000 x
+b0xxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+bx00000000 x
+#235
 0!
-#14130
+#240
 1!
-b110000 o
-b10 V!
-bx0000000000000000000000000000000000000000000000010100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-1i
-b1000 X!
-b1 X!
-b10100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-1S!
-1U!
-#14135
+b1010000 r
+0}
+b1 ~
+1}
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+0w
+1u
+b101000101 z
+b0 p
+1#
+b1 {
+bx x
+#245
 0!
-#14140
+#250
+1!
+0}
+b10 ~
+1}
+b10100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+1j
+b1000 "!
+b1 "!
+0}
+b10100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+bx z
+b0 {
+#255
+0!
+#260
 1h
 1!
-0i
-b11 V!
-#14145
+0j
+b11 ~
+#265
 0!
-#14150
+#270
 1!
-b100 V!
-#14151
-1#
-1d
-1R!
+b100 ~
+#271
+1$
+1e
+0d
 0c
+0b
 1`
-1^
-1]
-0[
-0X
-1W
-0V
-0T
-0S
-0P
-1O
-1N
-0M
-0L
-0K
-0H
-1G
-0F
-0D
-1A
-1?
-1>
-0<
-18
-14
-10
-1,
-1*
-1(
-1&
-1$
-#14155
-0!
-#14160
-1!
-b101 V!
-0S!
-0Q!
-0P!
-0O!
-1N!
-1M!
-1L!
-1K!
-0J!
-1w
-1v
-0u
-1t
-0s
-1r
-0q
-1p
-1!!
-0~
-1}
-1|
-0{
-0z
-1y
-1x
-1)!
-1(!
-1'!
-1&!
-0%!
-1$!
-1#!
-1"!
-11!
-00!
-1/!
-1.!
-1-!
-1,!
-0+!
-0*!
-09!
-18!
-07!
-06!
-15!
-04!
-03!
-02!
-0A!
-0@!
-1?!
-0>!
-1=!
-1<!
-0;!
-0:!
-0I!
-1H!
-1G!
-0F!
-1E!
-0D!
-1C!
-0B!
-0U!
-#14161
-0d
-1c
-0_
-0^
-0]
-1\
-1[
-0W
-1V
-1S
-0O
-0N
-1M
-1K
-0G
-1F
-0A
-0@
-0>
-#14165
-0!
-#14170
-1!
-b110 V!
-b10 X!
-b0 W!
-b0 k
-#14171
-0?
-0;
-0:
-08
-17
-05
-04
-03
-12
-01
-00
-1/
-0-
-0,
-0*
-1)
-1'
-0$
-#14175
-0!
-#14180
-1!
-b111000 o
-b111 V!
-b0 V!
-b1010101111001101111011110011110100010010001101000101011001111000 W!
-b100 X!
-b101010111100110111101111 k
-b10010001101000101011001111000 j
-1Q!
-0M!
-0L!
-0K!
-1J!
-0/!
-0.!
-0,!
-19!
-05!
-14!
-1A!
-0=!
-0<!
-1;!
-1I!
-0E!
-1D!
-#14181
-1b
-1a
-1^
-1]
-0Z
-1X
-0V
-1T
-1R
-0Q
-1P
-1N
-0M
-1L
-0J
-1H
-0F
-1D
-1B
-1A
-1>
-1=
-1;
-07
-06
-15
-13
-0/
-1.
-0)
-0(
-0&
-#14185
-0!
-#14190
-1!
-b1000000 o
-b1 V!
-b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0w
-0v
-0t
-0r
-0p
-0!!
-0}
-0|
-0y
-0x
-0)!
-0(!
-0'!
-0&!
-0$!
-0#!
-0"!
-0-!
-#14191
-1e
-02
-0.
-0+
-0'
-#14195
-0!
-#14200
-1!
-b1001000 o
-b10 V!
-b10010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-1i
-b1000 X!
-b1 X!
-b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-1O!
-0N!
-1M!
-1L!
-0J!
-1w
-1v
-1u
-1r
-1q
-1!!
-1|
-1x
-1)!
-1(!
-1&!
-1$!
-1"!
-1/!
-1.!
-1+!
-1*!
-17!
-16!
-13!
-12!
-1>!
-1=!
-1<!
-0;!
-0I!
-0G!
-1E!
-0D!
-0C!
-#14201
-0#
-0e
-0R!
-#14205
-0!
-#14210
-1!
-0i
-b11 V!
-b10 X!
-b0 W!
-b0 k
-#14215
-0!
-#14220
-1!
-b100 V!
-b0 V!
-b110011110001001101010111100110111101111001111010001001000110100 W!
-b100 X!
-b1010000 o
-b110011110001001101010111100110111101111 k
-b1001000110100 j
-1Q!
-0M!
-0L!
-1K!
-0?!
-0>!
-0<!
-1I!
-0E!
-1D!
-#14225
-0!
-#14230
-1!
-b1011000 o
-b1 V!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-xw
-xv
-xu
-xt
-xs
-xr
-xq
-xp
-0!!
-0|
-0x
-0)!
-0(!
-0&!
-0$!
-0"!
-01!
-0/!
-0.!
-0+!
-0*!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-0A!
-0=!
-0H!
-0D!
-#14235
-0!
-#14240
-1!
-b1100000 o
-b10 V!
-bx000000000000000000000000xxxxxxxx00000000000000010100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-1i
-b1000 X!
-b1 X!
-b10100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-1S!
-1U!
-#14245
-0!
-#14250
-1g
-1!
-0i
-b11 V!
-#14255
-0!
-#14260
-1!
-b100 V!
-#14261
-1#
-1d
-1R!
-0c
-0b
-0a
-1_
-0\
-0[
-1Z
-0X
-1W
-0T
-0S
-0R
-1Q
-0P
-1O
-0L
-0K
-1J
-0H
-1G
-0D
-0B
-1@
-1?
-0=
-1:
-18
-16
-14
-11
-10
-1-
-1,
-1+
-1*
-1(
-1&
-1$
-#14265
-0!
-#14270
-1!
-b101 V!
-0S!
-0Q!
-0P!
-0O!
-1N!
-1M!
-1L!
-1K!
-0J!
-1w
-1v
-0u
-1t
-0s
-1r
-0q
-1p
-1!!
-0~
-1}
-1|
-0{
-0z
-1y
-1x
-1)!
-1(!
-1'!
-1&!
-0%!
-1$!
-1#!
-1"!
-11!
-00!
-1/!
-1.!
-1-!
-1,!
-0+!
-0*!
-09!
-18!
-07!
-06!
-15!
-04!
-03!
-02!
-0A!
-0@!
-1?!
-0>!
-1=!
-1<!
-0;!
-0:!
-0I!
-1H!
-1G!
-0F!
-1E!
-0D!
-1C!
-0B!
-0U!
-#14271
-0d
-1c
-0_
-0^
-0]
-1\
-1[
-0W
-1V
-1S
-0O
-0N
-1M
-1K
-0G
-1F
-0A
-0@
-0>
-#14275
-0!
-#14280
-1!
-b110 V!
-b10 X!
-b0 W!
-b0 k
-#14281
-0?
-0;
-0:
-08
-17
-05
-04
-03
-12
-01
-00
-1/
-0-
-0,
-0*
-1)
-1'
-0$
-#14285
-0!
-#14290
-1!
-b1101000 o
-b111 V!
-b0 V!
-b1010101111001101111011110011110100010010001101000101011001111000 W!
-b100 X!
-b101010111100110111101111 k
-b10010001101000101011001111000 j
-1Q!
-0M!
-0L!
-0K!
-1J!
-0/!
-0.!
-0,!
-19!
-05!
-14!
-1A!
-0=!
-0<!
-1;!
-1I!
-0E!
-1D!
-#14291
-1b
-1a
-1^
-1]
-0Z
-1X
-0V
-1T
-1R
-0Q
-1P
-1N
-0M
-1L
-0J
-1H
-0F
-1D
-1B
-1A
-1>
-1=
-1;
-07
-06
-15
-13
-0/
-1.
-0)
-0(
-0&
-#14295
-0!
-#14300
-1!
-b1110000 o
-b1 V!
-b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0w
-0v
-0t
-0r
-0p
-0!!
-0}
-0|
-0y
-0x
-0)!
-0(!
-0'!
-0&!
-0$!
-0#!
-0"!
-0-!
-#14301
-1e
-0B
-0A
-0>
-0=
-0;
-09
-05
-03
-02
-0.
-0+
-0'
-#14305
-0!
-#14310
-1!
-b1111000 o
-b10 V!
-b10010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-1i
-b1000 X!
-b1 X!
-b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-1O!
-0N!
-1M!
-1L!
-0J!
-1w
-1v
-1u
-1r
-1q
-1!!
-1|
-1x
-1)!
-1(!
-1&!
-1$!
-1"!
-1/!
-1.!
-1+!
-1*!
-17!
-16!
-13!
-12!
-1>!
-1=!
-1<!
-0;!
-0I!
-0G!
-1E!
-0D!
-0C!
-#14311
-0#
-0e
-0R!
-#14315
-0!
-#14320
-1!
-0i
-b11 V!
-b10 X!
-b0 W!
-b0 k
-#14325
-0!
-#14330
-1!
-b100 V!
-b0 V!
-b110011110001001101010111100110111101111001111010001001000110100 W!
-b100 X!
-b10000000 o
-b110011110001001101010111100110111101111 k
-b1001000110100 j
-1Q!
-0M!
-0L!
-1K!
-0v
-0u
-0r
-0q
-0?!
-0>!
-0<!
-1I!
-0E!
-1D!
-#14335
-0!
-#14340
-1!
-b10001000 o
-b1 V!
-b1100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-b1 X!
-1i
-b1100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-0O!
-0K!
-xw
-xv
-xu
-xt
-xs
-xr
-xq
-xp
-0!!
-0|
-0x
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-0A!
-0=!
-0I!
-0H!
-0D!
-#14345
-0!
-#14350
-0g
-1!
-0i
-b10 V!
-b10 X!
-b0 W!
-b0 k
-#14355
-0!
-#14360
-1!
-b10010000 o
-b11 V!
-b0 V!
-b0xxxxxxxx00000000xxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000 W!
-b1 X!
-b0 j
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-1S!
-1U!
-#14361
-1#
-1d
-1R!
-0c
-0b
-0a
-1_
-0\
-0[
-1Z
-0X
-1W
-0T
-0S
-0R
-1Q
-0P
-1O
-0L
-0K
-1J
-0H
-1G
-0D
-1B
-1A
-1@
-1>
-1=
-1<
-1;
-19
-18
-17
-16
-13
-11
-10
-1-
-1,
-1+
-1*
-1(
-1&
-1$
-#14365
-0!
-#14370
-1!
-b1 V!
-0Q!
-0P!
-0O!
-1N!
-1M!
-1L!
-1K!
-0J!
-1w
-1v
-0u
-1t
-0s
-1r
-0q
-1p
-1!!
-0~
-1}
-1|
-0{
-0z
-1y
-1x
-1)!
-0(!
-1'!
-1&!
-1%!
-1$!
-0#!
-0"!
-11!
-10!
-1/!
-1.!
-0-!
-1,!
-1+!
-1*!
-09!
-18!
-07!
-06!
-15!
-04!
-03!
-02!
-0A!
-0@!
-1?!
-0>!
-1=!
-1<!
-0;!
-0:!
-0I!
-1H!
-1G!
-0F!
-1E!
-0D!
-1C!
-0B!
-0S!
-0U!
-#14371
-0d
-1c
-0_
-0^
-0]
-1\
-1[
-0W
-1V
-1S
-0O
-0N
-1M
-1K
-0G
-1F
-0B
-0A
-0@
-0=
-0<
-1:
-07
-15
-14
-#14375
-0!
-#14380
-1!
-b10 V!
-b10 X!
-b0 W!
-#14381
-0>
-0;
-0:
-08
-17
-05
-04
-03
-12
-01
-00
-1/
-0-
-0,
-0*
-1)
-1'
-0$
-#14385
-0!
-#14390
-1!
-b10011000 o
-b11 V!
-b0 V!
-b1010101111001101001111011110111100010010001101000101011001111000 W!
-b1000 X!
-1Q!
-0M!
-0L!
-0K!
-1J!
-1(!
-0%!
-1#!
-1"!
-00!
-0/!
-0.!
-0+!
-0*!
-19!
-05!
-14!
-1A!
-0=!
-0<!
-1;!
-1I!
-0E!
-1D!
-#14391
-1b
-1a
-1^
-1]
-0Z
-1X
-0V
-1T
-1R
-0Q
-1P
-1N
-0M
-1L
-0J
-1H
-0F
-1D
-1B
-1A
-1>
-1=
-1;
-07
-06
-15
-13
-0/
-1.
-0)
-0(
-0'
-#14395
-0!
-#14400
-1!
-b10100000 o
-b1 V!
-0w
-0v
-0t
-0r
-0p
-0!!
-0}
-0|
-0y
-0x
-0)!
-0(!
-0'!
-0&!
-0$!
-0#!
-0"!
-0,!
-#14401
-1e
-02
-0.
-0+
-0&
-#14405
-0!
-#14410
-1!
-b10101000 o
-b10 V!
-b1 X!
-0Q!
-1O!
-0N!
-1M!
-1L!
-0J!
-1w
-1v
-1u
-1r
-1q
-1!!
-1|
-1x
-1)!
-1(!
-1&!
-1$!
-1"!
-1/!
-1.!
-1+!
-1*!
-17!
-16!
-13!
-12!
-1>!
-1=!
-1<!
-0;!
-0I!
-0G!
-1E!
-0D!
-0C!
-#14411
-0#
-0e
-0R!
-#14415
-0!
-#14420
-1!
-b11 V!
-b10 X!
-b0 W!
-#14425
-0!
-#14430
-1!
-b100 V!
-b0 V!
-b110011110001001101010111100110111101111001111010001001000110100 W!
-b100 X!
-b10110000 o
-b110011110001001101010111100110111101111 k
-b1001000110100 j
-1Q!
-0M!
-0L!
-1K!
-0?!
-0>!
-0=!
-1I!
-0E!
-1D!
-#14435
-0!
-#14440
-1!
-b10111000 o
-b1 V!
-b1100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-b1100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111 k
-xw
-xv
-xu
-xt
-xs
-xr
-xq
-xp
-0!!
-0|
-0x
-0)!
-0(!
-0&!
-0$!
-0"!
-01!
-0/!
-0.!
-0+!
-0*!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-0A!
-0<!
-0H!
-0D!
-#14445
-0!
-#14450
-1!
-b11000000 o
-b10 V!
-bx000000000000000000000000xxxxxxxx00000000000000010100010101100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-1i
-b1000 X!
-b1 X!
-b10100010101100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111 k
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-1S!
-1U!
-#14455
-0!
-#14460
-1!
-0i
-b11 V!
-#14465
-0!
-#14470
-1!
-b100 V!
-#14471
-1#
-1d
-1R!
-0c
-0b
-0`
-1_
 0]
 0\
-0[
-1Z
+1[
 0Y
-0X
-1W
+1X
 0U
 0T
-0R
-1Q
-1O
+0S
+1R
+0Q
+1P
+0M
 0L
-1J
-1I
-1F
-1E
-0B
+1K
+0I
+1H
+0E
+0C
+1A
 1@
 0>
-1<
-1:
-09
-18
-16
-05
-14
-10
+1;
+19
+17
+15
+12
+11
+1.
+1-
 1,
 1+
-1*
 1)
-1&
+1'
 1%
-#14475
+b1010101111001101111011110011110100010010001101000101011001111000 s
+#275
 0!
-#14480
+#280
 1!
-b101 V!
-0S!
-0Q!
-0P!
-1O!
-0N!
-1M!
-1L!
-0K!
-0J!
-1w
-1v
-1u
-0t
-0s
-1r
-1q
-0p
-1!!
-0~
-0}
+b1011000 q
+b101 ~
+b1000 p
+0u
 1|
-0{
-0z
-0y
-1x
-1)!
-1(!
-0'!
-1&!
-0%!
-1$!
-0#!
-1"!
-11!
-00!
-1/!
-1.!
-0-!
-0,!
-1+!
-1*!
-19!
-18!
-17!
-16!
-05!
-14!
-13!
-12!
-1A!
-0@!
-1?!
-1>!
-1=!
-1<!
-0;!
-0:!
-0I!
-1H!
-0G!
-0F!
-1E!
-0D!
-0C!
-0B!
-0U!
-#14481
-0d
-1c
+bx01111000 x
+bx0101011001111000 x
+bx001101000101011001111000 x
+bx00010010001101000101011001111000 x
+bx0011110100010010001101000101011001111000 x
+bx111011110011110100010010001101000101011001111000 x
+bx11001101111011110011110100010010001101000101011001111000 x
+b1010101111001101111011110011110100010010001101000101011001111000 x
+#281
+0e
+1d
+0`
 0_
 0^
 1]
-1[
-0W
-1V
-0Q
-0P
-0N
-#14485
-0!
-#14490
-1!
-b110 V!
-b10 X!
-b0 W!
-b0 k
-#14491
-0O
-0K
-0J
-0I
-1G
-0D
-0C
-1B
-0@
-1?
-0<
-0;
-0:
-19
-08
-17
-04
-03
-12
-00
-1/
-0,
-1(
-1$
-#14495
-0!
-#14500
-1!
-b11001000 o
-b111 V!
-b0 V!
-b110011110001001101010111100110111101111001111010001001000110100 W!
-b100 X!
-b110011110001001101010111100110111101111 k
-1Q!
-0M!
-0L!
-1K!
-0?!
-0>!
-0<!
-1I!
-0E!
-1D!
-#14501
-1`
-1_
-1^
-0]
-0Z
-1Y
-1X
-0V
-1U
+1\
+0X
+1W
 1T
-1R
-1P
+0P
+0O
 1N
 1L
-1K
-0G
-0F
-0E
-1D
-1C
+0H
+1G
+0B
+0A
 0?
-1>
-1;
-07
+b1010101111001101111011110001000100100011010001010110011110001001 s
+#285
+0!
+#290
+1!
+b110 ~
+b10 "!
+1}
+b0 !!
+b1100000 q
+b1011000 r
+b0 l
+b1010101111001101111011110011110100010010001101000101011001111000 z
+b1 {
+b1010101111001101111011110011110100010010001101000101011010001001 x
+b1010101111001101111011110011110100010010001101000110011110001001 x
+b1010101111001101111011110011110100010010010001010110011110001001 x
+b1010101111001101111011110011110100100011010001010110011110001001 x
+b1010101111001101111011110001000100100011010001010110011110001001 x
+#291
+0@
+0<
+0;
+09
+18
 06
-15
+05
+04
 13
-0/
-1.
+02
+01
+10
+0.
+0-
+0+
+1*
+1(
+0%
+b11110100010010001101000000000100100011010001010110011110001001 s
+#295
+0!
+#300
+1!
+b1101000 q
+b1100000 r
+0}
+b111 ~
+1}
+b0 ~
+b1010101111001101111011110011110100010010001101000101011001111000 !!
+b100 "!
+b101010111100110111101111 l
+b10010001101000101011001111000 k
+b1010101111001101111011110001000100100011010001010110011110001001 z
+b101 v
+b1010101111001101111011110000000100100011010001010110011110001001 x
+b100100011010001010110011110001001 x
+#301
+1c
+1b
+1_
+1^
+0[
+1Y
+0W
+1U
+1S
+0R
+1Q
+1O
+0N
+1M
+0K
+1I
+0G
+1E
+1C
+1B
+1?
+1>
+1<
+08
+07
+16
+14
+00
+1/
 0*
 0)
-0(
-1'
-0&
-0%
-0$
-#14505
-0!
-#14510
-1!
-b11010000 o
-b1 V!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0w
-0v
-0u
-0r
-0q
-0!!
-0|
-0x
-0)!
-0(!
-0&!
-0$!
-0"!
-01!
-0/!
-0.!
-0+!
-0*!
-09!
-08!
-07!
-06!
-04!
-03!
-02!
-0=!
-#14511
-1e
-1b
-0_
-1]
-1\
-02
-0.
-0+
 0'
-#14515
+b1000100100011010001010110011110001001101010111100110111101111 s
+#305
 0!
-#14520
+#310
 1!
-b11011000 o
-b10 V!
-b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-1i
-b1000 X!
-b1 X!
-b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-0O!
-1N!
-1M!
-1L!
-1w
-1v
-1t
-1r
-1p
-1!!
-1}
-1|
-1y
-1x
-1)!
-1'!
-1&!
-1%!
-1$!
-11!
-10!
-1/!
-1.!
-1,!
-1+!
-1*!
-18!
-15!
-0A!
-1?!
-1=!
-1<!
-0I!
-1G!
-1E!
-0D!
-1C!
-#14521
-0#
-0e
-0R!
-#14525
-0!
-#14530
-1!
-0i
-b11 V!
-b10 X!
-b0 W!
-b0 k
-#14535
-0!
-#14540
-1!
-b100 V!
-b0 V!
-b1010101111001101001111011110111100010010001101000101011001111000 W!
-b1000 X!
-b11100000 o
-b0 j
-1Q!
-0M!
-0L!
-0K!
-1J!
-1(!
-0%!
-1#!
-1"!
-00!
-0/!
-0.!
-1-!
-0,!
-0+!
-0*!
-19!
-05!
-14!
-1A!
-0=!
-0<!
-1;!
-1I!
-0E!
-1D!
-#14545
-0!
-#14550
-1!
-b11101000 o
-b1 V!
-xw
-xv
-xu
-xt
-xs
-xr
-xq
-xp
-0!!
+b1110000 q
+b1100101 r
 0}
-0|
-0y
-0x
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-01!
-0-!
-08!
-04!
-#14555
-0!
-#14560
-0h
-1g
+b1 ~
+1}
+b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b1011 p
+b100100011010001010110011110001001 z
+b1000 v
+b100100011010001010110011100110100 x
+b100100011010001010001001000110100 x
+b100100011001111010001001000110100 x
+b111101111001111010001001000110100 x
+b1100110111101111001111010001001000110100 x
+b101010111100110111101111001111010001001000110100 x
+b10001001101010111100110111101111001111010001001000110100 x
+b110011110001001101010111100110111101111001111010001001000110100 x
+#311
 1f
-1!
-b11110000 o
-b10 V!
-b1 X!
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-1S!
-1U!
-#14565
+b110011110001001101010111100110111101111 s
+0C
+0B
+0?
+0>
+0<
+0:
+06
+04
+03
+0/
+0,
+0(
+b110001001101010111100110111101111 s
+#315
 0!
-#14570
+#320
 1!
-b11 V!
-#14571
+b1111000 q
+b1101101 r
+0}
+b10 ~
+1}
+b10010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+1j
+b1000 "!
+b1 "!
+0}
+b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b110011110001001101010111100110111101111001111010001001000110100 z
+b110011110001001101010111100110111101111001111010001001001000101 x
+b110011110001001101010111100110111101111001111010010001101000101 x
+b110011110001001101010111100110111101111000100010010001101000101 x
+b110001001101010111100110111101111000100010010001101000101 x
+#321
+0$
+0f
+#325
+0!
+#330
+1!
+b1110101 r
+0j
+b11 ~
+b10 "!
+1}
+b0 !!
+b0 l
+1w
+b11 p
+0#
+0|
+b10 {
+b110001001101010111100110111101111000100010010001100000000 x
+b110001001101010111100110111101111000100010000000000000000 x
+b110001001101010111100110111101111000000000000000000000000 x
+b1100010011010101111001101xxxxxxxx000000000000000000000000 x
+b11000100110101011xxxxxxxxxxxxxxxx000000000000000000000000 x
+b110001001xxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000 x
+b1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000 x
+bx000000000000000000000000 x
+#335
+0!
+#340
+1!
+0}
+b100 ~
+1}
+b0 ~
+b110011110001001101010111100110111101111001111010001001000110100 !!
+b100 "!
+b1110110 r
+b110011110001001101010111100110111101111 l
+b1001000110100 k
+b110001001101010111100110111101111000100010010001101000101 z
+b10 p
+b1 {
+bx0000000000000000 x
+#345
+0!
+#350
+1!
+b1110111 r
+0}
+b1 ~
+1}
+b1100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+b1 "!
+1j
+0}
+b1100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+bx z
+b1 p
+b0 {
+bx00000000 x
+#355
+0!
+#360
+0h
+1!
+b1111000 r
+0j
+b10 ~
+b10 "!
+1}
+b0 !!
+b0 l
+0w
+b0 p
+1u
 1#
-1d
-1R!
+bx x
+#365
+0!
+#370
+1!
+0}
+b11 ~
+1}
+b0 ~
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx !!
+b1000 "!
+b0 k
+#371
+1$
+1e
+0d
 0c
 0b
-0a
-1_
+1`
+0]
 0\
-0[
-1Z
-0X
-1W
+1[
+0Y
+1X
+0U
 0T
 0S
-0R
-1Q
-0P
-1O
-0L
-0K
-1J
-0H
-1G
-0D
-0B
-1@
-1?
-0=
-1:
-18
-16
-14
-11
-10
-1-
-1,
-1+
-1*
-1(
-1&
-1$
-#14575
-0!
-#14580
-1!
-b100 V!
-0S!
-0Q!
-0P!
-0O!
-1N!
-1M!
-1L!
-1K!
-0J!
-1w
-1v
-0u
-1t
-0s
-1r
-0q
-1p
-1!!
-0~
-1}
-1|
-0{
-0z
-1y
-1x
-1)!
-1(!
-1'!
-1&!
-0%!
-1$!
-1#!
-1"!
-11!
-00!
-1/!
-1.!
-1-!
-1,!
-0+!
-0*!
-09!
-18!
-07!
-06!
-15!
-04!
-03!
-02!
-0A!
-0@!
-1?!
-0>!
-1=!
-1<!
-0;!
-0:!
-0I!
-1H!
-1G!
-0F!
-1E!
-0D!
-1C!
-0B!
-0U!
-#14581
-0d
-1c
-0_
-0^
-0]
-1\
-1[
-0W
-1V
-1S
-0O
-0N
-1M
-1K
-0G
-1F
-0A
-0@
-0>
-#14585
-0!
-#14590
-1!
-b101 V!
-b10 X!
-b0 W!
-#14591
-17
-01
-00
-0-
-0,
-0+
-0*
-1)
-0(
-1'
-0$
-#14595
-0!
-#14600
-1!
-b11111000 o
-b110 V!
-b0 V!
-b1010101111001101111011110011110100010010001101000101011001111000 W!
-b100 X!
-b101010111100110111101111 k
-b10010001101000101011001111000 j
-1Q!
-0M!
-0L!
-0K!
-1J!
-0/!
-0.!
-0,!
-19!
-05!
-14!
-1A!
-0=!
-0<!
-1;!
-1I!
-0E!
-1D!
-#14601
-0c
-1b
-0`
-1_
-0\
-0Z
-1X
-1W
-0U
 1R
+0Q
 1P
-1N
-1L
-0J
-1I
+0M
+0L
+1K
+0I
 1H
-0F
-1E
-1D
+0E
+1C
 1B
-1@
-0?
+1A
+1?
 1>
+1=
 1<
-0:
-09
-07
-06
-05
+1:
+19
+18
+17
+14
 12
 11
 1.
 1-
+1,
 1+
-0'
-0&
+1)
+1'
 1%
-#14605
+b1010101111001101001111011110111100010010001101000101011001111000 s
+#375
 0!
-#14610
+#380
 1!
-b100000000 o
-b1 V!
-b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0w
-0v
-0t
-0r
-0p
+b10000000 q
 0}
-0|
-0y
-0x
-1%!
-#14611
+b1 ~
+1}
+b1000 p
+0u
+1|
+bx01111000 x
+bx0101011001111000 x
+bx001101000101011001111000 x
+bx00010010001101000101011001111000 x
+bx1110111100010010001101000101011001111000 x
+bx001111011110111100010010001101000101011001111000 x
+bx11001101001111011110111100010010001101000101011001111000 x
+b1010101111001101001111011110111100010010001101000101011001111000 x
+#381
+0e
+1d
+0`
+0_
+0^
+1]
+1\
+0X
+1W
+1T
+0P
+0O
+1N
+1L
+0H
+1G
+0C
+0B
+0A
+0>
+0=
+1;
+08
+16
+15
+b1010101111001101111011110010000100100011010001010110011110001001 s
+#385
+0!
+#390
+1!
+b10001000 q
+b10000000 r
+0}
+b10 ~
+1}
+b1 "!
+0}
+b1010101111001101001111011110111100010010001101000101011001111000 z
+b1 {
+b1010101111001101001111011110111100010010001101000101011010001001 x
+b1010101111001101001111011110111100010010001101000110011110001001 x
+b1010101111001101001111011110111100010010010001010110011110001001 x
+b1010101111001101001111011110111100100011010001010110011110001001 x
+b1010101111001101001111010010000100100011010001010110011110001001 x
+b1010101111001101111011110010000100100011010001010110011110001001 x
+#391
+0?
+0<
+0;
+09
+18
+06
+05
+04
+13
+02
+01
+10
+0.
+0-
+0+
+1*
+1(
+0%
+b11110100010010001101000000000100100011010001010110011110001001 s
+#395
+0!
+#400
+1!
+b10010000 q
+b10001000 r
+b11 ~
+b10 "!
+1}
+b0 !!
+b10 {
+b101 v
+b1010101111001101111011110000000100100011010001010110011110001001 x
+b100100011010001010110011110001001 x
+#401
 1c
+1b
+1_
+1^
+0[
+1Y
+0W
+1U
+1S
+0R
+1Q
+1O
+0N
+1M
+0K
+1I
+0G
+1E
+1C
+1B
+1?
+1>
+1<
+08
+07
+16
+14
+00
+1/
+0*
+0)
+0(
+b10000100100011010001010110011110001001101010111100110111101111 s
+#405
+0!
+#410
+1!
+0}
+b100 ~
+1}
+b0 ~
+b1010101111001101001111011110111100010010001101000101011001111000 !!
+b1 "!
+0}
+b10011000 q
+b10001101 r
+b1011 p
+b1010101111001101111011110010000100100011010001010110011110001001 z
+b1000 v
+b100100011010001010110011100110100 x
+b100100011010001010001001000110100 x
+b100100011001111010001001000110100 x
+b111101111001111010001001000110100 x
+b1100110111101111001111010001001000110100 x
+b101010111100110111101111001111010001001000110100 x
+b10001001101010111100110111101111001111010001001000110100 x
+b110011110001001101010111100110111101111001111010001001000110100 x
+#411
+1f
+b100011010001010110011110001001101010111100110111101111 s
+03
+0/
+0,
+0'
+b1010001010110011110001001101010111100110111101111 s
+#415
+0!
+#420
+1!
+b10100000 q
+b10010101 r
+b1 ~
+b10 "!
+1}
+b0 !!
+b11 {
+b110011110001001101010111100110111101111001111010001001001000101 x
+b110011110001001101010111100110111101111001111010010001101000101 x
+b110011110001001101010111100110111101111001000010010001101000101 x
+#421
+0$
+0f
+#425
+0!
+#430
+1!
+0}
+b10 ~
+1}
+b0 ~
+b1010101111001101111011110010000100100011010001010110011110001001 !!
+b1000 "!
+b10011101 r
+b11 p
+b100100011010001010110011110001001 z
+b10 v
+b110011110001001101010111100110111101111001000010000000101000101 x
+b101000101 x
+#435
+0!
+#440
+1!
+b10011111 r
+0}
+b1 ~
+1}
+b1 "!
+0}
+1w
+b110011110001001101010111100110111101111001111010001001000110100 z
+b1 p
+0#
+0|
+b1000 v
+b100000000 x
+b0xxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+bx00000000 x
+#445
+0!
+#450
+1!
+b10100000 r
+b10 ~
+b10 "!
+1}
+b0 !!
+0w
+b0 p
+1u
+1#
+bx x
+#455
+0!
+#460
+1!
+0}
+b11 ~
+1}
+b0 ~
+b110011110001001101010111100110111101111001111010001001000110100 !!
+b100 "!
+b110011110001001101010111100110111101111 l
+b1001000110100 k
+b110011110001001101010111100110111101111001000010010001101000101 z
+b10 {
+#465
+0!
+#470
+1!
+0}
+b1 ~
+1}
+b1100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+b1100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111 l
+b101000101 z
+b1 {
+#475
+0!
+#480
+1!
+0}
+b10 ~
+1}
+b10100010101100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+1j
+b1000 "!
+b1 "!
+0}
+b10100010101100111100010011010101111001101111011110010000100100011010001010110011110001001101010111100110111101111 l
+bx z
+b0 {
+#485
+0!
+#490
+1!
+0j
+b11 ~
+#495
+0!
+#500
+1!
+b100 ~
+#501
+1$
+1e
+0d
+0c
+0a
+1`
+0^
+0]
+0\
+1[
+0Z
+0Y
+1X
+0V
+0U
+0S
+1R
+1P
+0M
+1K
+1J
+1G
+1F
+0C
+1A
+0?
+1=
+1;
+0:
+19
+17
+06
+15
+11
+1-
+1,
+1+
+1*
+1'
+1&
+b110011110001001101010111100110111101111001111010001001000110100 s
+#505
+0!
+#510
+1!
+b10101000 q
+b101 ~
+b1000 p
+0u
+1|
+bx00110100 x
+bx0001001000110100 x
+bx001111010001001000110100 x
+bx11101111001111010001001000110100 x
+bx1100110111101111001111010001001000110100 x
+bx101010111100110111101111001111010001001000110100 x
+bx10001001101010111100110111101111001111010001001000110100 x
+b110011110001001101010111100110111101111001111010001001000110100 x
+#511
+0e
+1d
+0`
 0_
 1^
-0Y
+1\
 0X
-0V
-#14615
+1W
+0R
+0Q
+0O
+b110011110001001101010111100110111101111000100010010001101000101 s
+#515
 0!
-#14620
+#520
 1!
-b100001000 o
-b10 V!
-b111111111000100010010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-1i
-b1000 X!
-b1 X!
-b10001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-1O!
-0N!
-1M!
-1L!
-0J!
-1w
-1v
-1u
-1r
-1q
-1|
-1x
-0'!
-0%!
-0#!
-1/!
-1.!
-0-!
-1+!
-1*!
-17!
-16!
-13!
-12!
-1>!
-1=!
-1<!
-0;!
-0I!
-0G!
-1E!
-0D!
-0C!
-#14621
-1e
+b110 ~
+b10 "!
+1}
+b0 !!
+b10110000 q
+b10101000 r
+b0 l
+b110011110001001101010111100110111101111001111010001001000110100 z
+b1 {
+b110011110001001101010111100110111101111001111010001001001000101 x
+b110011110001001101010111100110111101111001111010010001101000101 x
+b110011110001001101010111100110111101111000100010010001101000101 x
+#521
+0P
+0L
+0K
+0J
+1H
+0E
+0D
+1C
+0A
+1@
+0=
+0<
+0;
+1:
+09
+18
+05
+04
+13
+01
+10
+0-
+1)
+1%
+b1110111100010010001101000101011001111000000000010010001101000101 s
+#525
+0!
+#530
+1!
+b10111000 q
+b10110000 r
+0}
+b111 ~
+1}
+b0 ~
+b110011110001001101010111100110111101111001111010001001000110100 !!
+b100 "!
+b110011110001001101010111100110111101111 l
+b110011110001001101010111100110111101111000100010010001101000101 z
+b11 v
+b110011110001001101010111100110111101111000000010010001101000101 x
+b10010001101000101 x
+#531
+1a
+1`
+1_
+0^
+0[
+1Z
+1Y
 0W
+1V
+1U
+1S
+1Q
+1O
+1M
+1L
+0H
+0G
+0F
+1E
+1D
+0@
+1?
+1<
+08
+07
+16
+14
+00
+1/
+0+
+0*
+0)
+1(
+0'
+0&
+0%
+b1000100100011010001010110011110001001101010111100110100111101 s
+#535
+0!
+#540
+1!
+b11000000 q
+b10110011 r
+0}
+b1 ~
+1}
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b1101 p
+b10010001101000101 z
+b1000 v
+b10010001101111000 x
+b10101011001111000 x
+b1101000101011001111000 x
+b10010001101000101011001111000 x
+b1110111100010010001101000101011001111000 x
+b1111011110111100010010001101000101011001111000 x
+b11001101001111011110111100010010001101000101011001111000 x
+b1010101111001101001111011110111100010010001101000101011001111000 x
+#541
+1f
+b100011010001010110011110001001101010111100110100111101 s
+1c
+0`
+1^
+1]
+03
+0/
+0,
+0(
+b1010001010110011110001001101010111100110111101111 s
+#545
+0!
+#550
+1!
+b11001000 q
+b10111011 r
+0}
+b10 ~
+1}
+b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+1j
+b1000 "!
+b1 "!
+0}
+b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b1010101111001101001111011110111100010010001101000101011001111000 z
+b1010101111001101001111011110111100010010001101000101011010001001 x
+b1010101111001101001111011110111100010010001101000110011110001001 x
+b1010101111001101001111011110111100010010010001010110011110001001 x
+b1010101111001101001111011110111100100011010001010110011110001001 x
+b1010101111001101001111010001000100100011010001010110011110001001 x
+b1010101111001101111011110001000100100011010001010110011110001001 x
+#551
+0$
+0f
+#555
+0!
+#560
+1!
+b11000011 r
+0j
+b11 ~
+b10 "!
+1}
+b0 !!
+b0 l
+b101 p
+b10 {
+b100 v
+b1010101111001101111011110001000100000001010001010110011110001001 x
+b1010001010110011110001001 x
+#565
+0!
+#570
+1!
+0}
+b100 ~
+1}
+b0 ~
+b1010101111001101001111011110111100010010001101000101011001111000 !!
+b1000 "!
+b11000111 r
+b0 k
+1w
+b1010101111001101111011110001000100100011010001010110011110001001 z
+b1 p
+0#
+0|
+b1000 v
+b1010001010110011100000000 x
+b101000101xxxxxxxx00000000 x
+b1xxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 x
+bx00000000 x
+#575
+0!
+#580
+1!
+b11001000 r
+0}
+b1 ~
+1}
+0w
+1u
+b1010001010110011110001001 z
+b0 p
+1#
+b1 {
+bx x
+#585
+0!
+#590
+0i
+1h
+1g
+1!
+0}
+b10 ~
+1}
+b1 "!
+0}
+bx z
+b0 {
+#595
+0!
+#600
+1!
+b11 ~
+#601
+1$
+1e
+0d
+0c
+0b
+1`
+0]
+0\
+1[
+0Y
+1X
+0U
+0T
+0S
+1R
+0Q
+1P
+0M
+0L
+1K
+0I
+1H
+0E
+0C
+1A
+1@
+0>
+1;
+19
+17
+15
+12
+11
+1.
+1-
+1,
+1+
+1)
+1'
+1%
+b1010101111001101111011110011110100010010001101000101011001111000 s
+#605
+0!
+#610
+1!
+b11010000 q
+b100 ~
+b1000 p
+0u
+1|
+bx01111000 x
+bx0101011001111000 x
+bx001101000101011001111000 x
+bx00010010001101000101011001111000 x
+bx0011110100010010001101000101011001111000 x
+bx111011110011110100010010001101000101011001111000 x
+bx11001101111011110011110100010010001101000101011001111000 x
+b1010101111001101111011110011110100010010001101000101011001111000 x
+#611
+0e
+1d
+0`
+0_
+0^
+1]
+1\
+0X
+1W
+1T
+0P
+0O
+1N
+1L
+0H
+1G
+0B
+0A
+0?
+b1010101111001101111011110001000100100011010001010110011110001001 s
+#615
+0!
+#620
+1!
+b101 ~
+b10 "!
+1}
+b0 !!
+b11011000 q
+b11010000 r
+b1010101111001101111011110011110100010010001101000101011001111000 z
+b1 {
+b1010101111001101111011110011110100010010001101000101011010001001 x
+b1010101111001101111011110011110100010010001101000110011110001001 x
+b1010101111001101111011110011110100010010010001010110011110001001 x
+b1010101111001101111011110011110100100011010001010110011110001001 x
+b1010101111001101111011110001000100100011010001010110011110001001 x
+#621
+18
+02
+01
+0.
+0-
+0,
+0+
+1*
+0)
+1(
+0%
+b11010000000001111111110001000100100011010001010110011110001001 s
+#625
+0!
+#630
+1!
+b11100000 q
+b11011000 r
+0}
+b110 ~
+1}
+b0 ~
+b1010101111001101111011110011110100010010001101000101011001111000 !!
+b100 "!
+b101010111100110111101111 l
+b10010001101000101011001111000 k
+b1010101111001101111011110001000100100011010001010110011110001001 z
+b111 v
+b1010101111001101111111110001000100100011010001010110011110001001 x
+b1010101100000001111111110001000100100011010001010110011110001001 x
+b1111111110001000100100011010001010110011110001001 x
+#631
+0d
+1c
+0a
+1`
+0]
+0[
+1Y
+1X
+0V
+1S
+1Q
+1O
+1M
+0K
+1J
+1I
+0G
+1F
+1E
+1C
+1A
+0@
+1?
+1=
+0;
+0:
+08
+07
+06
+13
+12
+1/
+1.
+1,
+0(
+0'
+1&
+b100010101100111100010011010101111001101111011110011110100010010 s
+#635
+0!
+#640
+1!
+b11101000 q
+b11011111 r
+0}
+b1 ~
+1}
+b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b1001 p
+b1111111110001000100100011010001010110011110001001 z
+b1000 v
+b1111111110001000100100011010001010110011100110100 x
+b1111111110001000100100011010001010001001000110100 x
+b1111111110001000100100011001111010001001000110100 x
+b1111111110001000111101111001111010001001000110100 x
+b1111111111100110111101111001111010001001000110100 x
+b1101010111100110111101111001111010001001000110100 x
+b10001001101010111100110111101111001111010001001000110100 x
+b110011110001001101010111100110111101111001111010001001000110100 x
+#641
+1d
+0`
+1_
+0Z
+0Y
+0W
+b100010101100111100010011010101111001101111011110001000100100011 s
+#645
+0!
+#650
+1!
+b11110000 q
+b11100111 r
+0}
+b10 ~
+1}
+b111111111000100010010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+1j
+b1000 "!
+b1 "!
+0}
+b10001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b110011110001001101010111100110111101111001111010001001000110100 z
+b110011110001001101010111100110111101111001111010001001001000101 x
+b110011110001001101010111100110111101111001111010010001101000101 x
+b110011110001001101010111100110111101111000100010010001101000101 x
+#651
+1f
+b1000100100011 s
+0X
+0T
 0S
 0R
 0Q
-0P
+0O
 0N
 0M
 0L
-0K
+0J
 0I
+0F
+0E
+0D
+0C
+0A
+0?
+0=
+0<
+09
+05
+04
+03
+02
+0/
+0.
+0,
+0*
+0&
+b100100011 s
+#655
+0!
+#660
+1!
+b11111000 q
+b11101111 r
+0j
+b11 ~
+b10 "!
+1}
+b0 !!
+b0 l
+b10 {
+b11 v
+b110011110001001101010111100110111101111000000010010001101000101 x
+b10010001101000101 x
+#661
+0$
+0f
+#665
+0!
+#670
+1!
+0}
+b100 ~
+1}
+b0 ~
+b110011110001001101010111100110111101111001111010001001000110100 !!
+b100 "!
+b11110010 r
+b110011110001001101010111100110111101111 l
+b1001000110100 k
+1w
+b110011110001001101010111100110111101111000100010010001101000101 z
+b110 p
+0#
+0|
+b1000 v
+b10010001100000000 x
+b10000000000000000 x
+b0 x
+b0xxxxxxxx000000000000000000000000000000000000000000000000 x
+bx000000000000000000000000000000000000000000000000 x
+#675
+0!
+#680
+1!
+b11110011 r
+0}
+b1 ~
+1}
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b10010001101000101 z
+b101 p
+b1 {
+bx0000000000000000000000000000000000000000 x
+#685
+0!
+#690
+1!
+b11110100 r
+0}
+b10 ~
+1}
+b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+1j
+b1000 "!
+b1 "!
+0}
+b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b100 p
+bx z
+b0 {
+bx00000000000000000000000000000000 x
+#695
+0!
+#700
+1!
+b11110101 r
+0j
+b11 ~
+b10 "!
+1}
+b0 !!
+b0 l
+b11 p
+bx000000000000000000000000 x
+#705
+0!
+#710
+1!
+0}
+b100 ~
+1}
+b0 ~
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx !!
+b1000 "!
+b11110110 r
+b0 k
+b10 p
+bx0000000000000000 x
+#715
+0!
+#720
+1!
+b11110111 r
+0}
+b1 ~
+1}
+b1 p
+bx00000000 x
+#725
+0!
+#730
+1!
+b11111000 r
+0}
+b10 ~
+1}
+0w
+b0 p
+1u
+1#
+bx x
+#735
+0!
+#740
+1!
+0}
+b11 ~
+1}
+#745
+0!
+#750
+1!
+0}
+b100 ~
+1}
+#751
+1$
+1e
+0d
+0c
+1a
+1`
+1^
+0\
+1[
+1Z
+1X
+1V
+1R
+1P
+1O
+1K
+1H
+1D
+1B
+1A
+1@
+1?
+1<
+1;
+1:
+19
+17
+16
+15
+14
+12
+11
+1.
+1-
+1,
+1+
+1)
+1'
+1%
+b1010101111001101111011110011110100010010001101000101011001111000 s
+#755
+0!
+#760
+1!
+b100000000 q
+0}
+b101 ~
+1}
+b1000 p
+0u
+1|
+bx01111000 x
+bx0101011001111000 x
+bx001101000101011001111000 x
+bx00010010001101000101011001111000 x
+bx0011110100010010001101000101011001111000 x
+bx111011110011110100010010001101000101011001111000 x
+bx11001101111011110011110100010010001101000101011001111000 x
+b1010101111001101111011110011110100010010001101000101011001111000 x
+#761
+0e
+1d
+0`
+0_
+0^
+1]
+1\
+0X
+1W
+1T
+0P
+0O
+1N
+1L
 0H
+1G
+0B
+0A
+0?
+b1010101111001101111011110001000100100011010001010110011110001001 s
+#765
+0!
+#770
+1!
+b100001000 q
+b100000000 r
+0}
+b110 ~
+1}
+b1 "!
+0}
+b1010101111001101111011110011110100010010001101000101011001111000 z
+b1 {
+b1010101111001101111011110011110100010010001101000101011010001001 x
+b1010101111001101111011110011110100010010001101000110011110001001 x
+b1010101111001101111011110011110100010010010001010110011110001001 x
+b1010101111001101111011110011110100100011010001010110011110001001 x
+b1010101111001101111011110001000100100011010001010110011110001001 x
+#771
+0@
+0<
+0;
+09
+18
+06
+05
+04
+13
+02
+01
+10
+0.
+0-
+0+
+1*
+1(
+0%
+b11110100010010001101000000000100100011010001010110011110001001 s
+#775
+0!
+#780
+1!
+b100010000 q
+b100001000 r
+b111 ~
+b10 "!
+1}
+b0 !!
+b10 {
+b101 v
+b1010101111001101111011110000000100100011010001010110011110001001 x
+b100100011010001010110011110001001 x
+#781
+1c
+1b
+1_
+1^
+0[
+1Y
+0W
+1U
+1S
+0R
+1Q
+1O
+0N
+1M
+0K
+1I
+0G
+1E
+1C
+1B
+1?
+1>
+1<
+08
+07
+16
+14
+00
+1/
+0*
+0)
+0'
+b1000100100011010001010110011110001001101010111100110111101111 s
+#785
+0!
+#790
+1!
+0}
+b1000 ~
+1}
+b0 ~
+b1010101111001101111011110011110100010010001101000101011001111000 !!
+b100 "!
+b100011000 q
+b100001101 r
+b101010111100110111101111 l
+b10010001101000101011001111000 k
+b1011 p
+b1010101111001101111011110001000100100011010001010110011110001001 z
+b1000 v
+b100100011010001010110011100110100 x
+b100100011010001010001001000110100 x
+b100100011001111010001001000110100 x
+b111101111001111010001001000110100 x
+b1100110111101111001111010001001000110100 x
+b101010111100110111101111001111010001001000110100 x
+b10001001101010111100110111101111001111010001001000110100 x
+b110011110001001101010111100110111101111001111010001001000110100 x
+#795
+0!
+#800
+1!
+b100100000 q
+b100010101 r
+0}
+b1 ~
+1}
+b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b100100011010001010110011110001001 z
+b110011110001001101010111100110111101111001111010001001001000101 x
+b110011110001001101010111100110111101111001111010010001101000101 x
+b110011110001001101010111100110111101111000100010010001101000101 x
+#801
+1f
+b1100110111101111 s
+1`
+0Z
+0Y
+0V
+0U
+0T
+0S
+0Q
+0O
+0M
+0L
+0I
 0E
 0D
 0C
 0B
-0@
+0?
 0>
 0<
-0;
-08
-04
-03
-02
-01
-0.
-0-
-0+
-0)
-0%
-#14625
-0!
-#14630
-1!
-0i
-b11 V!
-b10 X!
-b0 W!
-b0 k
-#14631
-0#
-0e
-0R!
-#14635
-0!
-#14640
-1!
-b100 V!
-b0 V!
-b110011110001001101010111100110111101111001111010001001000110100 W!
-b100 X!
-b100010000 o
-b110011110001001101010111100110111101111 k
-b1001000110100 j
-1Q!
-0M!
-0L!
-1K!
-0?!
-0>!
-0<!
-1I!
-0E!
-1D!
-#14645
-0!
-#14650
-1!
-b100011000 o
-b1 V!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0w
-0v
-0u
-0r
-0q
-0!!
-0|
-0x
-0)!
-0(!
-0&!
-0$!
-0"!
-01!
-0/!
-0.!
-0+!
-0*!
-09!
-08!
-07!
-06!
-04!
-03!
-02!
-0=!
-#14655
-0!
-#14660
-1!
-b100100000 o
-b10 V!
-b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-1i
-b1000 X!
-b1 X!
-b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-0O!
-0K!
-xw
-xv
-xu
-xt
-xs
-xr
-xq
-xp
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-#14665
-0!
-#14670
-1!
-0i
-b11 V!
-b10 X!
-b0 W!
-b0 k
-#14675
-0!
-#14680
-1!
-b100101000 o
-b100 V!
-b0 V!
-b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000000 W!
-b1 X!
-b0 j
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-1S!
-1U!
-#14681
-1#
-1d
-1R!
-0c
-0b
-1`
-1_
-1]
-0[
-1Z
-1Y
-1W
-1U
-1Q
-1O
-1N
-1J
-1G
-1C
-1A
-1@
-1?
-1>
-1;
-1:
-19
-18
-16
-15
-14
-13
-11
-10
-1-
-1,
-1+
-1*
-1(
-1&
-1$
-#14685
-0!
-#14690
-1!
-b1 V!
-0Q!
-0P!
-0O!
-1N!
-1M!
-1L!
-1K!
-0J!
-1w
-1v
-0u
-1t
-0s
-1r
-0q
-1p
-1!!
-0~
-1}
-1|
-0{
-0z
-1y
-1x
-1)!
-1(!
-1'!
-1&!
-0%!
-1$!
-1#!
-1"!
-11!
-00!
-1/!
-1.!
-1-!
-1,!
-0+!
-0*!
-09!
-18!
-07!
-06!
-15!
-04!
-03!
-02!
-0A!
-0@!
-1?!
-0>!
-1=!
-1<!
-0;!
-0:!
-0I!
-1H!
-1G!
-0F!
-1E!
-0D!
-1C!
-0B!
-0S!
-0U!
-#14691
-0d
-1c
-0_
-0^
-0]
-1\
-1[
-0W
-1V
-1S
-0O
-0N
-1M
-1K
-0G
-1F
-0A
-0@
-0>
-#14695
-0!
-#14700
-1!
-b10 V!
-b10 X!
-b0 W!
-#14701
-0?
-0;
 0:
-08
-17
-05
+06
 04
 03
-12
-01
-00
-1/
-0-
-0,
-0*
-1)
-1'
-0$
-#14705
-0!
-#14710
-1!
-b100110000 o
-b11 V!
-b0 V!
-b1010101111001101111011110011110100010010001101000101011001111000 W!
-b100 X!
-b101010111100110111101111 k
-b10010001101000101011001111000 j
-1Q!
-0M!
-0L!
-0K!
-1J!
-0/!
-0.!
-0,!
-19!
-05!
-14!
-1A!
-0=!
-0<!
-1;!
-1I!
-0E!
-1D!
-#14711
-1b
-1a
-1^
-1]
-0Z
-1X
-0V
-1T
-1R
-0Q
-1P
-1N
-0M
-1L
-0J
-1H
-0F
-1D
-1B
-1A
-1>
-1=
-1;
-07
-06
-15
-13
 0/
-1.
-0)
+0,
 0(
-0&
-#14715
+b111111111 s
+#805
 0!
-#14720
+#810
 1!
-b100111000 o
-b1 V!
-b10101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-b1010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0w
-0v
-0t
-0r
-0p
-0!!
+b100101000 q
+b100011101 r
 0}
-0|
-0y
-0x
-0)!
-0(!
-0'!
-0&!
-0$!
-0#!
-0"!
-0-!
-#14725
+b10 ~
+1}
+b10010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 !!
+1j
+b1000 "!
+b1 "!
+0}
+b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b110011110001001101010111100110111101111001111010001001000110100 z
+b101 v
+b110011110001001101010111100110111111111000100010010001101000101 x
+b110011110001001101010110000000111111111000100010010001101000101 x
+b111111111000100010010001101000101 x
+#811
+0$
+0f
+#815
 0!
-#14730
+#820
 1!
-b101000000 o
-b10 V!
-b10010001101000101011001111000100110101011110011011110111100010001001000110100010101100111100010011010101111001101111011110011110100010010001101000101011001111000 W!
-1i
-b1000 X!
-b1 X!
-b1001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-0Q!
-1O!
-0N!
-1M!
-1L!
-0J!
+b100100010 r
+0j
+b11 ~
+b10 "!
+1}
+b0 !!
+b0 l
 1w
-1v
-1u
-1r
-1q
-1!!
-1|
-1x
-1)!
-1(!
-1&!
-1$!
-1"!
-1/!
-1.!
-1+!
-1*!
-17!
-16!
-13!
-12!
-1>!
-1=!
-1<!
-0;!
-0I!
-0G!
-1E!
-0D!
-0C!
-#14731
+b110 p
 0#
-0R!
-1_
-0Y
-0X
-0U
-0T
-0S
-0R
-0P
-0N
-0L
-0K
-0H
-0D
-0C
-0B
-0A
-0>
-0=
-0;
-09
-05
-03
-02
-0.
-0+
-0'
-#14735
+0|
+b11 {
+b1000 v
+b111111111000100010010001100000000 x
+b111111111000100010000000000000000 x
+b111111111000000000000000000000000 x
+b100000000000000000000000000000000 x
+b0 x
+b0xxxxxxxx000000000000000000000000000000000000000000000000 x
+bx000000000000000000000000000000000000000000000000 x
+#825
 0!
-#14740
+#830
 1!
-0i
-b11 V!
-b10 X!
-b0 W!
-b0 k
-#14745
+0}
+b100 ~
+1}
+b0 ~
+b110011110001001101010111100110111101111001111010001001000110100 !!
+b100 "!
+b100100011 r
+b110011110001001101010111100110111101111 l
+b1001000110100 k
+b101 p
+b110011110001001101010111100110111101111000100010010001101000101 z
+b10 {
+bx0000000000000000000000000000000000000000 x
+#835
 0!
-#14750
+#840
 1!
-b101001000 o
-b100 V!
-b0 V!
-b110011110001001101010111100110111101111001111010001001000110100 W!
-b100 X!
-b110011110001001101010111100110111101111 k
-b1001000110100 j
-1Q!
-0M!
-0L!
-1K!
-0?!
-0>!
-0<!
-1I!
-0E!
-1D!
-#14755
+b100100100 r
+0}
+b1 ~
+1}
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b111111111000100010010001101000101 z
+b100 p
+b1 {
+bx00000000000000000000000000000000 x
+#845
 0!
-#14760
+#850
 1!
-b101010000 o
-b1 V!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-b1100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-xw
-xv
-xu
-xt
-xs
-xr
-xq
-xp
-x!!
-x~
-x}
-x|
-x{
-xz
-xy
-xx
-x)!
-x(!
-x'!
-x&!
-x%!
-x$!
-x#!
-x"!
-x1!
-x0!
-x/!
-x.!
-x-!
-x,!
-x+!
-x*!
-x9!
-x8!
-x7!
-x6!
-x5!
-x4!
-x3!
-x2!
-#14765
+b100100101 r
+0}
+b10 ~
+1}
+b11111111100010001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 !!
+1j
+b1000 "!
+b1 "!
+0}
+b10001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 l
+b11 p
+bx z
+b0 {
+bx000000000000000000000000 x
+#855
 0!
-#14770
-1!
-b101011000 o
-b10 V!
-bx00010001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111001111010001001000110100 W!
-1i
-b1000 X!
-b10001001000110100010101100111100010011010101111001101111011110001000100100011010001010110011110001001101010111100110111101111 k
-xQ!
-xP!
-xO!
-xN!
-xM!
-xL!
-xK!
-xJ!
-xA!
-x@!
-x?!
-x>!
-x=!
-x<!
-x;!
-x:!
-xI!
-xH!
-xG!
-xF!
-xE!
-xD!
-xC!
-xB!
-#14775
-0!
-#14780
-1!
-b101100000 o
-0i
-b11 V!
-#14790
-b0 ]!
-b0 ^!
-#14840
-b1000 ]!
-#14850
-b10000 ]!
-#14860
-b11000 ]!
-b1 ^!
-#14870
-b100000 ]!
-b10 ^!
-#14880
-b101000 ]!
-b11 ^!
-#14890
-b100 ^!
-#14900
-b101 ^!
-#14910
-b110 ^!
-#14920
-b111 ^!
-#14930
-b1000 ^!
-#14940
-b1001 ^!
-#14950
-b1010 ^!
-#14960
-b1011 ^!
-#14970
-b1100 ^!
-#14980
-b1101 ^!
-#14990
-b1110 ^!
-#15000
-b1111 ^!
-#15010
-b10000 ^!
-#15020
-b10001 ^!
-#15030
-b10010 ^!
-#15040
-b10011 ^!
-#15050
-b10100 ^!
-#15060
-b10101 ^!
-#15070
-b10110 ^!
-#15090
-b10111 ^!
-#15100
-b11000 ^!
-#15110
-b11001 ^!
-#15120
-b11010 ^!
-#15130
-b11011 ^!
-#15140
-b11100 ^!
-#15150
-b11101 ^!
-#15160
-b11110 ^!
-#15170
-b11111 ^!
-#15180
-b100000 ^!
-#15190
-b100001 ^!
-#15200
-b100010 ^!
-#15210
-b100011 ^!
-#15220
-b100100 ^!
-#15230
-b100101 ^!
-#15240
-b100110 ^!
-#15250
-b100111 ^!
-#15260
-b101000 ^!
-#15290
-b110000 ]!
-#15300
-b111000 ]!
-#15310
-b1000000 ]!
-b101001 ^!
-#15320
-b1001000 ]!
-b101010 ^!
-#15330
-b1010000 ]!
-b101011 ^!
-#15340
-b101100 ^!
-#15350
-b101101 ^!
-#15360
-b101110 ^!
-#15370
-b101111 ^!
-#15380
-b110000 ^!
-#15390
-b110001 ^!
-#15400
-b110010 ^!
-#15410
-b110011 ^!
-#15420
-b110100 ^!
-#15430
-b110101 ^!
-#15440
-b110110 ^!
-#15450
-b110111 ^!
-#15460
-b111000 ^!
-#15470
-b111001 ^!
-#15480
-b111010 ^!
-#15490
-b111011 ^!
-#15500
-b111100 ^!
-#15510
-b111101 ^!
-#15530
-b111110 ^!
-#15540
-b111111 ^!
-#15550
-b1000000 ^!
-#15560
-b1000001 ^!
-#15570
-b1000010 ^!
-#15580
-b1000011 ^!
-#15590
-b1000100 ^!
-#15600
-b1000101 ^!
-#15610
-b1000110 ^!
-#15620
-b1000111 ^!
-#15630
-b1001000 ^!
-#15640
-b1001001 ^!
-#15650
-b1001010 ^!
-#15660
-b1001011 ^!
-#15670
-b1001100 ^!
-#15680
-b1001101 ^!
-#15690
-b1001110 ^!
-#15700
-b1001111 ^!
-#15720
-b1010000 ^!
-#15730
-b1011000 ]!
-#15740
-b1100000 ]!
-#15750
-b1101000 ]!
-b1010001 ^!
-#15760
-b1110000 ]!
-b1010010 ^!
-#15770
-b1111000 ]!
-b1010011 ^!
-#15780
-b1010100 ^!
-#15790
-b1010101 ^!
-#15800
-b1010110 ^!
-#15810
-b1010111 ^!
-#15820
-b1011000 ^!
-#15830
-b1011001 ^!
-#15840
-b1011010 ^!
-#15850
-b1011011 ^!
-#15860
-b1011100 ^!
-#15870
-b1011101 ^!
-#15880
-b1011110 ^!
-#15890
-b1011111 ^!
-#15900
-b1100000 ^!
-#15910
-b1100001 ^!
-#15920
-b1100010 ^!
-#15930
-b1100011 ^!
-#15940
-b1100100 ^!
-#15950
-b1100101 ^!
-#15970
-b1100110 ^!
-#15980
-b1100111 ^!
-#15990
-b1101000 ^!
-#16000
-b1101001 ^!
-#16010
-b1101010 ^!
-#16020
-b1101011 ^!
-#16030
-b1101100 ^!
-#16040
-b1101101 ^!
-#16050
-b1101110 ^!
-#16060
-b1101111 ^!
-#16070
-b1110000 ^!
-#16080
-b1110001 ^!
-#16090
-b1110010 ^!
-#16100
-b1110011 ^!
-#16110
-b1110100 ^!
-#16120
-b1110101 ^!
-#16140
-b1110110 ^!
-#16150
-b10000000 ]!
-b1110111 ^!
-#16160
-b10001000 ]!
-b1111000 ^!
-#16170
-b10010000 ]!
-b1111001 ^!
-#16180
-b10011000 ]!
-b1111010 ^!
-#16190
-b10100000 ]!
-b1111011 ^!
-#16200
-b1111100 ^!
-#16210
-b1111101 ^!
-#16220
-b1111110 ^!
-#16230
-b1111111 ^!
-#16240
-b10000000 ^!
-#16250
-b10000001 ^!
-#16260
-b10000010 ^!
-#16270
-b10000011 ^!
-#16280
-b10000100 ^!
-#16290
-b10000101 ^!
-#16300
-b10000110 ^!
-#16310
-b10000111 ^!
-#16320
-b10001000 ^!
-#16330
-b10001001 ^!
-#16340
-b10001010 ^!
-#16350
-b10001011 ^!
-#16360
-b10001100 ^!
-#16370
-b10001101 ^!
-#16390
-b10001110 ^!
-#16400
-b10001111 ^!
-#16410
-b10010000 ^!
-#16420
-b10010001 ^!
-#16430
-b10010010 ^!
-#16440
-b10010011 ^!
-#16450
-b10010100 ^!
-#16460
-b10010101 ^!
-#16470
-b10010110 ^!
-#16480
-b10010111 ^!
-#16490
-b10011000 ^!
-#16500
-b10011001 ^!
-#16510
-b10011010 ^!
-#16520
-b10011011 ^!
-#16530
-b10011100 ^!
-#16540
-b10011101 ^!
-#16550
-b10011110 ^!
-#16560
-b10011111 ^!
-#16580
-b10100000 ^!
-#16590
-b10101000 ]!
-#16600
-b10110000 ]!
-#16610
-b10111000 ]!
-b10100001 ^!
-#16620
-b11000000 ]!
-b10100010 ^!
-#16630
-b11001000 ]!
-b10100011 ^!
-#16640
-b10100100 ^!
-#16650
-b10100101 ^!
-#16660
-b10100110 ^!
-#16670
-b10100111 ^!
-#16680
-b10101000 ^!
-#16690
-b10101001 ^!
-#16700
-b10101010 ^!
-#16710
-b10101011 ^!
-#16720
-b10101100 ^!
-#16730
-b10101101 ^!
-#16740
-b10101110 ^!
-#16750
-b10101111 ^!
-#16760
-b10110000 ^!
-#16770
-b10110001 ^!
-#16780
-b10110010 ^!
-#16790
-b10110011 ^!
-#16810
-b10110100 ^!
-#16820
-b10110101 ^!
-#16830
-b10110110 ^!
-#16840
-b10110111 ^!
-#16850
-b10111000 ^!
-#16860
-b10111001 ^!
-#16870
-b10111010 ^!
-#16880
-b10111011 ^!
-#16890
-b10111100 ^!
-#16900
-b10111101 ^!
-#16910
-b10111110 ^!
-#16920
-b10111111 ^!
-#16930
-b11000000 ^!
-#16940
-b11000001 ^!
-#16950
-b11000010 ^!
-#16960
-b11000011 ^!
-#16970
-b11000100 ^!
-#16980
-b11000101 ^!
-#16990
-b11000110 ^!
-#17000
-b11000111 ^!
-#17020
-b11001000 ^!
-#17100
-b11010000 ]!
-#17110
-b11011000 ]!
-#17120
-b11100000 ]!
-b11001001 ^!
-#17130
-b11101000 ]!
-b11001010 ^!
-#17140
-b11110000 ]!
-b11001011 ^!
-#17150
-b11111000 ]!
-b11001100 ^!
-#17160
-b11001101 ^!
-#17170
-b11001110 ^!
-#17180
-b11001111 ^!
-#17190
-b11010000 ^!
-#17200
-b11010001 ^!
-#17210
-b11010010 ^!
-#17220
-b11010011 ^!
-#17230
-b11010100 ^!
-#17240
-b11010101 ^!
-#17250
-b11010110 ^!
-#17260
-b11010111 ^!
-#17270
-b11011000 ^!
-#17280
-b11011001 ^!
-#17290
-b11011010 ^!
-#17300
-b11011011 ^!
-#17310
-b11011100 ^!
-#17320
-b11011101 ^!
-#17330
-b11011110 ^!
-#17340
-b11011111 ^!
-#17360
-b11100000 ^!
-#17370
-b11100001 ^!
-#17380
-b11100010 ^!
-#17390
-b11100011 ^!
-#17400
-b11100100 ^!
-#17410
-b11100101 ^!
-#17420
-b11100110 ^!
-#17430
-b11100111 ^!
-#17440
-b11101000 ^!
-#17450
-b11101001 ^!
-#17460
-b11101010 ^!
-#17470
-b11101011 ^!
-#17480
-b11101100 ^!
-#17490
-b11101101 ^!
-#17500
-b11101110 ^!
-#17510
-b11101111 ^!
-#17520
-b11110000 ^!
-#17530
-b11110001 ^!
-#17540
-b11110010 ^!
-#17560
-b11110011 ^!
-#17570
-b100000000 ]!
-b11110100 ^!
-#17580
-b100001000 ]!
-b11110101 ^!
-#17590
-b100010000 ]!
-b11110110 ^!
-#17600
-b100011000 ]!
-b11110111 ^!
-#17610
-b100100000 ]!
-b11111000 ^!
-#17620
-b100101000 ]!
-b11111001 ^!
-#17630
-b11111010 ^!
-#17640
-b11111011 ^!
-#17650
-b11111100 ^!
-#17660
-b11111101 ^!
-#17670
-b11111110 ^!
-#17680
-b11111111 ^!
-#17690
-b100000000 ^!
-#17700
-b100000001 ^!
-#17710
-b100000010 ^!
-#17720
-b100000011 ^!
-#17730
-b100000100 ^!
-#17740
-b100000101 ^!
-#17750
-b100000110 ^!
-#17760
-b100000111 ^!
-#17770
-b100001000 ^!
-#17780
-b100001001 ^!
-#17790
-b100001010 ^!
-#17800
-b100001011 ^!
-#17810
-b100001100 ^!
-#17820
-b100001101 ^!
-#17840
-b100001110 ^!
-#17850
-b100001111 ^!
-#17860
-b100010000 ^!
-#17870
-b100010001 ^!
-#17880
-b100010010 ^!
-#17890
-b100010011 ^!
-#17900
-b100010100 ^!
-#17910
-b100010101 ^!
-#17920
-b100010110 ^!
-#17930
-b100010111 ^!
-#17940
-b100011000 ^!
-#17950
-b100011001 ^!
-#17960
-b100011010 ^!
-#17970
-b100011011 ^!
-#17980
-b100011100 ^!
-#17990
-b100011101 ^!
-#18000
-b100011110 ^!
-#18010
-b100011111 ^!
-#18020
-b100100000 ^!
-#18030
-b100100001 ^!
-#18040
-b100100010 ^!
-#18060
-b100110000 ]!
-b100100011 ^!
-#18070
-b100111000 ]!
-b100100100 ^!
-#18080
-b100100101 ^!
-#18090
-b100100110 ^!
-#18100
-b100100111 ^!
-#18110
-b100101000 ^!
-#18120
-b100101001 ^!
-#18130
-b100101010 ^!
-#18140
-b100101011 ^!
-#18150
-b100101100 ^!
-#18160
-b100101101 ^!
-#18170
-b100101110 ^!
-#18180
-b100101111 ^!
-#18190
-b100110000 ^!
-#18200
-b100110001 ^!
-#18210
-b100110010 ^!
-#18220
-b100110011 ^!
-#18230
-b100110100 ^!
-#18240
-b100110101 ^!
-#18250
-b100110110 ^!
-#18260
-b100110111 ^!
-#18270
-b100111000 ^!
-#18310
-b101000000 ]!
-#18320
-b101001000 ]!
-#18330
-b101010000 ]!
-b100111001 ^!
-#18340
-b100111010 ^!
-#18350
-b100111011 ^!
-#18360
-b100111100 ^!
-#18370
-b100111101 ^!
-#18380
-b100111110 ^!
-#18390
-b100111111 ^!
-#18400
-b101000000 ^!
-#18410
-b101000001 ^!
-#18420
-b101000010 ^!
-#18430
-b101000011 ^!
-#18440
-b101000100 ^!
-#18450
-b101000101 ^!
-#18460
-b101000110 ^!
-#18470
-b101000111 ^!
-#18480
-b101001000 ^!
-#18490
-b101001001 ^!
-#18500
-b101001010 ^!
-#18510
-b101001011 ^!
-#18530
-b101001100 ^!
-#18540
-b101001101 ^!
-#18550
-b101011000 ]!
-b101001110 ^!
-#18560
-b101100000 ]!
-b101001111 ^!
-#18570
-b101010000 ^!
-#18580
-b101010001 ^!
-#18590
-b101010010 ^!
-#18600
-b101010011 ^!
-#18610
-b101010100 ^!
-#18620
-b101010101 ^!
-#18630
-b101010110 ^!
-#18640
-b101010111 ^!
-#18650
-b101011000 ^!
-#18660
-b101011001 ^!
-#18670
-b101011010 ^!
-#18680
-b101011011 ^!
-#18690
-b101011100 ^!
-#18700
-b101011101 ^!
-#18710
-b101011110 ^!
-#18720
-b101011111 ^!
-#18740
-b101100000 ^!
-#18760
-b101101000 ]!
-#18770
-b101110000 ]!
-#18780
-b101100001 ^!
-#18790
-b101100010 ^!
-#18800
-b101100011 ^!
-#18810
-b101100100 ^!
-#18820
-b101100101 ^!
-#18830
-b101100110 ^!
-#18840
-b101100111 ^!
-#18850
-b101101000 ^!
-#18860
-b101101001 ^!
-#18870
-b101101010 ^!
-#18890
-b101101011 ^!
-#18900
-b101101100 ^!
-#18910
-b101111000 ]!
-b101101101 ^!
-#18920
-b101101110 ^!
-#18930
-b101101111 ^!
-#18940
-b101110000 ^!
-#18950
-b101110001 ^!
-#18960
-b101110010 ^!
-#18970
-b101110011 ^!
-#18980
-b101110100 ^!
-#18990
-b101110101 ^!
-#19010
-b101110110 ^!
-#19020
-b101110111 ^!
-#19030
-b110000000 ]!
-b101111000 ^!
-#19040
-b110001000 ]!
-#19050
-b101111001 ^!
-#19060
-b101111010 ^!
-#19070
-b101111011 ^!
-#19080
-b101111100 ^!
-#19090
-b101111101 ^!
-#19100
-b101111110 ^!
-#19110
-b101111111 ^!
-#19120
-b110000000 ^!
-#19130
-b110000001 ^!
-#19140
-b110000010 ^!
-#19160
-b110000011 ^!
-#19170
-b110000100 ^!
-#19180
-b110010000 ]!
-b110000101 ^!
-#19190
-b110011000 ]!
-b110000110 ^!
-#19200
-b110100000 ]!
-b110000111 ^!
-#19210
-b110001000 ^!
-#19220
-b110001001 ^!
-#19230
-b110001010 ^!
-#19240
-b110001011 ^!
-#19250
-b110001100 ^!
-#19260
-b110001101 ^!
-#19270
-b110001110 ^!
-#19280
-b110001111 ^!
-#19290
-b110010000 ^!
-#19300
-b110010001 ^!
-#19310
-b110010010 ^!
-#19320
-b110010011 ^!
-#19330
-b110010100 ^!
-#19340
-b110010101 ^!
-#19350
-b110010110 ^!
-#19360
-b110010111 ^!
-#19370
-b110011000 ^!
-#19380
-b110011001 ^!
-#19390
-b110011010 ^!
-#19410
-b110011011 ^!
-#19420
-b110011100 ^!
-#19430
-b110101000 ]!
-b110011101 ^!
-#19440
-b110110000 ]!
-b110011110 ^!
-#19450
-b110111000 ]!
-b110011111 ^!
-#19460
-b110100000 ^!
-#19470
-b110100001 ^!
-#19480
-b110100010 ^!
-#19490
-b110100011 ^!
-#19500
-b110100100 ^!
-#19510
-b110100101 ^!
-#19520
-b110100110 ^!
-#19530
-b110100111 ^!
-#19540
-b110101000 ^!
-#19550
-b110101001 ^!
-#19560
-b110101010 ^!
-#19570
-b110101011 ^!
-#19580
-b110101100 ^!
-#19590
-b110101101 ^!
-#19600
-b110101110 ^!
-#19610
-b110101111 ^!
-#19620
-b110110000 ^!
-#19630
-b110110001 ^!
-#19640
-b110110010 ^!
-#19650
-b110110011 ^!
-#19660
-b110110100 ^!
-#19680
-b110110101 ^!
-#19690
-b110110110 ^!
-#19700
-b111000000 ]!
-b110110111 ^!
-#19710
-b111001000 ]!
-b110111000 ^!
-#19720
-b111010000 ]!
-b110111001 ^!
-#19730
-b110111010 ^!
-#19740
-b110111011 ^!
-#19750
-b110111100 ^!
-#19760
-b110111101 ^!
-#19770
-b110111110 ^!
-#19780
-b110111111 ^!
-#19790
-b111000000 ^!
-#19800
-b111000001 ^!
-#19810
-b111000010 ^!
-#19820
-b111000011 ^!
-#19830
-b111000100 ^!
-#19840
-b111000101 ^!
-#19850
-b111000110 ^!
-#19860
-b111000111 ^!
-#19870
-b111001000 ^!
-#19880
-b111001001 ^!
-#19900
-b111001010 ^!
-#19910
-b111001011 ^!
-#19920
-b111011000 ]!
-b111001100 ^!
-#19930
-b111100000 ]!
-b111001101 ^!
-#19940
-b111001110 ^!
-#19950
-b111001111 ^!
-#19960
-b111010000 ^!
-#19970
-b111010001 ^!
-#19980
-b111010010 ^!
-#19990
-b111010011 ^!
-#20000
-b111010100 ^!
-#20010
-b111010101 ^!
-#20020
-b111010110 ^!
-#20030
-b111010111 ^!
-#20040
-b111011000 ^!
-#20050
-b111011001 ^!
-#20060
-b111011010 ^!
-#20070
-b111011011 ^!
-#20090
-b111011100 ^!
-#20100
-b111011101 ^!
-#20110
-b111101000 ]!
-b111011110 ^!
-#20120
-b111110000 ]!
-b111011111 ^!
-#20130
-b111100000 ^!
-#20140
-b111100001 ^!
-#20150
-b111100010 ^!
-#20160
-b111100011 ^!
-#20170
-b111100100 ^!
-#20180
-b111100101 ^!
-#20190
-b111100110 ^!
-#20200
-b111100111 ^!
-#20210
-b111101000 ^!
-#20220
-b111101001 ^!
-#20230
-b111101010 ^!
-#20240
-b111101011 ^!
-#20250
-b111101100 ^!
-#20260
-b111101101 ^!
-#20270
-b111101110 ^!
-#20280
-b111101111 ^!
-#20300
-b111110000 ^!
-#20320
-b111111000 ]!
-#20330
-b0 ]!
-#20340
-b111110001 ^!
-#20350
-b111110010 ^!
-#20360
-b111110011 ^!
-#20370
-b111110100 ^!
-#20380
-b111110101 ^!
-#20390
-b111110110 ^!
-#20400
-b111110111 ^!
-#20410
-b111111000 ^!
-#20420
-b111111001 ^!
-#20430
-b111111010 ^!
-#20440
-b111111011 ^!
-#20450
-b111111100 ^!
-#20460
-b111111101 ^!
-#20470
-b111111110 ^!
-#20480
-b111111111 ^!
-#20500
-b0 ^!
-#20520
-b1000 ]!
-#20530
-b10000 ]!
-#20540
-b1 ^!
-#20550
-b10 ^!
-#20560
-b11 ^!
-#20570
-b100 ^!
-#20580
-b101 ^!
-#20590
-b110 ^!
-#20600
-b111 ^!
-#20610
-b1000 ^!
-#20620
-b1001 ^!
-#20630
-b1010 ^!
-#20640
-b1011 ^!
-#20650
-b1100 ^!
-#20660
-b1101 ^!
-#20680
-b1110 ^!
-#20690
-b1111 ^!
-#20700
-b11000 ]!
-b10000 ^!
-#20710
-b100000 ]!
-#20720
-b10001 ^!
-#20730
-b10010 ^!
-#20740
-b10011 ^!
-#20750
-b10100 ^!
-#20760
-b10101 ^!
-#20770
-b10110 ^!
-#20780
-b10111 ^!
-#20790
-b11000 ^!
-#20800
-b11001 ^!
-#20810
-b11010 ^!
-#20820
-b11011 ^!
-#20830
-b11100 ^!
-#20840
-b11101 ^!
-#20850
-b11110 ^!
-#20860
-b11111 ^!
-#20870
-b100000 ^!
-#20910
-b101000 ]!
-#20920
-b110000 ]!
-#20930
-b111000 ]!
-b100001 ^!
-#20940
-b100010 ^!
-#20950
-b100011 ^!
-#20960
-b100100 ^!
-#20970
-b100101 ^!
-#20980
-b100110 ^!
-#20990
-b100111 ^!
-#21000
-b101000 ^!
-#21010
-b101001 ^!
-#21020
-b101010 ^!
-#21030
-b101011 ^!
-#21040
-b101100 ^!
-#21050
-b101101 ^!
-#21060
-b101110 ^!
-#21070
-b101111 ^!
-#21080
-b110000 ^!
-#21090
-b110001 ^!
-#21100
-b110010 ^!
-#21110
-b110011 ^!
-#21120
-b110100 ^!
-#21130
-b110101 ^!
-#21150
-b110110 ^!
-#21160
-b110111 ^!
-#21170
-b1000000 ]!
-b111000 ^!
-#21190
-b111001 ^!
-#21200
-b111010 ^!
-#21210
-b111011 ^!
-#21220
-b111100 ^!
-#21230
-b111101 ^!
-#21240
-b111110 ^!
-#21250
-b111111 ^!
-#21260
-b1000000 ^!
-#21300
-b1001000 ]!
-#21320
-b1000001 ^!
-#21330
-b1000010 ^!
-#21340
-b1000011 ^!
-#21350
-b1000100 ^!
-#21370
-b1000101 ^!
-#21380
-b1000110 ^!
-#21390
-b1010000 ]!
-b1000111 ^!
-#21400
-b1001000 ^!
-#21410
-b1001001 ^!
-#21420
-b1001010 ^!
-#21430
-b1001011 ^!
-#21440
-b1001100 ^!
-#21450
-b1001101 ^!
-#21460
-b1001110 ^!
-#21470
-b1001111 ^!
-#21490
-b1010000 ^!
-#21510
-b1011000 ]!
-#21530
-b1010001 ^!
-#21540
-b1010010 ^!
-#21550
-b1010011 ^!
-#21560
-b1010100 ^!
-#21570
-b1010101 ^!
-#21590
-b1010110 ^!
-#21600
-b1010111 ^!
-#21610
-b1100000 ]!
-b1011000 ^!
-#21630
-b1011001 ^!
-#21640
-b1011010 ^!
-#21650
-b1011011 ^!
-#21660
-b1011100 ^!
-#21670
-b1011101 ^!
-#21680
-b1011110 ^!
-#21690
-b1011111 ^!
-#21710
-b1100000 ^!
-#21730
-b1101000 ]!
-#21740
-b1110000 ]!
-#21750
-b1111000 ]!
-b1100001 ^!
-#21760
-b1100010 ^!
-#21770
-b1100011 ^!
-#21780
-b1100100 ^!
-#21790
-b1100101 ^!
-#21800
-b1100110 ^!
-#21810
-b1100111 ^!
-#21820
-b1101000 ^!
-#21830
-b1101001 ^!
-#21840
-b1101010 ^!
-#21850
-b1101011 ^!
-#21860
-b1101100 ^!
-#21870
-b1101101 ^!
-#21880
-b1101110 ^!
-#21890
-b1101111 ^!
-#21900
-b1110000 ^!
-#21910
-b1110001 ^!
-#21920
-b1110010 ^!
-#21930
-b1110011 ^!
-#21940
-b1110100 ^!
-#21960
-b1110101 ^!
-#21970
-b1110110 ^!
-#21980
-b10000000 ]!
-b1110111 ^!
-#21990
-b10001000 ]!
-b1111000 ^!
-#22000
-b1111001 ^!
-#22010
-b1111010 ^!
-#22020
-b1111011 ^!
-#22030
-b1111100 ^!
-#22040
-b1111101 ^!
-#22050
-b1111110 ^!
-#22060
-b1111111 ^!
-#22070
-b10000000 ^!
-#22080
-b10000001 ^!
-#22090
-b10000010 ^!
-#22100
-b10000011 ^!
-#22110
-b10000100 ^!
-#22120
-b10000101 ^!
-#22130
-b10000110 ^!
-#22140
-b10000111 ^!
-#22160
-b10001000 ^!
-#22180
-b10010000 ]!
-#22190
-b10011000 ]!
-#22200
-b10001001 ^!
-#22210
-b10001010 ^!
-#22220
-b10001011 ^!
-#22230
-b10001100 ^!
-#22240
-b10001101 ^!
-#22250
-b10001110 ^!
-#22260
-b10001111 ^!
-#22270
-b10010000 ^!
-#22280
-b10010001 ^!
-#22290
-b10010010 ^!
-#22310
-b10010011 ^!
-#22320
-b10010100 ^!
-#22330
-b10100000 ]!
-b10010101 ^!
-#22340
-b10101000 ]!
-b10010110 ^!
-#22350
-b10010111 ^!
-#22360
-b10011000 ^!
-#22370
-b10011001 ^!
-#22380
-b10011010 ^!
-#22390
-b10011011 ^!
-#22400
-b10011100 ^!
-#22410
-b10011101 ^!
-#22420
-b10011110 ^!
-#22430
-b10011111 ^!
-#22440
-b10100000 ^!
-#22450
-b10100001 ^!
-#22460
-b10100010 ^!
-#22470
-b10100011 ^!
-#22480
-b10100100 ^!
-#22490
-b10100101 ^!
-#22500
-b10100110 ^!
-#22510
-b10100111 ^!
-#22520
-b10101000 ^!
-#22560
-b10110000 ]!
-#22570
-b10111000 ]!
-#22580
-b11000000 ]!
-b10101001 ^!
-#22590
-b10101010 ^!
-#22600
-b10101011 ^!
-#22610
-b10101100 ^!
-#22620
-b10101101 ^!
-#22630
-b10101110 ^!
-#22640
-b10101111 ^!
-#22650
-b10110000 ^!
-#22660
-b10110001 ^!
-#22670
-b10110010 ^!
-#22680
-b10110011 ^!
-#22690
-b10110100 ^!
-#22700
-b10110101 ^!
-#22710
-b10110110 ^!
-#22720
-b10110111 ^!
-#22730
-b10111000 ^!
-#22740
-b10111001 ^!
-#22750
-b10111010 ^!
-#22770
-b10111011 ^!
-#22780
-b10111100 ^!
-#22790
-b11001000 ]!
-b10111101 ^!
-#22800
-b11010000 ]!
-b10111110 ^!
-#22810
-b11011000 ]!
-b10111111 ^!
-#22820
-b11000000 ^!
-#22830
-b11000001 ^!
-#22840
-b11000010 ^!
-#22850
-b11000011 ^!
-#22860
-b11000100 ^!
-#22870
-b11000101 ^!
-#22880
-b11000110 ^!
-#22890
-b11000111 ^!
-#22900
-b11001000 ^!
-#22910
-b11001001 ^!
-#22920
-b11001010 ^!
-#22930
-b11001011 ^!
-#22940
-b11001100 ^!
-#22950
-b11001101 ^!
-#22960
-b11001110 ^!
-#22970
-b11001111 ^!
-#22980
-b11010000 ^!
-#22990
-b11010001 ^!
-#23000
-b11010010 ^!
-#23020
-b11010011 ^!
-#23030
-b11010100 ^!
-#23040
-b11100000 ]!
-b11010101 ^!
-#23050
-b11101000 ]!
-b11010110 ^!
-#23060
-b11110000 ]!
-b11010111 ^!
-#23070
-b11011000 ^!
-#23080
-b11011001 ^!
-#23090
-b11011010 ^!
-#23100
-b11011011 ^!
-#23110
-b11011100 ^!
-#23120
-b11011101 ^!
-#23130
-b11011110 ^!
-#23140
-b11011111 ^!
-#23150
-b11100000 ^!
-#23160
-b11100001 ^!
-#23170
-b11100010 ^!
-#23180
-b11100011 ^!
-#23190
-b11100100 ^!
-#23200
-b11100101 ^!
-#23210
-b11100110 ^!
-#23220
-b11100111 ^!
-#23230
-b11101000 ^!
-#23240
-b11101001 ^!
-#23250
-b11101010 ^!
-#23260
-b11101011 ^!
-#23270
-b11101100 ^!
-#23290
-b11101101 ^!
-#23300
-b11101110 ^!
-#23310
-b11111000 ]!
-b11101111 ^!
-#23320
-b100000000 ]!
-b11110000 ^!
-#23330
-b11110001 ^!
-#23340
-b11110010 ^!
-#23350
-b11110011 ^!
-#23360
-b11110100 ^!
-#23370
-b11110101 ^!
-#23380
-b11110110 ^!
-#23390
-b11110111 ^!
-#23400
-b11111000 ^!
-#23410
-b11111001 ^!
-#23420
-b11111010 ^!
-#23430
-b11111011 ^!
-#23440
-b11111100 ^!
-#23460
-b11111101 ^!
-#23470
-b11111110 ^!
-#23480
-b100001000 ]!
-b11111111 ^!
-#23490
-b100010000 ]!
-b100000000 ^!
-#23500
-b100000001 ^!
-#23510
-b100000010 ^!
-#23520
-b100000011 ^!
-#23530
-b100000100 ^!
-#23540
-b100000101 ^!
-#23550
-b100000110 ^!
-#23560
-b100000111 ^!
-#23570
-b100001000 ^!
-#23580
-b100001001 ^!
-#23590
-b100001010 ^!
-#23600
-b100001011 ^!
-#23610
-b100001100 ^!
-#23620
-b100001101 ^!
-#23630
-b100001110 ^!
-#23640
-b100001111 ^!
-#23650
-b100010000 ^!
-#23690
-b100011000 ]!
-#23710
-b100010001 ^!
-#23720
-b100010010 ^!
-#23730
-b100010011 ^!
-#23740
-b100010100 ^!
-#23750
-b100010101 ^!
-#23760
-b100010110 ^!
-#23770
-b100010111 ^!
-#23790
-b100011000 ^!
-#23810
-b100100000 ]!
-#23820
-b100101000 ]!
-#23830
-b100011001 ^!
-#23840
-b100011010 ^!
-#23850
-b100011011 ^!
-#23860
-b100011100 ^!
-#23870
-b100011101 ^!
-#23880
-b100011110 ^!
-#23890
-b100011111 ^!
-#23900
-b100100000 ^!
-#23910
-b100100001 ^!
-#23920
-b100100010 ^!
-#23930
-b100100011 ^!
-#23940
-b100100100 ^!
-#23950
-b100100101 ^!
-#23960
-b100100110 ^!
-#23980
-b100100111 ^!
-#23990
-b100101000 ^!
-#24000
-b100110000 ]!
-#24010
-b100111000 ]!
-#24020
-b101000000 ]!
-b100101001 ^!
-#24030
-b100101010 ^!
-#24040
-b100101011 ^!
-#24050
-b100101100 ^!
-#24060
-b100101101 ^!
-#24070
-b100101110 ^!
-#24080
-b100101111 ^!
-#24090
-b100110000 ^!
-#24100
-b100110001 ^!
-#24110
-b100110010 ^!
-#24120
-b100110011 ^!
-#24130
-b100110100 ^!
-#24140
-b100110101 ^!
-#24150
-b100110110 ^!
-#24160
-b100110111 ^!
-#24170
-b100111000 ^!
-#24180
-b100111001 ^!
-#24190
-b100111010 ^!
-#24200
-b100111011 ^!
-#24210
-b100111100 ^!
-#24220
-b100111101 ^!
-#24240
-b100111110 ^!
-#24250
-b100111111 ^!
-#24260
-b101001000 ]!
-b101000000 ^!
-#24270
-b101010000 ]!
-#24280
-b101000001 ^!
-#24290
-b101000010 ^!
-#24300
-b101000011 ^!
-#24310
-b101000100 ^!
-#24320
-b101000101 ^!
-#24330
-b101000110 ^!
-#24340
-b101000111 ^!
-#24350
-b101001000 ^!
-#24360
-b101001001 ^!
-#24370
-b101001010 ^!
-#24380
-b101001011 ^!
-#24390
-b101001100 ^!
-#24400
-b101001101 ^!
-#24410
-b101001110 ^!
-#24420
-b101001111 ^!
-#24430
-b101010000 ^!
-#24470
-b101011000 ]!
-#24480
-b101100000 ]!
-#24490
-b101010001 ^!
-#24500
-b101010010 ^!
-#24510
-b101010011 ^!
-#24520
-b101010100 ^!
-#24530
-b101010101 ^!
-#24540
-b101010110 ^!
-#24550
-b101010111 ^!
-#24560
-b101011000 ^!
-#24570
-b101011001 ^!
-#24580
-b101011010 ^!
-#24590
-b101011011 ^!
-#24600
-b101011100 ^!
-#24620
-b101011101 ^!
-#24630
-b101011110 ^!
-#24640
-b101101000 ]!
-b101011111 ^!
-#24650
-b101110000 ]!
-b101100000 ^!
-#24660
-b101100001 ^!
-#24670
-b101100010 ^!
-#24680
-b101100011 ^!
-#24690
-b101100100 ^!
-#24700
-b101100101 ^!
-#24710
-b101100110 ^!
-#24720
-b101100111 ^!
-#24730
-b101101000 ^!
-#24740
-b101101001 ^!
-#24750
-b101101010 ^!
-#24760
-b101101011 ^!
-#24770
-b101101100 ^!
-#24780
-b101101101 ^!
-#24790
-b101101110 ^!
-#24810
-b101101111 ^!
-#24820
-b101110000 ^!
-#24830
-b101111000 ]!
-#24840
-b110000000 ]!
-#24850
-b101110001 ^!
-#24860
-b101110010 ^!
-#24870
-b101110011 ^!
-#24880
-b101110100 ^!
-#24890
-b101110101 ^!
-#24900
-b101110110 ^!
-#24910
-b101110111 ^!
-#24920
-b101111000 ^!
-#24930
-b101111001 ^!
-#24940
-b101111010 ^!
-#24950
-b101111011 ^!
-#24960
-b101111100 ^!
-#24970
-b101111101 ^!
-#24980
-b101111110 ^!
-#24990
-b101111111 ^!
-#25000
-b110000000 ^!
-#25040
-b110001000 ]!
-#25050
-b110010000 ]!
-#25060
-b110000001 ^!
-#25070
-b110000010 ^!
-#25080
-b110000011 ^!
-#25090
-b110000100 ^!
-#25100
-b110000101 ^!
-#25110
-b110000110 ^!
-#25120
-b110000111 ^!
-#25130
-b110001000 ^!
-#25140
-b110001001 ^!
-#25150
-b110001010 ^!
-#25160
-b110001011 ^!
-#25170
-b110001100 ^!
-#25180
-b110001101 ^!
-#25200
-b110001110 ^!
-#25210
-b110001111 ^!
-#25220
-b110011000 ]!
-b110010000 ^!
-#25230
-b110100000 ]!
-#25240
-b110010001 ^!
-#25250
-b110010010 ^!
-#25260
-b110010011 ^!
-#25270
-b110010100 ^!
-#25280
-b110010101 ^!
-#25290
-b110010110 ^!
-#25300
-b110010111 ^!
-#25310
-b110011000 ^!
-#25320
-b110011001 ^!
-#25330
-b110011010 ^!
-#25350
-b110011011 ^!
-#25360
-b110011100 ^!
-#25370
-b110101000 ]!
-b110011101 ^!
-#25380
-b110011110 ^!
-#25390
-b110011111 ^!
-#25400
-b110100000 ^!
-#25410
-b110100001 ^!
-#25420
-b110100010 ^!
-#25430
-b110100011 ^!
-#25440
-b110100100 ^!
-#25450
-b110100101 ^!
-#25460
-b110100110 ^!
-#25470
-b110100111 ^!
-#25480
-b110101000 ^!
-#25520
-b110110000 ]!
-#25530
-b110111000 ]!
-#25540
-b110101001 ^!
-#25550
-b110101010 ^!
-#25560
-b110101011 ^!
-#25570
-b110101100 ^!
-#25580
-b110101101 ^!
-#25590
-b110101110 ^!
-#25600
-b110101111 ^!
-#25610
-b110110000 ^!
-#25620
-b110110001 ^!
-#25640
-b110110010 ^!
-#25650
-b110110011 ^!
-#25660
-b111000000 ]!
-b110110100 ^!
-#25670
-b111001000 ]!
-b110110101 ^!
-#25680
-b110110110 ^!
-#25690
-b110110111 ^!
-#25700
-b110111000 ^!
-#25710
-b110111001 ^!
-#25720
-b110111010 ^!
-#25730
-b110111011 ^!
-#25740
-b110111100 ^!
-#25750
-b110111101 ^!
-#25760
-b110111110 ^!
-#25770
-b110111111 ^!
-#25780
-b111000000 ^!
-#25790
-b111000001 ^!
-#25800
-b111000010 ^!
-#25810
-b111000011 ^!
-#25830
-b111000100 ^!
-#25840
-b111000101 ^!
-#25850
-b111010000 ]!
-b111000110 ^!
-#25860
-b111011000 ]!
-b111000111 ^!
-#25870
-b111001000 ^!
-#25880
-b111001001 ^!
-#25890
-b111001010 ^!
-#25900
-b111001011 ^!
-#25910
-b111001100 ^!
-#25920
-b111001101 ^!
-#25930
-b111001110 ^!
-#25940
-b111001111 ^!
-#25950
-b111010000 ^!
-#25960
-b111010001 ^!
-#25970
-b111010010 ^!
-#25980
-b111010011 ^!
-#26000
-b111010100 ^!
-#26010
-b111010101 ^!
-#26020
-b111100000 ]!
-b111010110 ^!
-#26030
-b111101000 ]!
-b111010111 ^!
-#26040
-b111110000 ]!
-b111011000 ^!
-#26050
-b111011001 ^!
-#26060
-b111011010 ^!
-#26070
-b111011011 ^!
-#26080
-b111011100 ^!
-#26090
-b111011101 ^!
-#26100
-b111011110 ^!
-#26110
-b111011111 ^!
-#26120
-b111100000 ^!
-#26130
-b111100001 ^!
-#26140
-b111100010 ^!
-#26150
-b111100011 ^!
-#26160
-b111100100 ^!
-#26170
-b111100101 ^!
-#26180
-b111100110 ^!
-#26190
-b111100111 ^!
-#26200
-b111101000 ^!
-#26210
-b111101001 ^!
-#26220
-b111101010 ^!
-#26230
-b111101011 ^!
-#26250
-b111101100 ^!
-#26260
-b111101101 ^!
-#26270
-b111111000 ]!
-b111101110 ^!
-#26280
-b0 ]!
-b111101111 ^!
-#26290
-b111110000 ^!
-#26300
-b111110001 ^!
-#26310
-b111110010 ^!
-#26320
-b111110011 ^!
-#26330
-b111110100 ^!
-#26340
-b111110101 ^!
-#26350
-b111110110 ^!
-#26360
-b111110111 ^!
-#26370
-b111111000 ^!
-#26380
-b111111001 ^!
-#26390
-b111111010 ^!
-#26410
-b111111011 ^!
-#26420
-b111111100 ^!
-#26430
-b1000 ]!
-b111111101 ^!
-#26440
-b10000 ]!
-b111111110 ^!
-#26450
-b111111111 ^!
-#26460
-b0 ^!
-#26470
-b1 ^!
-#26480
-b10 ^!
-#26490
-b11 ^!
-#26500
-b100 ^!
-#26510
-b101 ^!
-#26520
-b110 ^!
-#26530
-b111 ^!
-#26540
-b1000 ^!
-#26550
-b1001 ^!
-#26560
-b1010 ^!
-#26570
-b1011 ^!
-#26580
-b1100 ^!
-#26590
-b1101 ^!
-#26600
-b1110 ^!
-#26620
-b1111 ^!
-#26630
-b10000 ^!
-#26640
-b11000 ]!
-#26660
-b10001 ^!
-#26670
-b10010 ^!
-#26680
-b10011 ^!
-#26690
-b10100 ^!
-#26700
-b10101 ^!
-#26710
-b10110 ^!
-#26730
-b10111 ^!
-#26740
-b11000 ^!
-#26750
-b100000 ]!
-#26760
-b101000 ]!
-#26770
-b11001 ^!
-#26780
-b11010 ^!
-#26790
-b11011 ^!
-#26800
-b11100 ^!
-#26810
-b11101 ^!
-#26820
-b11110 ^!
-#26830
-b11111 ^!
-#26840
-b100000 ^!
-#26850
-b100001 ^!
-#26870
-b100010 ^!
-#26880
-b100011 ^!
-#26890
-b110000 ]!
-b100100 ^!
-#26900
-b111000 ]!
-b100101 ^!
-#26910
-b1000000 ]!
-b100110 ^!
-#26920
-b100111 ^!
-#26930
-b101000 ^!
-#26940
-b101001 ^!
-#26950
-b101010 ^!
-#26960
-b101011 ^!
-#26970
-b101100 ^!
-#26980
-b101101 ^!
-#26990
-b101110 ^!
-#27000
-b101111 ^!
-#27010
-b110000 ^!
-#27020
-b110001 ^!
-#27030
-b110010 ^!
-#27040
-b110011 ^!
-#27050
-b110100 ^!
-#27060
-b110101 ^!
-#27070
-b110110 ^!
-#27080
-b110111 ^!
-#27090
-b111000 ^!
-#27100
-b111001 ^!
-#27110
-b111010 ^!
-#27130
-b111011 ^!
-#27140
-b111100 ^!
-#27150
-b1001000 ]!
-b111101 ^!
-#27160
-b1010000 ]!
-b111110 ^!
-#27170
-b111111 ^!
-#27180
-b1000000 ^!
-#27190
-b1000001 ^!
-#27200
-b1000010 ^!
-#27210
-b1000011 ^!
-#27220
-b1000100 ^!
-#27230
-b1000101 ^!
-#27240
-b1000110 ^!
-#27250
-b1000111 ^!
-#27260
-b1001000 ^!
-#27270
-b1001001 ^!
-#27280
-b1001010 ^!
-#27290
-b1001011 ^!
-#27300
-b1001100 ^!
-#27320
-b1001101 ^!
-#27330
-b1001110 ^!
-#27340
-b1011000 ]!
-b1001111 ^!
-#27350
-b1100000 ]!
-b1010000 ^!
-#27360
-b1010001 ^!
-#27370
-b1010010 ^!
-#27380
-b1010011 ^!
-#27390
-b1010100 ^!
-#27400
-b1010101 ^!
-#27410
-b1010110 ^!
-#27420
-b1010111 ^!
-#27430
-b1011000 ^!
-#27440
-b1011001 ^!
-#27450
-b1011010 ^!
-#27460
-b1011011 ^!
-#27470
-b1011100 ^!
-#27480
-b1011101 ^!
-#27490
-b1011110 ^!
-#27510
-b1011111 ^!
-#27520
-b1100000 ^!
-#27530
-b1101000 ]!
-#27550
-b1100001 ^!
-#27560
-b1100010 ^!
-#27570
-b1100011 ^!
-#27580
-b1100100 ^!
-#27590
-b1100101 ^!
-#27600
-b1100110 ^!
-#27620
-b1100111 ^!
-#27630
-b1101000 ^!
-#27640
-b1110000 ]!
-#27650
-b1111000 ]!
-#27660
-b10000000 ]!
-b1101001 ^!
-#27670
-b1101010 ^!
-#27680
-b1101011 ^!
-#27690
-b1101100 ^!
-#27700
-b1101101 ^!
-#27710
-b1101110 ^!
-#27720
-b1101111 ^!
-#27730
-b1110000 ^!
-#27740
-b1110001 ^!
-#27750
-b1110010 ^!
-#27760
-b1110011 ^!
-#27770
-b1110100 ^!
-#27780
-b1110101 ^!
-#27790
-b1110110 ^!
-#27800
-b1110111 ^!
-#27810
-b1111000 ^!
-#27820
-b1111001 ^!
-#27830
-b1111010 ^!
-#27840
-b1111011 ^!
-#27860
-b1111100 ^!
-#27870
-b1111101 ^!
-#27880
-b10001000 ]!
-b1111110 ^!
-#27890
-b10010000 ]!
-b1111111 ^!
-#27900
-b10000000 ^!
-#27910
-b10000001 ^!
-#27920
-b10000010 ^!
-#27930
-b10000011 ^!
-#27940
-b10000100 ^!
-#27950
-b10000101 ^!
-#27960
-b10000110 ^!
-#27970
-b10000111 ^!
-#27980
-b10001000 ^!
-#27990
-b10001001 ^!
-#28000
-b10001010 ^!
-#28020
-b10001011 ^!
-#28030
-b10001100 ^!
-#28040
-b10011000 ]!
-b10001101 ^!
-#28050
-b10001110 ^!
-#28060
-b10001111 ^!
-#28070
-b10010000 ^!
-#28080
-b10010001 ^!
-#28090
-b10010010 ^!
-#28100
-b10010011 ^!
-#28110
-b10010100 ^!
-#28120
-b10010101 ^!
-#28130
-b10010110 ^!
-#28150
-b10010111 ^!
-#28160
-b10011000 ^!
-#28170
-b10100000 ]!
-#28180
-b10101000 ]!
-#28190
-b10011001 ^!
-#28200
-b10011010 ^!
-#28210
-b10011011 ^!
-#28220
-b10011100 ^!
-#28230
-b10011101 ^!
-#28240
-b10011110 ^!
-#28250
-b10011111 ^!
-#28260
-b10100000 ^!
-#28270
-b10100001 ^!
-#28280
-b10100010 ^!
-#28290
-b10100011 ^!
-#28300
-b10100100 ^!
-#28310
-b10100101 ^!
-#28320
-b10100110 ^!
-#28340
-b10100111 ^!
-#28350
-b10101000 ^!
-#28360
-b10110000 ]!
-#28370
-b10111000 ]!
-#28380
-b11000000 ]!
-b10101001 ^!
-#28390
-b10101010 ^!
-#28400
-b10101011 ^!
-#28410
-b10101100 ^!
-#28420
-b10101101 ^!
-#28430
-b10101110 ^!
-#28440
-b10101111 ^!
-#28450
-b10110000 ^!
-#28460
-b10110001 ^!
-#28470
-b10110010 ^!
-#28480
-b10110011 ^!
-#28490
-b10110100 ^!
-#28500
-b10110101 ^!
-#28510
-b10110110 ^!
-#28520
-b10110111 ^!
-#28530
-b10111000 ^!
-#28540
-b10111001 ^!
-#28550
-b10111010 ^!
-#28570
-b10111011 ^!
-#28580
-b10111100 ^!
-#28590
-b11001000 ]!
-b10111101 ^!
-#28600
-b11010000 ]!
-b10111110 ^!
-#28610
-b10111111 ^!
-#28620
-b11000000 ^!
-#28630
-b11000001 ^!
-#28640
-b11000010 ^!
-#28650
-b11000011 ^!
-#28660
-b11000100 ^!
-#28670
-b11000101 ^!
-#28680
-b11000110 ^!
-#28690
-b11000111 ^!
-#28700
-b11001000 ^!
-#28710
-b11001001 ^!
-#28720
-b11001010 ^!
-#28730
-b11001011 ^!
-#28740
-b11001100 ^!
-#28750
-b11001101 ^!
-#28770
-b11001110 ^!
-#28780
-b11001111 ^!
-#28790
-b11011000 ]!
-b11010000 ^!
-#28800
-b11100000 ]!
-#28810
-b11010001 ^!
-#28820
-b11010010 ^!
-#28830
-b11010011 ^!
-#28840
-b11010100 ^!
-#28850
-b11010101 ^!
-#28860
-b11010110 ^!
-#28870
-b11010111 ^!
-#28880
-b11011000 ^!
-#28890
-b11011001 ^!
-#28900
-b11011010 ^!
-#28910
-b11011011 ^!
-#28930
-b11011100 ^!
-#28940
-b11011101 ^!
-#28950
-b11101000 ]!
-b11011110 ^!
-#28960
-b11011111 ^!
-#28970
-b11100000 ^!
-#28980
-b11100001 ^!
-#28990
-b11100010 ^!
-#29000
-b11100011 ^!
-#29010
-b11100100 ^!
-#29020
-b11100101 ^!
-#29030
-b11100110 ^!
-#29040
-b11100111 ^!
-#29060
-b11101000 ^!
-#29080
-b11110000 ]!
-#29100
-b11101001 ^!
-#29110
-b11101010 ^!
-#29120
-b11101011 ^!
-#29130
-b11101100 ^!
-#29140
-b11101101 ^!
-#29150
-b11101110 ^!
-#29160
-b11101111 ^!
-#29180
-b11110000 ^!
-#29200
-b11111000 ]!
-#29210
-b100000000 ]!
-#29220
-b11110001 ^!
-#29230
-b11110010 ^!
-#29240
-b11110011 ^!
-#29250
-b11110100 ^!
-#29260
-b11110101 ^!
-#29270
-b11110110 ^!
-#29280
-b11110111 ^!
-#29290
-b11111000 ^!
-#29300
-b11111001 ^!
-#29320
-b11111010 ^!
-#29330
-b11111011 ^!
-#29340
-b100001000 ]!
-b11111100 ^!
-#29350
-b100010000 ]!
-b11111101 ^!
-#29360
-b11111110 ^!
-#29370
-b11111111 ^!
-#29380
-b100000000 ^!
-#29390
-b100000001 ^!
-#29400
-b100000010 ^!
-#29410
-b100000011 ^!
-#29420
-b100000100 ^!
-#29430
-b100000101 ^!
-#29440
-b100000110 ^!
-#29450
-b100000111 ^!
-#29460
-b100001000 ^!
-#29470
-b100001001 ^!
-#29490
-b100001010 ^!
-#29500
-b100001011 ^!
-#29510
-b100011000 ]!
-b100001100 ^!
-#29520
-b100100000 ]!
-b100001101 ^!
-#29530
-b100101000 ]!
-b100001110 ^!
-#29540
-b100001111 ^!
-#29550
-b100010000 ^!
-#29560
-b100010001 ^!
-#29570
-b100010010 ^!
-#29580
-b100010011 ^!
-#29590
-b100010100 ^!
-#29600
-b100010101 ^!
-#29610
-b100010110 ^!
-#29620
-b100010111 ^!
-#29630
-b100011000 ^!
-#29640
-b100011001 ^!
-#29650
-b100011010 ^!
-#29660
-b100011011 ^!
-#29670
-b100011100 ^!
-#29680
-b100011101 ^!
-#29690
-b100011110 ^!
-#29700
-b100011111 ^!
-#29710
-b100100000 ^!
-#29720
-b100100001 ^!
-#29730
-b100100010 ^!
-#29740
-b100100011 ^!
-#29750
-b100100100 ^!
-#29770
-b100100101 ^!
-#29780
-b100100110 ^!
-#29790
-b100110000 ]!
-b100100111 ^!
-#29800
-b100111000 ]!
-b100101000 ^!
-#29810
-b100101001 ^!
-#29820
-b100101010 ^!
-#29830
-b100101011 ^!
-#29840
-b100101100 ^!
-#29850
-b100101101 ^!
-#29860
-b100101110 ^!
-#29870
-b100101111 ^!
-#29880
-b100110000 ^!
-#29890
-b100110001 ^!
-#29900
-b100110010 ^!
-#29910
-b100110011 ^!
-#29920
-b100110100 ^!
-#29930
-b100110101 ^!
-#29940
-b100110110 ^!
-#29950
-b100110111 ^!
-#29960
-b100111000 ^!
-#30000
-b101000000 ]!
-#30020
-b100111001 ^!
-#30030
-b100111010 ^!
-#30040
-b100111011 ^!
-#30050
-b100111100 ^!
-#30060
-b100111101 ^!
-#30070
-b100111110 ^!
-#30080
-b100111111 ^!
-#30100
-b101000000 ^!
-#30120
-b101001000 ]!
-#30130
-b101010000 ]!
-#30140
-b101000001 ^!
-#30150
-b101000010 ^!
-#30160
-b101000011 ^!
-#30170
-b101000100 ^!
-#30180
-b101000101 ^!
-#30190
-b101000110 ^!
-#30200
-b101000111 ^!
-#30210
-b101001000 ^!
-#30220
-b101001001 ^!
-#30230
-b101001010 ^!
-#30250
-b101001011 ^!
-#30260
-b101001100 ^!
-#30270
-b101011000 ]!
-b101001101 ^!
-#30280
-b101001110 ^!
-#30290
-b101001111 ^!
-#30300
-b101010000 ^!
-#30310
-b101010001 ^!
-#30320
-b101010010 ^!
-#30330
-b101010011 ^!
-#30340
-b101010100 ^!
-#30350
-b101010101 ^!
-#30360
-b101010110 ^!
-#30370
-b101010111 ^!
-#30390
-b101011000 ^!
-#30410
-b101100000 ]!
-#30420
-b101101000 ]!
-#30430
-b101011001 ^!
-#30440
-b101011010 ^!
-#30450
-b101011011 ^!
-#30460
-b101011100 ^!
-#30470
-b101011101 ^!
-#30480
-b101011110 ^!
-#30490
-b101011111 ^!
-#30500
-b101100000 ^!
-#30510
-b101100001 ^!
-#30520
-b101100010 ^!
-#30530
-b101100011 ^!
-#30540
-b101100100 ^!
-#30550
-b101100101 ^!
-#30560
-b101100110 ^!
-#30570
-b101100111 ^!
-#30590
-b101101000 ^!
-#30610
-b101110000 ]!
-#30620
-b101111000 ]!
-#30630
-b101101001 ^!
-#30640
-b101101010 ^!
-#30650
-b101101011 ^!
-#30660
-b101101100 ^!
-#30670
-b101101101 ^!
-#30680
-b101101110 ^!
-#30690
-b101101111 ^!
-#30700
-b101110000 ^!
-#30710
-b101110001 ^!
-#30720
-b101110010 ^!
-#30730
-b101110011 ^!
-#30740
-b101110100 ^!
-#30750
-b101110101 ^!
-#30760
-b101110110 ^!
-#30770
-b101110111 ^!
-#30790
-b101111000 ^!
-#30810
-b110000000 ]!
-#30820
-b110001000 ]!
-#30830
-b101111001 ^!
-#30840
-b101111010 ^!
-#30850
-b101111011 ^!
-#30860
-b101111100 ^!
-#30870
-b101111101 ^!
-#30880
-b101111110 ^!
-#30890
-b101111111 ^!
-#30900
-b110000000 ^!
-#30910
-b110000001 ^!
-#30920
-b110000010 ^!
-#30930
-b110000011 ^!
-#30940
-b110000100 ^!
-#30950
-b110000101 ^!
-#30960
-b110000110 ^!
-#30970
-b110000111 ^!
-#30990
-b110001000 ^!
-#31010
-b110010000 ]!
-#31030
-b110001001 ^!
-#31040
-b110001010 ^!
-#31050
-b110001011 ^!
-#31060
-b110001100 ^!
-#31070
-b110001101 ^!
-#31080
-b110001110 ^!
-#31090
-b110001111 ^!
-#31100
-b110010000 ^!
-#31140
-b110011000 ]!
-#31160
-b110010001 ^!
-#31170
-b110010010 ^!
-#31180
-b110010011 ^!
-#31190
-b110010100 ^!
-#31200
-b110010101 ^!
-#31210
-b110010110 ^!
-#31220
-b110010111 ^!
-#31230
-b110011000 ^!
-#31270
-b110100000 ]!
-#31280
-b110101000 ]!
-#31290
-b110110000 ]!
-b110011001 ^!
-#31300
-b110011010 ^!
-#31310
-b110011011 ^!
-#31320
-b110011100 ^!
-#31330
-b110011101 ^!
-#31340
-b110011110 ^!
-#31350
-b110011111 ^!
-#31360
-b110100000 ^!
-#31370
-b110100001 ^!
-#31380
-b110100010 ^!
-#31390
-b110100011 ^!
-#31400
-b110100100 ^!
-#31410
-b110100101 ^!
-#31420
-b110100110 ^!
-#31430
-b110100111 ^!
-#31440
-b110101000 ^!
-#31450
-b110101001 ^!
-#31460
-b110101010 ^!
-#31470
-b110101011 ^!
-#31480
-b110101100 ^!
-#31490
-b110101101 ^!
-#31510
-b110101110 ^!
-#31520
-b110101111 ^!
-#31530
-b110111000 ]!
-b110110000 ^!
-#31550
-b110110001 ^!
-#31560
-b110110010 ^!
-#31570
-b110110011 ^!
-#31580
-b110110100 ^!
-#31590
-b110110101 ^!
-#31600
-b110110110 ^!
-#31620
-b110110111 ^!
-#31630
-b110111000 ^!
-#31640
-b111000000 ]!
-#31660
-b110111001 ^!
-#31670
-b110111010 ^!
-#31680
-b110111011 ^!
-#31690
-b110111100 ^!
-#31700
-b110111101 ^!
-#31710
-b110111110 ^!
-#31720
-b110111111 ^!
-#31730
-b111000000 ^!
-#31770
-b111001000 ]!
-#31780
-b111010000 ]!
-#31790
-b111000001 ^!
-#31800
-b111000010 ^!
-#31810
-b111000011 ^!
-#31820
-b111000100 ^!
-#31830
-b111000101 ^!
-#31840
-b111000110 ^!
-#31850
-b111000111 ^!
-#31860
-b111001000 ^!
-#31870
-b111001001 ^!
-#31880
-b111001010 ^!
-#31890
-b111001011 ^!
-#31900
-b111001100 ^!
-#31910
-b111001101 ^!
-#31920
-b111001110 ^!
-#31930
-b111001111 ^!
-#31950
-b111010000 ^!
-#31970
-b111011000 ]!
-#31980
-b111100000 ]!
-#31990
-b111010001 ^!
-#32000
-b111010010 ^!
-#32010
-b111010011 ^!
-#32020
-b111010100 ^!
-#32030
-b111010101 ^!
-#32040
-b111010110 ^!
-#32050
-b111010111 ^!
-#32060
-b111011000 ^!
-#32070
-b111011001 ^!
-#32080
-b111011010 ^!
-#32090
-b111011011 ^!
-#32100
-b111011100 ^!
-#32110
-b111011101 ^!
-#32130
-b111011110 ^!
-#32140
-b111011111 ^!
-#32150
-b111101000 ]!
-b111100000 ^!
-#32170
-b111100001 ^!
-#32180
-b111100010 ^!
-#32190
-b111100011 ^!
-#32200
-b111100100 ^!
-#32210
-b111100101 ^!
-#32220
-b111100110 ^!
-#32230
-b111100111 ^!
-#32240
-b111101000 ^!
-#32280
-b111110000 ]!
-#32300
-b111101001 ^!
-#32310
-b111101010 ^!
-#32320
-b111101011 ^!
-#32330
-b111101100 ^!
-#32340
-b111101101 ^!
-#32350
-b111101110 ^!
-#32360
-b111101111 ^!
-#32380
-b111110000 ^!
-#32400
-b111111000 ]!
-#32410
-b0 ]!
-#32420
-b111110001 ^!
-#32430
-b111110010 ^!
-#32440
-b111110011 ^!
-#32450
-b111110100 ^!
-#32460
-b111110101 ^!
-#32470
-b111110110 ^!
-#32480
-b111110111 ^!
-#32490
-b111111000 ^!
-#32500
-b111111001 ^!
-#32510
-b111111010 ^!
-#32520
-b111111011 ^!
-#32540
-b111111100 ^!
-#32550
-b111111101 ^!
-#32560
-b1000 ]!
-b111111110 ^!
-#32570
-b10000 ]!
-b111111111 ^!
-#32580
-b0 ^!
-#32590
-b1 ^!
-#32600
-b10 ^!
-#32610
-b11 ^!
-#32620
-b100 ^!
-#32630
-b101 ^!
-#32640
-b110 ^!
-#32650
-b111 ^!
-#32660
-b1000 ^!
-#32670
-b1001 ^!
-#32680
-b1010 ^!
-#32700
-b1011 ^!
-#32710
-b1100 ^!
-#32720
-b11000 ]!
-b1101 ^!
-#32730
-b100000 ]!
-b1110 ^!
-#32740
-b1111 ^!
-#32750
-b10000 ^!
-#32760
-b10001 ^!
-#32770
-b10010 ^!
-#32780
-b10011 ^!
-#32790
-b10100 ^!
-#32800
-b10101 ^!
-#32810
-b10110 ^!
-#32820
-b10111 ^!
-#32830
-b11000 ^!
-#32840
-b11001 ^!
-#32850
-b11010 ^!
-#32870
-b11011 ^!
-#32880
-b11100 ^!
-#32890
-b101000 ]!
-b11101 ^!
-#32900
-b110000 ]!
-b11110 ^!
-#32910
-b111000 ]!
-b11111 ^!
-#32920
-b100000 ^!
-#32930
-b100001 ^!
-#32940
-b100010 ^!
-#32950
-b100011 ^!
-#32960
-b100100 ^!
-#32970
-b100101 ^!
-#32980
-b100110 ^!
-#32990
-b100111 ^!
-#33000
-b101000 ^!
-#33010
-b101001 ^!
-#33020
-b101010 ^!
-#33030
-b101011 ^!
-#33040
-b101100 ^!
-#33050
-b101101 ^!
-#33060
-b101110 ^!
-#33070
-b101111 ^!
-#33080
-b110000 ^!
-#33090
-b110001 ^!
-#33100
-b110010 ^!
-#33110
-b110011 ^!
-#33130
-b110100 ^!
-#33140
-b110101 ^!
-#33150
-b1000000 ]!
-b110110 ^!
-#33160
-b1001000 ]!
-b110111 ^!
-#33170
-b111000 ^!
-#33180
-b111001 ^!
-#33190
-b111010 ^!
-#33200
-b111011 ^!
-#33210
-b111100 ^!
-#33220
-b111101 ^!
-#33230
-b111110 ^!
-#33240
-b111111 ^!
-#33250
-b1000000 ^!
-#33260
-b1000001 ^!
-#33270
-b1000010 ^!
-#33280
-b1000011 ^!
-#33290
-b1000100 ^!
-#33310
-b1000101 ^!
-#33320
-b1000110 ^!
-#33330
-b1010000 ]!
-b1000111 ^!
-#33340
-b1011000 ]!
-b1001000 ^!
-#33350
-b1001001 ^!
-#33360
-b1001010 ^!
-#33370
-b1001011 ^!
-#33380
-b1001100 ^!
-#33390
-b1001101 ^!
-#33400
-b1001110 ^!
-#33410
-b1001111 ^!
-#33420
-b1010000 ^!
-#33430
-b1010001 ^!
-#33450
-b1010010 ^!
-#33460
-b1010011 ^!
-#33470
-b1100000 ]!
-b1010100 ^!
-#33480
-b1101000 ]!
-b1010101 ^!
-#33490
-b1010110 ^!
-#33500
-b1010111 ^!
-#33510
-b1011000 ^!
-#33520
-b1011001 ^!
-#33530
-b1011010 ^!
-#33540
-b1011011 ^!
-#33550
-b1011100 ^!
-#33560
-b1011101 ^!
-#33570
-b1011110 ^!
-#33580
-b1011111 ^!
-#33590
-b1100000 ^!
-#33600
-b1100001 ^!
-#33610
-b1100010 ^!
-#33620
-b1100011 ^!
-#33630
-b1100100 ^!
-#33650
-b1100101 ^!
-#33660
-b1100110 ^!
-#33670
-b1110000 ]!
-b1100111 ^!
-#33680
-b1111000 ]!
-b1101000 ^!
-#33690
-b1101001 ^!
-#33700
-b1101010 ^!
-#33710
-b1101011 ^!
-#33720
-b1101100 ^!
-#33730
-b1101101 ^!
-#33740
-b1101110 ^!
-#33750
-b1101111 ^!
-#33760
-b1110000 ^!
-#33770
-b1110001 ^!
-#33780
-b1110010 ^!
-#33790
-b1110011 ^!
-#33800
-b1110100 ^!
-#33810
-b1110101 ^!
-#33830
-b1110110 ^!
-#33840
-b1110111 ^!
-#33850
-b10000000 ]!
-b1111000 ^!
-#33860
-b10001000 ]!
-#33870
-b1111001 ^!
-#33880
-b1111010 ^!
-#33890
-b1111011 ^!
-#33900
-b1111100 ^!
-#33910
-b1111101 ^!
-#33920
-b1111110 ^!
-#33930
-b1111111 ^!
-#33940
-b10000000 ^!
-#33950
-b10000001 ^!
-#33960
-b10000010 ^!
-#33970
-b10000011 ^!
-#33980
-b10000100 ^!
-#33990
-b10000101 ^!
-#34010
-b10000110 ^!
-#34020
-b10000111 ^!
-#34030
-b10010000 ]!
-b10001000 ^!
-#34040
-b10011000 ]!
-#34050
-b10001001 ^!
-#34060
-b10001010 ^!
-#34070
-b10001011 ^!
-#34080
-b10001100 ^!
-#34090
-b10001101 ^!
-#34100
-b10001110 ^!
-#34110
-b10001111 ^!
-#34120
-b10010000 ^!
-#34130
-b10010001 ^!
-#34140
-b10010010 ^!
-#34150
-b10010011 ^!
-#34170
-b10010100 ^!
-#34180
-b10010101 ^!
-#34190
-b10100000 ]!
-b10010110 ^!
-#34200
-b10101000 ]!
-b10010111 ^!
-#34210
-b10011000 ^!
-#34220
-b10011001 ^!
-#34230
-b10011010 ^!
-#34240
-b10011011 ^!
-#34250
-b10011100 ^!
-#34260
-b10011101 ^!
-#34270
-b10011110 ^!
-#34280
-b10011111 ^!
-#34290
-b10100000 ^!
-#34300
-b10100001 ^!
-#34310
-b10100010 ^!
-#34320
-b10100011 ^!
-#34330
-b10100100 ^!
-#34340
-b10100101 ^!
-#34360
-b10100110 ^!
-#34370
-b10100111 ^!
-#34380
-b10110000 ]!
-b10101000 ^!
-#34390
-b10111000 ]!
-#34400
-b10101001 ^!
-#34410
-b10101010 ^!
-#34420
-b10101011 ^!
-#34430
-b10101100 ^!
-#34440
-b10101101 ^!
-#34450
-b10101110 ^!
-#34460
-b10101111 ^!
-#34470
-b10110000 ^!
-#34480
-b10110001 ^!
-#34490
-b10110010 ^!
-#34500
-b10110011 ^!
-#34510
-b10110100 ^!
-#34520
-b10110101 ^!
-#34530
-b10110110 ^!
-#34550
-b10110111 ^!
-#34560
-b10111000 ^!
-#34570
-b11000000 ]!
-#34580
-b11001000 ]!
-#34590
-b10111001 ^!
-#34600
-b10111010 ^!
-#34610
-b10111011 ^!
-#34620
-b10111100 ^!
-#34630
-b10111101 ^!
-#34640
-b10111110 ^!
-#34650
-b10111111 ^!
-#34660
-b11000000 ^!
-#34670
-b11000001 ^!
-#34680
-b11000010 ^!
-#34700
-b11000011 ^!
-#34710
-b11000100 ^!
-#34720
-b11010000 ]!
-b11000101 ^!
-#34730
-b11011000 ]!
-b11000110 ^!
-#34740
-b11000111 ^!
-#34750
-b11001000 ^!
-#34760
-b11001001 ^!
-#34770
-b11001010 ^!
-#34780
-b11001011 ^!
-#34790
-b11001100 ^!
-#34800
-b11001101 ^!
-#34810
-b11001110 ^!
-#34820
-b11001111 ^!
-#34830
-b11010000 ^!
-#34840
-b11010001 ^!
-#34850
-b11010010 ^!
-#34860
-b11010011 ^!
-#34870
-b11010100 ^!
-#34880
-b11010101 ^!
-#34890
-b11010110 ^!
-#34910
-b11010111 ^!
-#34920
-b11011000 ^!
-#34930
-b11100000 ]!
-#34950
-b11011001 ^!
-#34960
-b11011010 ^!
-#34970
-b11011011 ^!
-#34980
-b11011100 ^!
-#34990
-b11011101 ^!
-#35000
-b11011110 ^!
-#35010
-b11011111 ^!
-#35020
-b11100000 ^!
-#35060
-b11101000 ]!
-#35080
-b11100001 ^!
-#35090
-b11100010 ^!
-#35100
-b11100011 ^!
-#35110
-b11100100 ^!
-#35120
-b11100101 ^!
-#35130
-b11100110 ^!
-#35140
-b11100111 ^!
-#35160
-b11101000 ^!
-#35180
-b11110000 ]!
-#35200
-b11101001 ^!
-#35210
-b11101010 ^!
-#35220
-b11101011 ^!
-#35230
-b11101100 ^!
-#35240
-b11101101 ^!
-#35250
-b11101110 ^!
-#35260
-b11101111 ^!
-#35270
-b11110000 ^!
-#35310
-b11111000 ]!
-#35320
-b100000000 ]!
-#35330
-b11110001 ^!
-#35340
-b11110010 ^!
-#35350
-b11110011 ^!
-#35360
-b11110100 ^!
-#35370
-b11110101 ^!
-#35380
-b11110110 ^!
-#35390
-b11110111 ^!
-#35400
-b11111000 ^!
-#35410
-b11111001 ^!
-#35420
-b11111010 ^!
-#35430
-b11111011 ^!
-#35440
-b11111100 ^!
-#35460
-b11111101 ^!
-#35470
-b11111110 ^!
-#35480
-b100001000 ]!
-b11111111 ^!
-#35490
-b100010000 ]!
-b100000000 ^!
-#35500
-b100000001 ^!
-#35510
-b100000010 ^!
-#35520
-b100000011 ^!
-#35530
-b100000100 ^!
-#35540
-b100000101 ^!
-#35550
-b100000110 ^!
-#35560
-b100000111 ^!
-#35570
-b100001000 ^!
-#35580
-b100001001 ^!
-#35590
-b100001010 ^!
-#35600
-b100001011 ^!
-#35610
-b100001100 ^!
-#35620
-b100001101 ^!
-#35630
-b100001110 ^!
-#35640
-b100001111 ^!
-#35650
-b100010000 ^!
-#35690
-b100011000 ]!
-#35700
-b100100000 ]!
-#35710
-b100010001 ^!
-#35720
-b100010010 ^!
-#35730
-b100010011 ^!
-#35740
-b100010100 ^!
-#35750
-b100010101 ^!
-#35760
-b100010110 ^!
-#35770
-b100010111 ^!
-#35780
-b100011000 ^!
-#35790
-b100011001 ^!
-#35810
-b100011010 ^!
-#35820
-b100011011 ^!
-#35830
-b100101000 ]!
-b100011100 ^!
-#35840
-b100011101 ^!
-#35850
-b100011110 ^!
-#35860
-b100011111 ^!
-#35870
-b100100000 ^!
-#35880
-b100100001 ^!
-#35890
-b100100010 ^!
-#35900
-b100100011 ^!
-#35910
-b100100100 ^!
-#35920
-b100100101 ^!
-#35930
-b100100110 ^!
-#35940
-b100100111 ^!
-#35960
-b100101000 ^!
-#35980
-b100110000 ]!
-#35990
-b100111000 ]!
-#36000
-b101000000 ]!
-b100101001 ^!
-#36010
-b100101010 ^!
-#36020
-b100101011 ^!
-#36030
-b100101100 ^!
-#36040
-b100101101 ^!
-#36050
-b100101110 ^!
-#36060
-b100101111 ^!
-#36070
-b100110000 ^!
-#36080
-b100110001 ^!
-#36090
-b100110010 ^!
-#36100
-b100110011 ^!
-#36110
-b100110100 ^!
-#36120
-b100110101 ^!
-#36130
-b100110110 ^!
-#36140
-b100110111 ^!
-#36150
-b100111000 ^!
-#36160
-b100111001 ^!
-#36170
-b100111010 ^!
-#36180
-b100111011 ^!
-#36200
-b100111100 ^!
-#36210
-b100111101 ^!
-#36220
-b101001000 ]!
-b100111110 ^!
-#36230
-b101010000 ]!
-b100111111 ^!
-#36240
-b101011000 ]!
-b101000000 ^!
-#36250
-b101000001 ^!
-#36260
-b101000010 ^!
-#36270
-b101000011 ^!
-#36280
-b101000100 ^!
-#36290
-b101000101 ^!
-#36300
-b101000110 ^!
-#36310
-b101000111 ^!
-#36320
-b101001000 ^!
-#36330
-b101001001 ^!
-#36340
-b101001010 ^!
-#36350
-b101001011 ^!
-#36360
-b101001100 ^!
-#36370
-b101001101 ^!
-#36380
-b101001110 ^!
-#36390
-b101001111 ^!
-#36400
-b101010000 ^!
-#36410
-b101010001 ^!
-#36430
-b101010010 ^!
-#36440
-b101010011 ^!
-#36450
-b101100000 ]!
-b101010100 ^!
-#36460
-b101101000 ]!
-b101010101 ^!
-#36470
-b101010110 ^!
-#36480
-b101010111 ^!
-#36490
-b101011000 ^!
-#36500
-b101011001 ^!
-#36510
-b101011010 ^!
-#36520
-b101011011 ^!
-#36530
-b101011100 ^!
-#36540
-b101011101 ^!
-#36550
-b101011110 ^!
-#36560
-b101011111 ^!
-#36570
-b101100000 ^!
-#36580
-b101100001 ^!
-#36590
-b101100010 ^!
-#36600
-b101100011 ^!
-#36610
-b101100100 ^!
-#36620
-b101100101 ^!
-#36630
-b101100110 ^!
-#36650
-b101100111 ^!
-#36660
-b101101000 ^!
-#36670
-b101110000 ]!
-#36680
-b101111000 ]!
-#36690
-b101101001 ^!
-#36700
-b101101010 ^!
-#36710
-b101101011 ^!
-#36720
-b101101100 ^!
-#36730
-b101101101 ^!
-#36740
-b101101110 ^!
-#36750
-b101101111 ^!
-#36760
-b101110000 ^!
-#36770
-b101110001 ^!
-#36780
-b101110010 ^!
-#36790
-b101110011 ^!
-#36800
-b101110100 ^!
-#36810
-b101110101 ^!
-#36830
-b101110110 ^!
-#36840
-b101110111 ^!
-#36850
-b110000000 ]!
-b101111000 ^!
-#36860
-b110001000 ]!
-#36870
-b101111001 ^!
-#36880
-b101111010 ^!
-#36890
-b101111011 ^!
-#36900
-b101111100 ^!
-#36910
-b101111101 ^!
-#36920
-b101111110 ^!
-#36930
-b101111111 ^!
-#36940
-b110000000 ^!
-#36950
-b110000001 ^!
-#36960
-b110000010 ^!
-#36980
-b110000011 ^!
-#36990
-b110000100 ^!
-#37000
-b110010000 ]!
-b110000101 ^!
-#37010
-b110011000 ]!
-b110000110 ^!
-#37020
-b110000111 ^!
-#37030
-b110001000 ^!
-#37040
-b110001001 ^!
-#37050
-b110001010 ^!
-#37060
-b110001011 ^!
-#37070
-b110001100 ^!
-#37080
-b110001101 ^!
-#37090
-b110001110 ^!
-#37100
-b110001111 ^!
-#37110
-b110010000 ^!
-#37120
-b110010001 ^!
-#37130
-b110010010 ^!
-#37140
-b110010011 ^!
-#37150
-b110010100 ^!
-#37160
-b110010101 ^!
-#37180
-b110010110 ^!
-#37190
-b110010111 ^!
-#37200
-b110100000 ]!
-b110011000 ^!
-#37210
-b110101000 ]!
-#37220
-b110011001 ^!
-#37230
-b110011010 ^!
-#37240
-b110011011 ^!
-#37250
-b110011100 ^!
-#37260
-b110011101 ^!
-#37270
-b110011110 ^!
-#37280
-b110011111 ^!
-#37290
-b110100000 ^!
-#37300
-b110100001 ^!
-#37310
-b110100010 ^!
-#37320
-b110100011 ^!
-#37340
-b110100100 ^!
-#37350
-b110100101 ^!
-#37360
-b110110000 ]!
-b110100110 ^!
-#37370
-b110111000 ]!
-b110100111 ^!
-#37380
-b110101000 ^!
-#37390
-b110101001 ^!
-#37400
-b110101010 ^!
-#37410
-b110101011 ^!
-#37420
-b110101100 ^!
-#37430
-b110101101 ^!
-#37440
-b110101110 ^!
-#37450
-b110101111 ^!
-#37460
-b110110000 ^!
-#37470
-b110110001 ^!
-#37480
-b110110010 ^!
-#37490
-b110110011 ^!
-#37500
-b110110100 ^!
-#37510
-b110110101 ^!
-#37520
-b110110110 ^!
-#37530
-b110110111 ^!
-#37540
-b110111000 ^!
-#37580
-b111000000 ]!
-#37590
-b111001000 ]!
-#37600
-b110111001 ^!
-#37610
-b110111010 ^!
-#37620
-b110111011 ^!
-#37630
-b110111100 ^!
-#37640
-b110111101 ^!
-#37650
-b110111110 ^!
-#37660
-b110111111 ^!
-#37670
-b111000000 ^!
-#37680
-b111000001 ^!
-#37690
-b111000010 ^!
-#37700
-b111000011 ^!
-#37720
-b111000100 ^!
-#37730
-b111000101 ^!
-#37740
-b111010000 ]!
-b111000110 ^!
-#37750
-b111011000 ]!
-b111000111 ^!
-#37760
-b111001000 ^!
-#37770
-b111001001 ^!
-#37780
-b111001010 ^!
-#37790
-b111001011 ^!
-#37800
-b111001100 ^!
-#37810
-b111001101 ^!
-#37820
-b111001110 ^!
-#37830
-b111001111 ^!
-#37840
-b111010000 ^!
-#37850
-b111010001 ^!
-#37870
-b111010010 ^!
-#37880
-b111010011 ^!
-#37890
-b111100000 ]!
-b111010100 ^!
-#37900
-b111010101 ^!
-#37910
-b111010110 ^!
-#37920
-b111010111 ^!
-#37930
-b111011000 ^!
-#37940
-b111011001 ^!
-#37950
-b111011010 ^!
-#37960
-b111011011 ^!
-#37970
-b111011100 ^!
-#37980
-b111011101 ^!
-#37990
-b111011110 ^!
-#38010
-b111011111 ^!
-#38020
-b111100000 ^!
-#38030
-b111101000 ]!
-#38040
-b111110000 ]!
-#38050
-b111100001 ^!
-#38060
-b111100010 ^!
-#38070
-b111100011 ^!
-#38080
-b111100100 ^!
-#38090
-b111100101 ^!
-#38100
-b111100110 ^!
-#38110
-b111100111 ^!
-#38120
-b111101000 ^!
-#38130
-b111101001 ^!
-#38140
-b111101010 ^!
-#38150
-b111101011 ^!
-#38160
-b111101100 ^!
-#38170
-b111101101 ^!
-#38190
-b111101110 ^!
-#38200
-b111101111 ^!
-#38210
-b111111000 ]!
-b111110000 ^!
-#38220
-b0 ]!
-#38230
-b111110001 ^!
-#38240
-b111110010 ^!
-#38250
-b111110011 ^!
-#38260
-b111110100 ^!
-#38270
-b111110101 ^!
-#38280
-b111110110 ^!
-#38290
-b111110111 ^!
-#38300
-b111111000 ^!
-#38310
-b111111001 ^!
-#38320
-b111111010 ^!
-#38330
-b111111011 ^!
-#38340
-b111111100 ^!
-#38350
-b111111101 ^!
-#38370
-b111111110 ^!
-#38380
-b111111111 ^!
-#38390
-b1000 ]!
-b0 ^!
-#38400
-b10000 ]!
-#38410
-b1 ^!
-#38420
-b10 ^!
-#38430
-b11 ^!
-#38440
-b100 ^!
-#38450
-b101 ^!
-#38460
-b110 ^!
-#38470
-b111 ^!
-#38480
-b1000 ^!
-#38490
-b1001 ^!
-#38500
-b1010 ^!
-#38510
-b1011 ^!
-#38520
-b1100 ^!
-#38530
-b1101 ^!
-#38550
-b1110 ^!
-#38560
-b1111 ^!
-#38570
-b11000 ]!
-b10000 ^!
-#38580
-b100000 ]!
-#38590
-b10001 ^!
-#38600
-b10010 ^!
-#38610
-b10011 ^!
-#38620
-b10100 ^!
-#38630
-b10101 ^!
-#38640
-b10110 ^!
-#38650
-b10111 ^!
-#38660
-b11000 ^!
-#38670
-b11001 ^!
-#38680
-b11010 ^!
-#38690
-b11011 ^!
-#38700
-b11100 ^!
-#38720
-b11101 ^!
-#38730
-b11110 ^!
-#38740
-b101000 ]!
-b11111 ^!
-#38750
-b110000 ]!
-b100000 ^!
-#38760
-b111000 ]!
-b100001 ^!
-#38770
-b100010 ^!
-#38780
-b100011 ^!
-#38790
-b100100 ^!
-#38800
-b100101 ^!
-#38810
-b100110 ^!
-#38820
-b100111 ^!
-#38830
-b101000 ^!
-#38840
-b101001 ^!
-#38850
-b101010 ^!
-#38860
-b101011 ^!
-#38870
-b101100 ^!
-#38880
-b101101 ^!
-#38890
-b101110 ^!
-#38900
-b101111 ^!
-#38910
-b110000 ^!
-#38920
-b110001 ^!
-#38940
-b110010 ^!
-#38950
-b110011 ^!
-#38960
-b1000000 ]!
-b110100 ^!
-#38970
-b1001000 ]!
-b110101 ^!
-#38980
-b110110 ^!
-#38990
-b110111 ^!
-#39000
-b111000 ^!
-#39010
-b111001 ^!
-#39020
-b111010 ^!
-#39030
-b111011 ^!
-#39040
-b111100 ^!
-#39050
-b111101 ^!
-#39060
-b111110 ^!
-#39070
-b111111 ^!
-#39080
-b1000000 ^!
-#39090
-b1000001 ^!
-#39100
-b1000010 ^!
-#39120
-b1000011 ^!
-#39130
-b1000100 ^!
-#39140
-b1010000 ]!
-b1000101 ^!
-#39150
-b1011000 ]!
-b1000110 ^!
-#39160
-b1000111 ^!
-#39170
-b1001000 ^!
-#39180
-b1001001 ^!
-#39190
-b1001010 ^!
-#39200
-b1001011 ^!
-#39210
-b1001100 ^!
-#39220
-b1001101 ^!
-#39230
-b1001110 ^!
-#39240
-b1001111 ^!
-#39250
-b1010000 ^!
-#39260
-b1010001 ^!
-#39270
-b1010010 ^!
-#39280
-b1010011 ^!
-#39290
-b1010100 ^!
-#39300
-b1010101 ^!
-#39310
-b1010110 ^!
-#39320
-b1010111 ^!
-#39330
-b1011000 ^!
-#39370
-b1100000 ]!
-#39380
-b1101000 ]!
-#39390
-b1011001 ^!
-#39400
-b1011010 ^!
-#39410
-b1011011 ^!
-#39420
-b1011100 ^!
-#39430
-b1011101 ^!
-#39440
-b1011110 ^!
-#39450
-b1011111 ^!
-#39460
-b1100000 ^!
-#39470
-b1100001 ^!
-#39480
-b1100010 ^!
-#39490
-b1100011 ^!
-#39500
-b1100100 ^!
-#39510
-b1100101 ^!
-#39520
-b1100110 ^!
-#39540
-b1100111 ^!
-#39550
-b1101000 ^!
-#39560
-b1110000 ]!
-#39570
-b1111000 ]!
-#39580
-b1101001 ^!
-#39590
-b1101010 ^!
-#39600
-b1101011 ^!
-#39610
-b1101100 ^!
-#39620
-b1101101 ^!
-#39630
-b1101110 ^!
-#39640
-b1101111 ^!
-#39650
-b1110000 ^!
-#39660
-b1110001 ^!
-#39670
-b1110010 ^!
-#39680
-b1110011 ^!
-#39690
-b1110100 ^!
-#39710
-b1110101 ^!
-#39720
-b1110110 ^!
-#39730
-b10000000 ]!
-b1110111 ^!
-#39740
-b10001000 ]!
-b1111000 ^!
-#39750
-b1111001 ^!
-#39760
-b1111010 ^!
-#39770
-b1111011 ^!
-#39780
-b1111100 ^!
-#39790
-b1111101 ^!
-#39800
-b1111110 ^!
-#39810
-b1111111 ^!
-#39820
-b10000000 ^!
-#39830
-b10000001 ^!
-#39840
-b10000010 ^!
-#39850
-b10000011 ^!
-#39860
-b10000100 ^!
-#39870
-b10000101 ^!
-#39880
-b10000110 ^!
-#39890
-b10000111 ^!
-#39910
-b10001000 ^!
-#39930
-b10010000 ]!
-#39940
-b10011000 ]!
-#39950
-b10001001 ^!
-#39960
-b10001010 ^!
-#39970
-b10001011 ^!
-#39980
-b10001100 ^!
-#39990
-b10001101 ^!
-#40000
-b10001110 ^!
-#40010
-b10001111 ^!
-#40020
-b10010000 ^!
-#40030
-b10010001 ^!
-#40040
-b10010010 ^!
-#40050
-b10010011 ^!
-#40060
-b10010100 ^!
-#40070
-b10010101 ^!
-#40090
-b10010110 ^!
-#40100
-b10010111 ^!
-#40110
-b10100000 ]!
-b10011000 ^!
-#40130
-b10011001 ^!
-#40140
-b10011010 ^!
-#40150
-b10011011 ^!
-#40160
-b10011100 ^!
-#40170
-b10011101 ^!
-#40180
-b10011110 ^!
-#40190
-b10011111 ^!
-#40210
-b10100000 ^!
-#40230
-b10101000 ]!
-#40240
-b10110000 ]!
-#40250
-b10100001 ^!
-#40260
-b10100010 ^!
-#40270
-b10100011 ^!
-#40280
-b10100100 ^!
-#40290
-b10100101 ^!
-#40300
-b10100110 ^!
-#40310
-b10100111 ^!
-#40320
-b10101000 ^!
-#40330
-b10101001 ^!
-#40350
-b10101010 ^!
-#40360
-b10101011 ^!
-#40370
-b10111000 ]!
-b10101100 ^!
-#40380
-b11000000 ]!
-b10101101 ^!
-#40390
-b11001000 ]!
-b10101110 ^!
-#40400
-b10101111 ^!
-#40410
-b10110000 ^!
-#40420
-b10110001 ^!
-#40430
-b10110010 ^!
-#40440
-b10110011 ^!
-#40450
-b10110100 ^!
-#40460
-b10110101 ^!
-#40470
-b10110110 ^!
-#40480
-b10110111 ^!
-#40490
-b10111000 ^!
-#40500
-b10111001 ^!
-#40510
-b10111010 ^!
-#40520
-b10111011 ^!
-#40530
-b10111100 ^!
-#40540
-b10111101 ^!
-#40550
-b10111110 ^!
-#40560
-b10111111 ^!
-#40570
-b11000000 ^!
-#40580
-b11000001 ^!
-#40600
-b11000010 ^!
-#40610
-b11000011 ^!
-#40620
-b11010000 ]!
-b11000100 ^!
-#40630
-b11000101 ^!
-#40640
-b11000110 ^!
-#40650
-b11000111 ^!
-#40660
-b11001000 ^!
-#40670
-b11001001 ^!
-#40680
-b11001010 ^!
-#40690
-b11001011 ^!
-#40700
-b11001100 ^!
-#40710
-b11001101 ^!
-#40720
-b11001110 ^!
-#40740
-b11001111 ^!
-#40750
-b11010000 ^!
-#40760
-b11011000 ]!
-#40770
-b11100000 ]!
-#40780
-b11010001 ^!
-#40790
-b11010010 ^!
-#40800
-b11010011 ^!
-#40810
-b11010100 ^!
-#40820
-b11010101 ^!
-#40830
-b11010110 ^!
-#40840
-b11010111 ^!
-#40850
-b11011000 ^!
-#40860
-b11011001 ^!
-#40880
-b11011010 ^!
-#40890
-b11011011 ^!
-#40900
-b11101000 ]!
-b11011100 ^!
-#40910
-b11011101 ^!
-#40920
-b11011110 ^!
-#40930
-b11011111 ^!
-#40940
-b11100000 ^!
-#40950
-b11100001 ^!
-#40960
-b11100010 ^!
-#40970
-b11100011 ^!
-#40980
-b11100100 ^!
-#40990
-b11100101 ^!
-#41010
-b11100110 ^!
-#41020
-b11100111 ^!
-#41030
-b11110000 ]!
-b11101000 ^!
-#41040
-b11111000 ]!
-#41050
-b11101001 ^!
-#41060
-b11101010 ^!
-#41070
-b11101011 ^!
-#41080
-b11101100 ^!
-#41090
-b11101101 ^!
-#41100
-b11101110 ^!
-#41110
-b11101111 ^!
-#41120
-b11110000 ^!
-#41130
-b11110001 ^!
-#41150
-b11110010 ^!
-#41160
-b11110011 ^!
-#41170
-b100000000 ]!
-b11110100 ^!
-#41180
-b11110101 ^!
-#41190
-b11110110 ^!
-#41200
-b11110111 ^!
-#41210
-b11111000 ^!
-#41220
-b11111001 ^!
-#41230
-b11111010 ^!
-#41240
-b11111011 ^!
-#41250
-b11111100 ^!
-#41260
-b11111101 ^!
-#41270
-b11111110 ^!
-#41280
-b11111111 ^!
-#41300
-b100000000 ^!
-#41320
-b100001000 ]!
-#41330
-b100010000 ]!
-#41340
-b100000001 ^!
-#41350
-b100000010 ^!
-#41360
-b100000011 ^!
-#41370
-b100000100 ^!
-#41380
-b100000101 ^!
-#41390
-b100000110 ^!
-#41400
-b100000111 ^!
-#41410
-b100001000 ^!
-#41420
-b100001001 ^!
-#41430
-b100001010 ^!
-#41440
-b100001011 ^!
-#41450
-b100001100 ^!
-#41460
-b100001101 ^!
-#41470
-b100001110 ^!
-#41490
-b100001111 ^!
-#41500
-b100010000 ^!
-#41510
-b100011000 ]!
-#41520
-b100100000 ]!
-#41530
-b100010001 ^!
-#41540
-b100010010 ^!
-#41550
-b100010011 ^!
-#41560
-b100010100 ^!
-#41570
-b100010101 ^!
-#41580
-b100010110 ^!
-#41590
-b100010111 ^!
-#41600
-b100011000 ^!
-#41610
-b100011001 ^!
-#41620
-b100011010 ^!
-#41630
-b100011011 ^!
-#41640
-b100011100 ^!
-#41650
-b100011101 ^!
-#41660
-b100011110 ^!
-#41680
-b100011111 ^!
-#41690
-b100100000 ^!
-#41700
-b100101000 ]!
-#41720
-b100100001 ^!
-#41730
-b100100010 ^!
-#41740
-b100100011 ^!
-#41750
-b100100100 ^!
-#41760
-b100100101 ^!
-#41770
-b100100110 ^!
-#41780
-b100100111 ^!
-#41790
-b100101000 ^!
-#41830
-b100110000 ]!
-#41850
-b100101001 ^!
-#41860
-b100101010 ^!
-#41870
-b100101011 ^!
-#41880
-b100101100 ^!
-#41890
-b100101101 ^!
-#41900
-b100101110 ^!
-#41910
-b100101111 ^!
-#41920
-b100110000 ^!
-#41960
-b100111000 ]!
-#41970
-b101000000 ]!
-#41980
-b101001000 ]!
-b100110001 ^!
-#41990
-b100110010 ^!
-#42000
-b100110011 ^!
-#42010
-b100110100 ^!
-#42020
-b100110101 ^!
-#42030
-b100110110 ^!
-#42040
-b100110111 ^!
-#42050
-b100111000 ^!
-#42060
-b100111001 ^!
-#42070
-b100111010 ^!
-#42080
-b100111011 ^!
-#42090
-b100111100 ^!
-#42100
-b100111101 ^!
-#42110
-b100111110 ^!
-#42120
-b100111111 ^!
-#42130
-b101000000 ^!
-#42140
-b101000001 ^!
-#42160
-b101000010 ^!
-#42170
-b101000011 ^!
-#42180
-b101010000 ]!
-b101000100 ^!
-#42190
-b101011000 ]!
-b101000101 ^!
-#42200
-b101000110 ^!
-#42210
-b101000111 ^!
-#42220
-b101001000 ^!
-#42230
-b101001001 ^!
-#42240
-b101001010 ^!
-#42250
-b101001011 ^!
-#42260
-b101001100 ^!
-#42270
-b101001101 ^!
-#42280
-b101001110 ^!
-#42290
-b101001111 ^!
-#42300
-b101010000 ^!
-#42310
-b101010001 ^!
-#42320
-b101010010 ^!
-#42330
-b101010011 ^!
-#42340
-b101010100 ^!
-#42360
-b101010101 ^!
-#42370
-b101010110 ^!
-#42380
-b101100000 ]!
-b101010111 ^!
-#42390
-b101101000 ]!
-b101011000 ^!
-#42400
-b101011001 ^!
-#42410
-b101011010 ^!
-#42420
-b101011011 ^!
-#42430
-b101011100 ^!
-#42440
-b101011101 ^!
-#42450
-b101011110 ^!
-#42460
-b101011111 ^!
-#42470
-b101100000 ^!
-#42480
-b101100001 ^!
-#42490
-b101100010 ^!
-#42500
-b101100011 ^!
-#42520
-b101100100 ^!
-#42530
-b101100101 ^!
-#42540
-b101110000 ]!
-b101100110 ^!
-#42550
-b101100111 ^!
-#42560
-b101101000 ^!
-#42570
-b101101001 ^!
-#42580
-b101101010 ^!
-#42590
-b101101011 ^!
-#42600
-b101101100 ^!
-#42610
-b101101101 ^!
-#42620
-b101101110 ^!
-#42630
-b101101111 ^!
-#42640
-b101110000 ^!
-#42680
-b101111000 ]!
-#42690
-b110000000 ]!
-#42700
-b101110001 ^!
-#42710
-b101110010 ^!
-#42720
-b101110011 ^!
-#42730
-b101110100 ^!
-#42740
-b101110101 ^!
-#42750
-b101110110 ^!
-#42760
-b101110111 ^!
-#42770
-b101111000 ^!
-#42780
-b101111001 ^!
-#42790
-b101111010 ^!
-#42800
-b101111011 ^!
-#42810
-b101111100 ^!
-#42820
-b101111101 ^!
-#42830
-b101111110 ^!
-#42840
-b101111111 ^!
-#42850
-b110000000 ^!
-#42890
-b110001000 ]!
-#42910
-b110000001 ^!
-#42920
-b110000010 ^!
-#42930
-b110000011 ^!
-#42940
-b110000100 ^!
-#42950
-b110000101 ^!
-#42970
-b110000110 ^!
-#42980
-b110000111 ^!
-#42990
-b110010000 ]!
-b110001000 ^!
-#43000
-b110011000 ]!
-#43010
-b110100000 ]!
-b110001001 ^!
-#43020
-b110001010 ^!
-#43030
-b110001011 ^!
-#43040
-b110001100 ^!
-#43050
-b110001101 ^!
-#43060
-b110001110 ^!
-#43070
-b110001111 ^!
-#43080
-b110010000 ^!
-#43090
-b110010001 ^!
-#43100
-b110010010 ^!
-#43110
-b110010011 ^!
-#43120
-b110010100 ^!
-#43130
-b110010101 ^!
-#43140
-b110010110 ^!
-#43150
-b110010111 ^!
-#43160
-b110011000 ^!
-#43170
-b110011001 ^!
-#43180
-b110011010 ^!
-#43190
-b110011011 ^!
-#43210
-b110011100 ^!
-#43220
-b110011101 ^!
-#43230
-b110101000 ]!
-b110011110 ^!
-#43240
-b110110000 ]!
-b110011111 ^!
-#43250
-b110100000 ^!
-#43260
-b110100001 ^!
-#43270
-b110100010 ^!
-#43280
-b110100011 ^!
-#43290
-b110100100 ^!
-#43300
-b110100101 ^!
-#43310
-b110100110 ^!
-#43320
-b110100111 ^!
-#43330
-b110101000 ^!
-#43340
-b110101001 ^!
-#43350
-b110101010 ^!
-#43360
-b110101011 ^!
-#43370
-b110101100 ^!
-#43380
-b110101101 ^!
-#43390
-b110101110 ^!
-#43400
-b110101111 ^!
-#43420
-b110110000 ^!
-#43440
-b110111000 ]!
-#43450
-b111000000 ]!
-#43460
-b111001000 ]!
-b110110001 ^!
-#43470
-b110110010 ^!
-#43480
-b110110011 ^!
-#43490
-b110110100 ^!
-#43500
-b110110101 ^!
-#43510
-b110110110 ^!
-#43520
-b110110111 ^!
-#43530
-b110111000 ^!
-#43540
-b110111001 ^!
-#43550
-b110111010 ^!
-#43560
-b110111011 ^!
-#43570
-b110111100 ^!
-#43580
-b110111101 ^!
-#43590
-b110111110 ^!
-#43600
-b110111111 ^!
-#43610
-b111000000 ^!
-#43620
-b111000001 ^!
-#43630
-b111000010 ^!
-#43650
-b111000011 ^!
-#43660
-b111000100 ^!
-#43670
-b111010000 ]!
-b111000101 ^!
-#43680
-b111011000 ]!
-b111000110 ^!
-#43690
-b111000111 ^!
-#43700
-b111001000 ^!
-#43710
-b111001001 ^!
-#43720
-b111001010 ^!
-#43730
-b111001011 ^!
-#43740
-b111001100 ^!
-#43750
-b111001101 ^!
-#43760
-b111001110 ^!
-#43770
-b111001111 ^!
-#43780
-b111010000 ^!
-#43790
-b111010001 ^!
-#43800
-b111010010 ^!
-#43810
-b111010011 ^!
-#43820
-b111010100 ^!
-#43830
-b111010101 ^!
-#43850
-b111010110 ^!
-#43860
-b111010111 ^!
-#43870
-b111100000 ]!
-b111011000 ^!
-#43880
-b111101000 ]!
-#43890
-b111011001 ^!
-#43900
-b111011010 ^!
-#43910
-b111011011 ^!
-#43920
-b111011100 ^!
-#43930
-b111011101 ^!
-#43940
-b111011110 ^!
-#43950
-b111011111 ^!
-#43960
-b111100000 ^!
-#43970
-b111100001 ^!
-#43980
-b111100010 ^!
-#43990
-b111100011 ^!
-#44000
-b111100100 ^!
-#44020
-b111100101 ^!
-#44030
-b111100110 ^!
-#44040
-b111110000 ]!
-b111100111 ^!
-#44050
-b111111000 ]!
-b111101000 ^!
-#44060
-b0 ]!
-b111101001 ^!
-#44070
-b111101010 ^!
-#44080
-b111101011 ^!
-#44090
-b111101100 ^!
-#44100
-b111101101 ^!
-#44110
-b111101110 ^!
-#44120
-b111101111 ^!
-#44130
-b111110000 ^!
-#44140
-b111110001 ^!
-#44150
-b111110010 ^!
-#44160
-b111110011 ^!
-#44170
-b111110100 ^!
-#44180
-b111110101 ^!
-#44190
-b111110110 ^!
-#44200
-b111110111 ^!
-#44210
-b111111000 ^!
-#44220
-b111111001 ^!
-#44230
-b111111010 ^!
-#44240
-b111111011 ^!
-#44250
-b111111100 ^!
-#44270
-b111111101 ^!
-#44280
-b111111110 ^!
-#44290
-b1000 ]!
-b111111111 ^!
-#44300
-b10000 ]!
-b0 ^!
-#44310
-b1 ^!
-#44320
-b10 ^!
-#44330
-b11 ^!
-#44340
-b100 ^!
-#44350
-b101 ^!
-#44360
-b110 ^!
-#44370
-b111 ^!
-#44380
-b1000 ^!
-#44390
-b1001 ^!
-#44400
-b1010 ^!
-#44410
-b1011 ^!
-#44420
-b1100 ^!
-#44430
-b1101 ^!
-#44440
-b1110 ^!
-#44450
-b1111 ^!
-#44470
-b10000 ^!
-#44490
-b11000 ]!
-#44500
-b100000 ]!
-#44510
-b10001 ^!
-#44520
-b10010 ^!
-#44530
-b10011 ^!
-#44540
-b10100 ^!
-#44550
-b10101 ^!
-#44560
-b10110 ^!
-#44570
-b10111 ^!
-#44580
-b11000 ^!
-#44590
-b11001 ^!
-#44600
-b11010 ^!
-#44610
-b11011 ^!
-#44620
-b11100 ^!
-#44640
-b11101 ^!
-#44650
-b11110 ^!
-#44660
-b101000 ]!
-b11111 ^!
-#44670
-b110000 ]!
-b100000 ^!
-#44680
-b100001 ^!
-#44690
-b100010 ^!
-#44700
-b100011 ^!
-#44710
-b100100 ^!
-#44720
-b100101 ^!
-#44730
-b100110 ^!
-#44740
-b100111 ^!
-#44750
-b101000 ^!
-#44760
-b101001 ^!
-#44770
-b101010 ^!
-#44780
-b101011 ^!
-#44790
-b101100 ^!
-#44800
-b101101 ^!
-#44810
-b101110 ^!
-#44820
-b101111 ^!
-#44840
-b110000 ^!
-#44860
-b111000 ]!
-#44870
-b1000000 ]!
-#44880
-b1001000 ]!
-b110001 ^!
-#44890
-b110010 ^!
-#44900
-b110011 ^!
-#44910
-b110100 ^!
-#44920
-b110101 ^!
-#44930
-b110110 ^!
-#44940
-b110111 ^!
-#44950
-b111000 ^!
-#44960
-b111001 ^!
-#44970
-b111010 ^!
-#44980
-b111011 ^!
-#44990
-b111100 ^!
-#45000
-b111101 ^!
-#45010
-b111110 ^!
-#45020
-b111111 ^!
-#45030
-b1000000 ^!
-#45040
-b1000001 ^!
-#45050
-b1000010 ^!
-#45070
-b1000011 ^!
-#45080
-b1000100 ^!
-#45090
-b1010000 ]!
-b1000101 ^!
-#45100
-b1011000 ]!
-b1000110 ^!
-#45110
-b1100000 ]!
-b1000111 ^!
-#45120
-b1001000 ^!
-#45130
-b1001001 ^!
-#45140
-b1001010 ^!
-#45150
-b1001011 ^!
-#45160
-b1001100 ^!
-#45170
-b1001101 ^!
-#45180
-b1001110 ^!
-#45190
-b1001111 ^!
-#45200
-b1010000 ^!
-#45210
-b1010001 ^!
-#45220
-b1010010 ^!
-#45230
-b1010011 ^!
-#45240
-b1010100 ^!
-#45250
-b1010101 ^!
-#45260
-b1010110 ^!
-#45270
-b1010111 ^!
-#45280
-b1011000 ^!
-#45290
-b1011001 ^!
-#45300
-b1011010 ^!
-#45310
-b1011011 ^!
-#45330
-b1011100 ^!
-#45340
-b1011101 ^!
-#45350
-b1101000 ]!
-b1011110 ^!
-#45360
-b1110000 ]!
-b1011111 ^!
-#45370
-b1111000 ]!
-b1100000 ^!
-#45380
-b1100001 ^!
-#45390
-b1100010 ^!
-#45400
-b1100011 ^!
-#45410
-b1100100 ^!
-#45420
-b1100101 ^!
-#45430
-b1100110 ^!
-#45440
-b1100111 ^!
-#45450
-b1101000 ^!
-#45460
-b1101001 ^!
-#45470
-b1101010 ^!
-#45480
-b1101011 ^!
-#45490
-b1101100 ^!
-#45500
-b1101101 ^!
-#45510
-b1101110 ^!
-#45520
-b1101111 ^!
-#45530
-b1110000 ^!
-#45540
-b1110001 ^!
-#45550
-b1110010 ^!
-#45570
-b1110011 ^!
-#45580
-b1110100 ^!
-#45590
-b10000000 ]!
-b1110101 ^!
-#45600
-b10001000 ]!
-b1110110 ^!
-#45610
-b1110111 ^!
-#45620
-b1111000 ^!
-#45630
-b1111001 ^!
-#45640
-b1111010 ^!
-#45650
-b1111011 ^!
-#45660
-b1111100 ^!
-#45670
-b1111101 ^!
-#45680
-b1111110 ^!
-#45690
-b1111111 ^!
-#45700
-b10000000 ^!
-#45710
-b10000001 ^!
-#45730
-b10000010 ^!
-#45740
-b10000011 ^!
-#45750
-b10010000 ]!
-b10000100 ^!
-#45760
-b10011000 ]!
-b10000101 ^!
-#45770
-b10100000 ]!
-b10000110 ^!
-#45780
-b10000111 ^!
-#45790
-b10001000 ^!
-#45800
-b10001001 ^!
-#45810
-b10001010 ^!
-#45820
-b10001011 ^!
-#45830
-b10001100 ^!
-#45840
-b10001101 ^!
-#45850
-b10001110 ^!
-#45860
-b10001111 ^!
-#45870
-b10010000 ^!
-#45880
-b10010001 ^!
-#45890
-b10010010 ^!
-#45900
-b10010011 ^!
-#45910
-b10010100 ^!
-#45920
-b10010101 ^!
-#45930
-b10010110 ^!
-#45940
-b10010111 ^!
-#45950
-b10011000 ^!
-#45960
-b10011001 ^!
-#45980
-b10011010 ^!
-#45990
-b10011011 ^!
-#46000
-b10101000 ]!
-b10011100 ^!
-#46010
-b10110000 ]!
-b10011101 ^!
-#46020
-b10011110 ^!
-#46030
-b10011111 ^!
-#46040
-b10100000 ^!
-#46050
-b10100001 ^!
-#46060
-b10100010 ^!
-#46070
-b10100011 ^!
-#46080
-b10100100 ^!
-#46090
-b10100101 ^!
-#46100
-b10100110 ^!
-#46110
-b10100111 ^!
-#46120
-b10101000 ^!
-#46130
-b10101001 ^!
-#46150
-b10101010 ^!
-#46160
-b10101011 ^!
-#46170
-b10111000 ]!
-b10101100 ^!
-#46180
-b11000000 ]!
-b10101101 ^!
-#46190
-b10101110 ^!
-#46200
-b10101111 ^!
-#46210
-b10110000 ^!
-#46220
-b10110001 ^!
-#46230
-b10110010 ^!
-#46240
-b10110011 ^!
-#46250
-b10110100 ^!
-#46260
-b10110101 ^!
-#46270
-b10110110 ^!
-#46280
-b10110111 ^!
-#46290
-b10111000 ^!
-#46300
-b10111001 ^!
-#46310
-b10111010 ^!
-#46320
-b10111011 ^!
-#46330
-b10111100 ^!
-#46340
-b10111101 ^!
-#46360
-b10111110 ^!
-#46370
-b10111111 ^!
-#46380
-b11001000 ]!
-b11000000 ^!
-#46390
-b11010000 ]!
-#46400
-b11000001 ^!
-#46410
-b11000010 ^!
-#46420
-b11000011 ^!
-#46430
-b11000100 ^!
-#46440
-b11000101 ^!
-#46450
-b11000110 ^!
-#46460
-b11000111 ^!
-#46470
-b11001000 ^!
-#46480
-b11001001 ^!
-#46500
-b11001010 ^!
-#46510
-b11001011 ^!
-#46520
-b11011000 ]!
-b11001100 ^!
-#46530
-b11001101 ^!
-#46540
-b11001110 ^!
-#46550
-b11001111 ^!
-#46560
-b11010000 ^!
-#46570
-b11010001 ^!
-#46580
-b11010010 ^!
-#46590
-b11010011 ^!
-#46600
-b11010100 ^!
-#46610
-b11010101 ^!
-#46620
-b11010110 ^!
-#46640
-b11010111 ^!
-#46650
-b11011000 ^!
-#46660
-b11100000 ]!
-#46670
-b11101000 ]!
-#46680
-b11110000 ]!
-b11011001 ^!
-#46690
-b11011010 ^!
-#46700
-b11011011 ^!
-#46710
-b11011100 ^!
-#46720
-b11011101 ^!
-#46730
-b11011110 ^!
-#46740
-b11011111 ^!
-#46750
-b11100000 ^!
-#46760
-b11100001 ^!
-#46770
-b11100010 ^!
-#46780
-b11100011 ^!
-#46790
-b11100100 ^!
-#46800
-b11100101 ^!
-#46810
-b11100110 ^!
-#46820
-b11100111 ^!
-#46830
-b11101000 ^!
-#46840
-b11101001 ^!
-#46850
-b11101010 ^!
-#46860
-b11101011 ^!
-#46870
-b11101100 ^!
-#46890
-b11101101 ^!
-#46900
-b11101110 ^!
-#46910
-b11111000 ]!
-b11101111 ^!
-#46920
-b100000000 ]!
-b11110000 ^!
-#46930
-b100001000 ]!
-b11110001 ^!
-#46940
-b11110010 ^!
-#46950
-b11110011 ^!
-#46960
-b11110100 ^!
-#46970
-b11110101 ^!
-#46980
-b11110110 ^!
-#46990
-b11110111 ^!
-#47000
-b11111000 ^!
-#47010
-b11111001 ^!
-#47020
-b11111010 ^!
-#47030
-b11111011 ^!
-#47040
-b11111100 ^!
-#47050
-b11111101 ^!
-#47060
-b11111110 ^!
-#47070
-b11111111 ^!
-#47080
-b100000000 ^!
-#47090
-b100000001 ^!
-#47110
-b100000010 ^!
-#47120
-b100000011 ^!
-#47130
-b100010000 ]!
-b100000100 ^!
-#47140
-b100011000 ]!
-b100000101 ^!
-#47150
-b100100000 ]!
-b100000110 ^!
-#47160
-b100000111 ^!
-#47170
-b100001000 ^!
-#47180
-b100001001 ^!
-#47190
-b100001010 ^!
-#47200
-b100001011 ^!
-#47210
-b100001100 ^!
-#47220
-b100001101 ^!
-#47230
-b100001110 ^!
-#47240
-b100001111 ^!
-#47250
-b100010000 ^!
-#47260
-b100010001 ^!
-#47270
-b100010010 ^!
-#47280
-b100010011 ^!
-#47290
-b100010100 ^!
-#47300
-b100010101 ^!
-#47310
-b100010110 ^!
-#47320
-b100010111 ^!
-#47330
-b100011000 ^!
-#47340
-b100011001 ^!
-#47350
-b100011010 ^!
-#47360
-b100011011 ^!
-#47370
-b100011100 ^!
-#47390
-b100011101 ^!
-#47400
-b100011110 ^!
-#47410
-b100101000 ]!
-b100011111 ^!
-#47420
-b100110000 ]!
-b100100000 ^!
-#47430
-b100100001 ^!
-#47440
-b100100010 ^!
-#47450
-b100100011 ^!
-#47460
-b100100100 ^!
-#47470
-b100100101 ^!
-#47480
-b100100110 ^!
-#47490
-b100100111 ^!
-#47500
-b100101000 ^!
-#47510
-b100101001 ^!
-#47520
-b100101010 ^!
-#47530
-b100101011 ^!
-#47540
-b100101100 ^!
-#47560
-b100101101 ^!
-#47570
-b100101110 ^!
-#47580
-b100111000 ]!
-b100101111 ^!
-#47590
-b101000000 ]!
-b100110000 ^!
-#47600
-b101001000 ]!
-b100110001 ^!
-#47610
-b100110010 ^!
-#47620
-b100110011 ^!
-#47630
-b100110100 ^!
-#47640
-b100110101 ^!
-#47650
-b100110110 ^!
-#47660
-b100110111 ^!
-#47670
-b100111000 ^!
-#47680
-b100111001 ^!
-#47690
-b100111010 ^!
-#47700
-b100111011 ^!
-#47710
-b100111100 ^!
-#47720
-b100111101 ^!
-#47730
-b100111110 ^!
-#47740
-b100111111 ^!
-#47750
-b101000000 ^!
-#47760
-b101000001 ^!
-#47770
-b101000010 ^!
-#47790
-b101000011 ^!
-#47800
-b101000100 ^!
-#47810
-b101010000 ]!
-b101000101 ^!
-#47820
-b101000110 ^!
-#47830
-b101000111 ^!
-#47840
-b101001000 ^!
-#47850
-b101001001 ^!
-#47860
-b101001010 ^!
-#47870
-b101001011 ^!
-#47880
-b101001100 ^!
-#47890
-b101001101 ^!
-#47900
-b101001110 ^!
-#47920
-b101001111 ^!
-#47930
-b101010000 ^!
-#47940
-b101011000 ]!
-#47960
-b101010001 ^!
-#47970
-b101010010 ^!
-#47980
-b101010011 ^!
-#47990
-b101010100 ^!
-#48000
-b101010101 ^!
-#48010
-b101010110 ^!
-#48020
-b101010111 ^!
-#48030
-b101011000 ^!
-#48070
-b101100000 ]!
-#48080
-b101101000 ]!
-#48090
-b101110000 ]!
-b101011001 ^!
-#48100
-b101011010 ^!
-#48110
-b101011011 ^!
-#48120
-b101011100 ^!
-#48130
-b101011101 ^!
-#48140
-b101011110 ^!
-#48150
-b101011111 ^!
-#48160
-b101100000 ^!
-#48170
-b101100001 ^!
-#48180
-b101100010 ^!
-#48190
-b101100011 ^!
-#48200
-b101100100 ^!
-#48210
-b101100101 ^!
-#48220
-b101100110 ^!
-#48230
-b101100111 ^!
-#48240
-b101101000 ^!
-#48250
-b101101001 ^!
-#48260
-b101101010 ^!
-#48280
-b101101011 ^!
-#48290
-b101101100 ^!
-#48300
-b101111000 ]!
-b101101101 ^!
-#48310
-b101101110 ^!
-#48320
-b101101111 ^!
-#48330
-b101110000 ^!
-#48340
-b101110001 ^!
-#48350
-b101110010 ^!
-#48360
-b101110011 ^!
-#48370
-b101110100 ^!
-#48380
-b101110101 ^!
-#48390
-b101110110 ^!
-#48400
-b101110111 ^!
-#48420
-b101111000 ^!
-#48440
-b110000000 ]!
-#48450
-b110001000 ]!
-#48460
-b101111001 ^!
-#48470
-b101111010 ^!
-#48480
-b101111011 ^!
-#48490
-b101111100 ^!
-#48500
-b101111101 ^!
-#48510
-b101111110 ^!
-#48520
-b101111111 ^!
-#48530
-b110000000 ^!
-#48540
-b110000001 ^!
-#48550
-b110000010 ^!
-#48560
-b110000011 ^!
-#48580
-b110000100 ^!
-#48590
-b110000101 ^!
-#48600
-b110010000 ]!
-b110000110 ^!
-#48610
-b110011000 ]!
-b110000111 ^!
-#48620
-b110001000 ^!
-#48630
-b110001001 ^!
-#48640
-b110001010 ^!
-#48650
-b110001011 ^!
-#48660
-b110001100 ^!
-#48670
-b110001101 ^!
-#48680
-b110001110 ^!
-#48690
-b110001111 ^!
-#48700
-b110010000 ^!
-#48710
-b110010001 ^!
-#48730
-b110010010 ^!
-#48740
-b110010011 ^!
-#48750
-b110100000 ]!
-b110010100 ^!
-#48760
-b110101000 ]!
-b110010101 ^!
-#48770
-b110010110 ^!
-#48780
-b110010111 ^!
-#48790
-b110011000 ^!
-#48800
-b110011001 ^!
-#48810
-b110011010 ^!
-#48820
-b110011011 ^!
-#48830
-b110011100 ^!
-#48840
-b110011101 ^!
-#48850
-b110011110 ^!
-#48860
-b110011111 ^!
-#48870
-b110100000 ^!
-#48880
-b110100001 ^!
-#48890
-b110100010 ^!
-#48900
-b110100011 ^!
-#48920
-b110100100 ^!
-#48930
-b110100101 ^!
-#48940
-b110110000 ]!
-b110100110 ^!
-#48950
-b110111000 ]!
-b110100111 ^!
-#48960
-b111000000 ]!
-b110101000 ^!
-#48970
-b110101001 ^!
-#48980
-b110101010 ^!
-#48990
-b110101011 ^!
-#49000
-b110101100 ^!
-#49010
-b110101101 ^!
-#49020
-b110101110 ^!
-#49030
-b110101111 ^!
-#49040
-b110110000 ^!
-#49050
-b110110001 ^!
-#49060
-b110110010 ^!
-#49070
-b110110011 ^!
-#49080
-b110110100 ^!
-#49090
-b110110101 ^!
-#49100
-b110110110 ^!
-#49110
-b110110111 ^!
-#49120
-b110111000 ^!
-#49130
-b110111001 ^!
-#49140
-b110111010 ^!
-#49160
-b110111011 ^!
-#49170
-b110111100 ^!
-#49180
-b111001000 ]!
-b110111101 ^!
-#49190
-b111010000 ]!
-b110111110 ^!
-#49200
-b111011000 ]!
-b110111111 ^!
-#49210
-b111000000 ^!
-#49220
-b111000001 ^!
-#49230
-b111000010 ^!
-#49240
-b111000011 ^!
-#49250
-b111000100 ^!
-#49260
-b111000101 ^!
-#49270
-b111000110 ^!
-#49280
-b111000111 ^!
-#49290
-b111001000 ^!
-#49300
-b111001001 ^!
-#49310
-b111001010 ^!
-#49320
-b111001011 ^!
-#49330
-b111001100 ^!
-#49340
-b111001101 ^!
-#49350
-b111001110 ^!
-#49360
-b111001111 ^!
-#49370
-b111010000 ^!
-#49380
-b111010001 ^!
-#49390
-b111010010 ^!
-#49400
-b111010011 ^!
-#49410
-b111010100 ^!
-#49430
-b111010101 ^!
-#49440
-b111010110 ^!
-#49450
-b111100000 ]!
-b111010111 ^!
-#49460
-b111101000 ]!
-b111011000 ^!
-#49470
-b111110000 ]!
-b111011001 ^!
-#49480
-b111011010 ^!
-#49490
-b111011011 ^!
-#49500
-b111011100 ^!
-#49510
-b111011101 ^!
-#49520
-b111011110 ^!
-#49530
-b111011111 ^!
-#49540
-b111100000 ^!
-#49550
-b111100001 ^!
-#49560
-b111100010 ^!
-#49570
-b111100011 ^!
-#49580
-b111100100 ^!
-#49590
-b111100101 ^!
-#49600
-b111100110 ^!
-#49610
-b111100111 ^!
-#49620
-b111101000 ^!
-#49630
-b111101001 ^!
-#49640
-b111101010 ^!
-#49650
-b111101011 ^!
-#49660
-b111101100 ^!
-#49680
-b111101101 ^!
-#49690
-b111101110 ^!
-#49700
-b111111000 ]!
-b111101111 ^!
-#49710
-b0 ]!
-b111110000 ^!
-#49720
-b111110001 ^!
-#49730
-b111110010 ^!
-#49740
-b111110011 ^!
-#49750
-b111110100 ^!
-#49760
-b111110101 ^!
-#49770
-b111110110 ^!
-#49780
-b111110111 ^!
-#49790
-b111111000 ^!
-#49800
-b111111001 ^!
-#49810
-b111111010 ^!
-#49820
-b111111011 ^!
-#49830
-b111111100 ^!
-#49850
-b111111101 ^!
-#49860
-b111111110 ^!
-#49870
-b1000 ]!
-b111111111 ^!
-#49880
-b0 ^!
-#49890
-b1 ^!
-#49900
-b10 ^!
-#49910
-b11 ^!
-#49920
-b100 ^!
-#49930
-b101 ^!
-#49940
-b110 ^!
-#49950
-b111 ^!
-#49960
-b1000 ^!
-#50000
-b10000 ]!
-#50010
-b11000 ]!
-#50020
-b100000 ]!
-b1001 ^!
-#50030
-b1010 ^!
-#50040
-b1011 ^!
-#50050
-b1100 ^!
-#50060
-b1101 ^!
-#50070
-b1110 ^!
-#50080
-b1111 ^!
-#50090
-b10000 ^!
-#50100
-b10001 ^!
-#50110
-b10010 ^!
-#50120
-b10011 ^!
-#50130
-b10100 ^!
-#50140
-b10101 ^!
-#50150
-b10110 ^!
-#50160
-b10111 ^!
-#50170
-b11000 ^!
-#50180
-b11001 ^!
-#50190
-b11010 ^!
-#50200
-b11011 ^!
-#50210
-b11100 ^!
-#50230
-b11101 ^!
-#50240
-b11110 ^!
-#50250
-b101000 ]!
-b11111 ^!
-#50260
-b110000 ]!
-b100000 ^!
-#50270
-b100001 ^!
-#50280
-b100010 ^!
-#50290
-b100011 ^!
-#50300
-b100100 ^!
-#50310
-b100101 ^!
-#50320
-b100110 ^!
-#50330
-b100111 ^!
-#50340
-b101000 ^!
-#50350
-b101001 ^!
-#50360
-b101010 ^!
-#50370
-b101011 ^!
-#50390
-b101100 ^!
-#50400
-b101101 ^!
-#50410
-b111000 ]!
-b101110 ^!
-#50420
-b1000000 ]!
-b101111 ^!
-#50430
-b110000 ^!
-#50440
-b110001 ^!
-#50450
-b110010 ^!
-#50460
-b110011 ^!
-#50470
-b110100 ^!
-#50480
-b110101 ^!
-#50490
-b110110 ^!
-#50500
-b110111 ^!
-#50510
-b111000 ^!
-#50520
-b111001 ^!
-#50530
-b111010 ^!
-#50540
-b111011 ^!
-#50550
-b111100 ^!
-#50560
-b111101 ^!
-#50570
-b111110 ^!
-#50580
-b111111 ^!
-#50590
-b1000000 ^!
-#50630
-b1001000 ]!
-#50640
-b1010000 ]!
-#50650
-b1000001 ^!
-#50660
-b1000010 ^!
-#50670
-b1000011 ^!
-#50680
-b1000100 ^!
-#50690
-b1000101 ^!
-#50700
-b1000110 ^!
-#50710
-b1000111 ^!
-#50720
-b1001000 ^!
-#50730
-b1001001 ^!
-#50740
-b1001010 ^!
-#50750
-b1001011 ^!
-#50770
-b1001100 ^!
-#50780
-b1001101 ^!
-#50790
-b1011000 ]!
-b1001110 ^!
-#50800
-b1100000 ]!
-b1001111 ^!
-#50810
-b1101000 ]!
-b1010000 ^!
-#50820
-b1010001 ^!
-#50830
-b1010010 ^!
-#50840
-b1010011 ^!
-#50850
-b1010100 ^!
-#50860
-b1010101 ^!
-#50870
-b1010110 ^!
-#50880
-b1010111 ^!
-#50890
-b1011000 ^!
-#50900
-b1011001 ^!
-#50910
-b1011010 ^!
-#50920
-b1011011 ^!
-#50930
-b1011100 ^!
-#50940
-b1011101 ^!
-#50950
-b1011110 ^!
-#50960
-b1011111 ^!
-#50970
-b1100000 ^!
-#50980
-b1100001 ^!
-#50990
-b1100010 ^!
-#51000
-b1100011 ^!
-#51020
-b1100100 ^!
-#51030
-b1100101 ^!
-#51040
-b1110000 ]!
-b1100110 ^!
-#51050
-b1111000 ]!
-b1100111 ^!
-#51060
-b1101000 ^!
-#51070
-b1101001 ^!
-#51080
-b1101010 ^!
-#51090
-b1101011 ^!
-#51100
-b1101100 ^!
-#51110
-b1101101 ^!
-#51120
-b1101110 ^!
-#51130
-b1101111 ^!
-#51140
-b1110000 ^!
-#51150
-b1110001 ^!
-#51160
-b1110010 ^!
-#51170
-b1110011 ^!
-#51180
-b1110100 ^!
-#51200
-b1110101 ^!
-#51210
-b1110110 ^!
-#51220
-b10000000 ]!
-b1110111 ^!
-#51230
-b1111000 ^!
-#51240
-b1111001 ^!
-#51250
-b1111010 ^!
-#51260
-b1111011 ^!
-#51270
-b1111100 ^!
-#51280
-b1111101 ^!
-#51290
-b1111110 ^!
-#51310
-b1111111 ^!
-#51320
-b10000000 ^!
-#51330
-b10001000 ]!
-#51350
-b10000001 ^!
-#51360
-b10000010 ^!
-#51370
-b10000011 ^!
-#51380
-b10000100 ^!
-#51390
-b10000101 ^!
-#51400
-b10000110 ^!
-#51420
-b10000111 ^!
-#51430
-b10001000 ^!
-#51440
-b10010000 ]!
-#51450
-b10011000 ]!
-#51460
-b10100000 ]!
-b10001001 ^!
-#51470
-b10001010 ^!
-#51480
-b10001011 ^!
-#51490
-b10001100 ^!
-#51500
-b10001101 ^!
-#51510
-b10001110 ^!
-#51520
-b10001111 ^!
-#51530
-b10010000 ^!
-#51540
-b10010001 ^!
-#51550
-b10010010 ^!
-#51560
-b10010011 ^!
-#51570
-b10010100 ^!
-#51580
-b10010101 ^!
-#51590
-b10010110 ^!
-#51600
-b10010111 ^!
-#51610
-b10011000 ^!
-#51620
-b10011001 ^!
-#51630
-b10011010 ^!
-#51640
-b10011011 ^!
-#51660
-b10011100 ^!
-#51670
-b10011101 ^!
-#51680
-b10101000 ]!
-b10011110 ^!
-#51690
-b10110000 ]!
-b10011111 ^!
-#51700
-b10111000 ]!
-b10100000 ^!
-#51710
-b10100001 ^!
-#51720
-b10100010 ^!
-#51730
-b10100011 ^!
-#51740
-b10100100 ^!
-#51750
-b10100101 ^!
-#51760
-b10100110 ^!
-#51770
-b10100111 ^!
-#51780
-b10101000 ^!
-#51790
-b10101001 ^!
-#51800
-b10101010 ^!
-#51810
-b10101011 ^!
-#51820
-b10101100 ^!
-#51830
-b10101101 ^!
-#51840
-b10101110 ^!
-#51850
-b10101111 ^!
-#51860
-b10110000 ^!
-#51870
-b10110001 ^!
-#51880
-b10110010 ^!
-#51890
-b10110011 ^!
-#51900
-b10110100 ^!
-#51920
-b10110101 ^!
-#51930
-b10110110 ^!
-#51940
-b11000000 ]!
-b10110111 ^!
-#51950
-b10111000 ^!
-#51960
-b10111001 ^!
-#51970
-b10111010 ^!
-#51980
-b10111011 ^!
-#51990
-b10111100 ^!
-#52000
-b10111101 ^!
-#52010
-b10111110 ^!
-#52030
-b10111111 ^!
-#52040
-b11000000 ^!
-#52050
-b11001000 ]!
-#52060
-b11010000 ]!
-#52070
-b11000001 ^!
-#52080
-b11000010 ^!
-#52090
-b11000011 ^!
-#52100
-b11000100 ^!
-#52110
-b11000101 ^!
-#52120
-b11000110 ^!
-#52130
-b11000111 ^!
-#52140
-b11001000 ^!
-#52150
-b11001001 ^!
-#52160
-b11001010 ^!
-#52170
-b11001011 ^!
-#52180
-b11001100 ^!
-#52190
-b11001101 ^!
-#52210
-b11001110 ^!
-#52220
-b11001111 ^!
-#52230
-b11011000 ]!
-b11010000 ^!
-#52240
-b11100000 ]!
-#52250
-b11101000 ]!
-b11010001 ^!
-#52260
-b11010010 ^!
-#52270
-b11010011 ^!
-#52280
-b11010100 ^!
-#52290
-b11010101 ^!
-#52300
-b11010110 ^!
-#52310
-b11010111 ^!
-#52320
-b11011000 ^!
-#52330
-b11011001 ^!
-#52340
-b11011010 ^!
-#52350
-b11011011 ^!
-#52360
-b11011100 ^!
-#52370
-b11011101 ^!
-#52380
-b11011110 ^!
-#52390
-b11011111 ^!
-#52400
-b11100000 ^!
-#52410
-b11100001 ^!
-#52420
-b11100010 ^!
-#52430
-b11100011 ^!
-#52450
-b11100100 ^!
-#52460
-b11100101 ^!
-#52470
-b11110000 ]!
-b11100110 ^!
-#52480
-b11100111 ^!
-#52490
-b11101000 ^!
-#52500
-b11101001 ^!
-#52510
-b11101010 ^!
-#52520
-b11101011 ^!
-#52530
-b11101100 ^!
-#52540
-b11101101 ^!
-#52550
-b11101110 ^!
-#52570
-b11101111 ^!
-#52580
-b11110000 ^!
-#52590
-b11111000 ]!
-#52600
-b100000000 ]!
-#52610
-b100001000 ]!
-b11110001 ^!
-#52620
-b11110010 ^!
-#52630
-b11110011 ^!
-#52640
-b11110100 ^!
-#52650
-b11110101 ^!
-#52660
-b11110110 ^!
-#52670
-b11110111 ^!
-#52680
-b11111000 ^!
-#52690
-b11111001 ^!
-#52700
-b11111010 ^!
-#52710
-b11111011 ^!
-#52720
-b11111100 ^!
-#52730
-b11111101 ^!
-#52740
-b11111110 ^!
-#52750
-b11111111 ^!
-#52760
-b100000000 ^!
-#52770
-b100000001 ^!
-#52780
-b100000010 ^!
-#52800
-b100000011 ^!
-#52810
-b100000100 ^!
-#52820
-b100010000 ]!
-b100000101 ^!
-#52830
-b100011000 ]!
-b100000110 ^!
-#52840
-b100000111 ^!
-#52850
-b100001000 ^!
-#52860
-b100001001 ^!
-#52870
-b100001010 ^!
-#52880
-b100001011 ^!
-#52890
-b100001100 ^!
-#52900
-b100001101 ^!
-#52910
-b100001110 ^!
-#52920
-b100001111 ^!
-#52930
-b100010000 ^!
-#52940
-b100010001 ^!
-#52950
-b100010010 ^!
-#52970
-b100010011 ^!
-#52980
-b100010100 ^!
-#52990
-b100100000 ]!
-b100010101 ^!
-#53000
-b100101000 ]!
-b100010110 ^!
-#53010
-b100010111 ^!
-#53020
-b100011000 ^!
-#53030
-b100011001 ^!
-#53040
-b100011010 ^!
-#53050
-b100011011 ^!
-#53060
-b100011100 ^!
-#53070
-b100011101 ^!
-#53080
-b100011110 ^!
-#53090
-b100011111 ^!
-#53100
-b100100000 ^!
-#53110
-b100100001 ^!
-#53120
-b100100010 ^!
-#53130
-b100100011 ^!
-#53140
-b100100100 ^!
-#53150
-b100100101 ^!
-#53160
-b100100110 ^!
-#53170
-b100100111 ^!
-#53190
-b100101000 ^!
-#53210
-b100110000 ]!
-#53220
-b100111000 ]!
-#53230
-b101000000 ]!
-b100101001 ^!
-#53240
-b100101010 ^!
-#53250
-b100101011 ^!
-#53260
-b100101100 ^!
-#53270
-b100101101 ^!
-#53280
-b100101110 ^!
-#53290
-b100101111 ^!
-#53300
-b100110000 ^!
-#53310
-b100110001 ^!
-#53320
-b100110010 ^!
-#53330
-b100110011 ^!
-#53340
-b100110100 ^!
-#53350
-b100110101 ^!
-#53360
-b100110110 ^!
-#53370
-b100110111 ^!
-#53380
-b100111000 ^!
-#53390
-b100111001 ^!
-#53400
-b100111010 ^!
-#53410
-b100111011 ^!
-#53420
-b100111100 ^!
-#53440
-b100111101 ^!
-#53450
-b100111110 ^!
-#53460
-b101001000 ]!
-b100111111 ^!
-#53470
-b101000000 ^!
-#53480
-b101000001 ^!
-#53490
-b101000010 ^!
-#53500
-b101000011 ^!
-#53510
-b101000100 ^!
-#53520
-b101000101 ^!
-#53530
-b101000110 ^!
-#53540
-b101000111 ^!
-#53550
-b101001000 ^!
-#53590
-b101010000 ]!
-#53600
-b101011000 ]!
-#53610
-b101001001 ^!
-#53620
-b101001010 ^!
-#53630
-b101001011 ^!
-#53640
-b101001100 ^!
-#53650
-b101001101 ^!
-#53660
-b101001110 ^!
-#53670
-b101001111 ^!
-#53680
-b101010000 ^!
-#53690
-b101010001 ^!
-#53700
-b101010010 ^!
-#53710
-b101010011 ^!
-#53720
-b101010100 ^!
-#53730
-b101010101 ^!
-#53740
-b101010110 ^!
-#53760
-b101010111 ^!
-#53770
-b101011000 ^!
-#53780
-b101100000 ]!
-#53790
-b101101000 ]!
-#53800
-b101110000 ]!
-b101011001 ^!
-#53810
-b101011010 ^!
-#53820
-b101011011 ^!
-#53830
-b101011100 ^!
-#53840
-b101011101 ^!
-#53850
-b101011110 ^!
-#53860
-b101011111 ^!
-#53870
-b101100000 ^!
-#53880
-b101100001 ^!
-#53890
-b101100010 ^!
-#53900
-b101100011 ^!
-#53910
-b101100100 ^!
-#53920
-b101100101 ^!
-#53930
-b101100110 ^!
-#53940
-b101100111 ^!
-#53950
-b101101000 ^!
-#53960
-b101101001 ^!
-#53980
-b101101010 ^!
-#53990
-b101101011 ^!
-#54000
-b101111000 ]!
-b101101100 ^!
-#54010
-b110000000 ]!
-b101101101 ^!
-#54020
-b110001000 ]!
-b101101110 ^!
-#54030
-b101101111 ^!
-#54040
-b101110000 ^!
-#54050
-b101110001 ^!
-#54060
-b101110010 ^!
-#54070
-b101110011 ^!
-#54080
-b101110100 ^!
-#54090
-b101110101 ^!
-#54100
-b101110110 ^!
-#54110
-b101110111 ^!
-#54120
-b101111000 ^!
-#54130
-b101111001 ^!
-#54140
-b101111010 ^!
-#54150
-b101111011 ^!
-#54160
-b101111100 ^!
-#54170
-b101111101 ^!
-#54180
-b101111110 ^!
-#54190
-b101111111 ^!
-#54200
-b110000000 ^!
-#54210
-b110000001 ^!
-#54230
-b110000010 ^!
-#54240
-b110000011 ^!
-#54250
-b110010000 ]!
-b110000100 ^!
-#54260
-b110000101 ^!
-#54270
-b110000110 ^!
-#54280
-b110000111 ^!
-#54290
-b110001000 ^!
-#54300
-b110001001 ^!
-#54310
-b110001010 ^!
-#54320
-b110001011 ^!
-#54330
-b110001100 ^!
-#54340
-b110001101 ^!
-#54360
-b110001110 ^!
-#54370
-b110001111 ^!
-#54380
-b110011000 ]!
-b110010000 ^!
-#54390
-b110100000 ]!
-#54400
-b110010001 ^!
-#54410
-b110010010 ^!
-#54420
-b110010011 ^!
-#54430
-b110010100 ^!
-#54440
-b110010101 ^!
-#54450
-b110010110 ^!
-#54460
-b110010111 ^!
-#54470
-b110011000 ^!
-#54480
-b110011001 ^!
-#54490
-b110011010 ^!
-#54500
-b110011011 ^!
-#54510
-b110011100 ^!
-#54520
-b110011101 ^!
-#54530
-b110011110 ^!
-#54540
-b110011111 ^!
-#54550
-b110100000 ^!
-#54590
-b110101000 ]!
-#54600
-b110110000 ]!
-#54610
-b110111000 ]!
-b110100001 ^!
-#54620
-b110100010 ^!
-#54630
-b110100011 ^!
-#54640
-b110100100 ^!
-#54650
-b110100101 ^!
-#54660
-b110100110 ^!
-#54670
-b110100111 ^!
-#54680
-b110101000 ^!
-#54690
-b110101001 ^!
-#54700
-b110101010 ^!
-#54710
-b110101011 ^!
-#54720
-b110101100 ^!
-#54730
-b110101101 ^!
-#54740
-b110101110 ^!
-#54750
-b110101111 ^!
-#54760
-b110110000 ^!
-#54770
-b110110001 ^!
