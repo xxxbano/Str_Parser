@@ -183,7 +183,7 @@ end
 				buf_wdata[55:48] = m[rd_cnt[MSIZE-1:0]+6];
 				buf_wdata[63:56] = m[rd_cnt[MSIZE-1:0]+7];
 			end
-			default: ;// do nothing
+			default: buf_wdata[63:0] = 0;
 		endcase
 	end
 
