@@ -8,11 +8,11 @@ let's say $ => ascii'0x01'. The string is terminated with a $.
 ##### Verilog files:
 - [parser.v](rtl/parser.v)
   - Version 1. 64-bit write in, 8-bit read out. 
-  - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf")
+  - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf&")
 - [parser_op.v](rtl/parser_op.v)
   - Version 2. 64-bit write in, 64-bit read out. 
   - Low latency. 
-  - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf")
+  - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf&")
 - [parser_op_dual.v](rtl/parser_op_dual.v): 
   - Version 3 based on a old Version 2. dual channel mode. 
   - Low latency. 
