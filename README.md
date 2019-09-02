@@ -13,7 +13,6 @@ let's say $ => ascii'0x01'. The string is terminated with a $.
   - Version 2. 64-bit write in, 64-bit read out. 
   - Low latency. 
   - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf")
-  - The input has a complex combinatin logic. Should be took care in a real project.
 - [parser_op_dual.v](rtl/parser_op_dual.v): 
   - Version 3 based on a old Version 2. dual channel mode. 
   - Low latency. 
