@@ -23,8 +23,8 @@ module parser_op #(
   input wire [2:0] avl_st_rx_empty,
   
   output reg   out1_valid,
-  output reg [ 31:0]  out1_tag,
-  output reg [127:0]  out1_value,
+  output wire [ 31:0]  out1_tag,
+  output wire [127:0]  out1_value,
 
   output reg   out2_valid,
   output reg [ 31:0]  out2_tag,
@@ -41,7 +41,6 @@ reg [MSIZE:0] rd_cnt;
 wire [63:0] fifo_wdata;
 reg [63:0] eog_wdata;
 wire fifo_wr;
-wire fifo_wr_dummy; // dummy write for eop, to clean up next 8-byte memory
 wire fifo_rd;
 wire equal;  
 wire full;  
@@ -354,18 +353,31 @@ endfunction
 // check SMARK symbol
 function sm_check;
 	input [64:0] wdata;
-	integer i;
 	begin
-		for(i=0;i<8;i=i+1) begin
-			if(wdata[7:0]==SMARK) begin
-				sm_check = 1;
-				break;
-			end else begin
-				wdata = wdata >> 8;
-				sm_check = 0;
-			end
-		end
+		case(SMARK)
+			wdata[ 7:0 ]: sm_check = 1; 
+			wdata[15:8 ]: sm_check = 1; 
+			wdata[23:16]: sm_check = 1;
+			wdata[31:24]: sm_check = 1;
+			wdata[39:32]: sm_check = 1;
+			wdata[47:40]: sm_check = 1;
+			wdata[55:48]: sm_check = 1;
+			wdata[63:56]: sm_check = 1;
+					 default: sm_check = 0;
+		endcase
 	end
+	//integer i;
+	//begin
+	//	for(i=0;i<8;i=i+1) begin
+	//		if(wdata[7:0]==SMARK) begin
+	//			sm_check = 1;
+	//			break;
+	//		end else begin
+	//			wdata = wdata >> 8;
+	//			sm_check = 0;
+	//		end
+	//	end
+	//end
 endfunction
 
 endmodule

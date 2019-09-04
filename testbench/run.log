@@ -1,5 +1,5 @@
 # vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
-# Start time: 10:35:12 on Sep 02,2019
+# Start time: 20:29:26 on Sep 03,2019
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
 # //
