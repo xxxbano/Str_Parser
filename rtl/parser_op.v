@@ -228,7 +228,7 @@ always @(posedge clk) begin
 		
 		case(state)
 		S1: begin  // idle
-			if(buf_count && ~mem_zero) begin
+			if(buf_count) begin
 				state<=S2;
 				buf_rd <= 1;
 				tmp_data <= 0;
@@ -273,7 +273,7 @@ always @(posedge clk) begin
 		end
 		S4: begin
 			buf_rd <= 1;
-			if(sm_check(buf_rdata) || mem_zero) begin // find SMARK, go to idle 
+			if(sm_check(buf_rdata)) begin // find SMARK, go to idle 
 				state<=S1;
 				buf_rd <= 0;
 			end
@@ -354,7 +354,7 @@ endfunction
 function sm_check;
 	input [64:0] wdata;
 	begin
-		case(SMARK)
+		casez(SMARK)
 			wdata[ 7:0 ]: sm_check = 1; 
 			wdata[15:8 ]: sm_check = 1; 
 			wdata[23:16]: sm_check = 1;
@@ -366,18 +366,6 @@ function sm_check;
 					 default: sm_check = 0;
 		endcase
 	end
-	//integer i;
-	//begin
-	//	for(i=0;i<8;i=i+1) begin
-	//		if(wdata[7:0]==SMARK) begin
-	//			sm_check = 1;
-	//			break;
-	//		end else begin
-	//			wdata = wdata >> 8;
-	//			sm_check = 0;
-	//		end
-	//	end
-	//end
 endfunction
 
 endmodule
