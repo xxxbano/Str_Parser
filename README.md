@@ -14,10 +14,9 @@ let's say $ => ascii'0x01'. The string is terminated with a $.
   - Low latency. 
   - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf&")
 - [parser_op_dual.v](rtl/parser_op_dual.v): 
-  - Version 3 based on a old Version 2. dual channel mode. 
+  - Version 3 based on Version 2. dual channel mode. 
   - Low latency. 
-  - But, based on old Version 2. Cannot handle general string input yet. Only for 1 string 1 grp of data (e.g. "8=TXS.1$" "9=fsaft$" "fsda=ffteaf$") 
-  - The dual channel mode idea can be applied on Version 1 and 2.
+  - Handle general string input. (e.g. "8=TXS.1$9=fsaft$fsda=ffteaf$78=fsaf&")
 - [fifo.v](rtl/fifo.v): first word fall through mode. Used in Version 2 and 3.
 ##### UnitTest files:
 Random Test Method: Randomly generate out_tag and out_value, and concatenate them to form a string package by following the parsing rules. Then, input the string package to the target parser. At last, verify the output with the generated result.
@@ -41,13 +40,37 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
   - test_2_continus_case_1st_ignore_17B_value: Input 2 grps of dat, 1st grp dat has 17-byte val, ignore byte [16~]
   - test_2_continus_case_2nd_ignore_17B_value: Input 2 grps of dat, 2nd grp dat has 17-byte val, ignore byte [16~]
 - [parser_op_dual_unit_test.sv](testbench/parser_op_dual_unit_test.sv): 
-  - Test1: random tag (1-4-Byte), random value (1-16-Byte), 200 times
+  - test_rst: reset test
+  - test_3_continus_case_empty_7: Input 3 groups of data, the last 8-byte has 7-byte empty  
+  - test_4_continus_case_empty_3: Input 4 groups of data, the last 8-byte has 3-byte empty
 - [TestResult](testbench/TestResult): Test Summary
 ##### ToDo:
 - Need to test more corner cases.
-- Implement dual mode for Version 1 and 2.
 
 #### Waveform from UnitTest
+##### parser_op_dual: Version 3
+###### test_3_continus_case_empty_7. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output, Fig 4: 3nd output
+- Input: 01 89abcdef1123456789abcdef 3d 123456 01 456789abcdef1123456789abcdef 3d 1234 01 1123456789abcdef1123456789abcdef 3d 12345678
+- 1st output: tag: 12345678 value: 1123456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0001456789abcdef1123456789abcdef
+- 3nd output: tag: 00123456 value: 0000000189abcdef1123456789abcdef
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig50.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig51.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig52.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig53.png "Logo Title Text 1")
+
+###### test_3_continus_case_empty_7. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output, Fig 4: 3nd output, Fig 5: 3nd output
+- Input: 01 ef 3d 56 01 89abcdef1123456789abcdef 3d 123456 01 456789abcdef1123456789abcdef 3d 1234 01 1123456789abcdef1123456789abcdef 3d 12345678
+- 1st output: tag: 12345678 value: 1123456789abcdef1123456789abcdef
+- 2nd output: tag: 00001234 value: 0001456789abcdef1123456789abcdef
+- 3nd output: tag: 00123456 value: 0000000189abcdef1123456789abcdef
+- 4nd output: tag: 00000056 value: 000000000000000000000000000001ef
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig54.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig55.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig56.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig57.png "Logo Title Text 1")
+![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig58.png "Logo Title Text 1")
+
 ##### [parser_op.v](rtl/parser_op.v): Version 2
 ###### test_2_continus_case_empty_0. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
 - Input: 01 456789abcdef1123456789abcdef 3d 1234 01 1123456789abcdef1123456789abcdef 3d 12345678
@@ -139,7 +162,7 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig23.png "Logo Title Text 1")
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig24.png "Logo Title Text 1")
 ###### test_2_continus_case_2nd_ignore_17B_value. Fig 1: input data, Fig 2: 1st output, Fig 3: 2nd output
-- Input: 01 ff1123456789abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678;;
+- Input: 01 ff1123456789abcdef1123456789abcdef 3d 1234 01 23456789abcdef1123456789abcdef 3d 12345678;
 - 1st output: tag: 12345678 value: 0023456789abcdef1123456789abcdef
 - 2nd output: tag: 00001234 value: 1123456789abcdef1123456789abcdef, ignored 'ff'
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig25.png "Logo Title Text 1")
@@ -151,13 +174,6 @@ Random Test Method: Randomly generate out_tag and out_value, and concatenate the
 ###### Random test. 1-4-byte tag, 1-16-byte value
 ![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig30.png "Logo Title Text 1")
 
-##### parser_op_dual: Version 3
-Input Hex: 000000000000208F 1277E5AAC5C6F98C ED760D013D12658D; '='='3D',' '='20' => out_tag=12658D,out_value=0000208F 1277E5AAC5C6F98C ED760D01
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig2.png "Logo Title Text 1")
-###### Dual channel interleaving output
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig1.png "Logo Title Text 1")
-###### 200 times rondom data test
-![alt text](https://github.com/xxxbano/Str_Parser/blob/master/doc/fig3.png "Logo Title Text 1")
 
 #### About UnitTest
 The UnitTest is designed by using SVUnit in Linux
