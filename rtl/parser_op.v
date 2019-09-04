@@ -1,11 +1,15 @@
 //////////////////////////////////
-// v0.1 string parser
+// v0.2 string parser
 // 2019-08-31 by Zhengfan Xia
 // 
 // Two layers of buffer
 // 1st layer store raw data
 // 2st layer receive arranged data by parsing SMARK
 // At last, be able to parse data in 64-bit length
+// 
+// Require input string terminated by SMARK
+// Or add protection in the last write in
+// e.g. after eog, write an extra SMARK
 //////////////////////////////////
 
 
@@ -53,6 +57,19 @@ assign empty =~(wr_cnt[MSIZE]^rd_cnt[MSIZE]) & equal;
 assign fifo_wr =avl_st_rx_valid &(~full);
 
 //masked data for eop
+always @(*) begin
+  case(avl_st_rx_empty)
+  3'b000: eog_wdata = avl_st_rx_data & 64'hffffffffffffffff;
+  3'b001: eog_wdata = avl_st_rx_data & 64'h00ffffffffffffff;
+  3'b010: eog_wdata = avl_st_rx_data & 64'h0000ffffffffffff;
+  3'b011: eog_wdata = avl_st_rx_data & 64'h000000ffffffffff;
+  3'b100: eog_wdata = avl_st_rx_data & 64'h00000000ffffffff;
+  3'b101: eog_wdata = avl_st_rx_data & 64'h0000000000ffffff;
+  3'b110: eog_wdata = avl_st_rx_data & 64'h000000000000ffff;
+  3'b111: eog_wdata = avl_st_rx_data & 64'h00000000000000ff;
+  endcase
+end
+
 always @(*) begin
   case(avl_st_rx_empty)
   3'b000: eog_wdata = avl_st_rx_data & 64'hffffffffffffffff;
@@ -190,7 +207,7 @@ end
 	assign buf_wr = ~empty && ~buf_full && ~mem_zero;
 
 // second layer buffer
-fifo #(.DSIZE(64), .MSIZE(8)) i_buf(
+fifo #(.DSIZE(64), .MSIZE(3)) i_buf(
 	.rst(rst),
 	.clk(clk),
 	.wr(buf_wr),
