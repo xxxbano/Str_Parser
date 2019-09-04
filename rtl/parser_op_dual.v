@@ -7,6 +7,10 @@
 // 2nd layer receive arranged data by parsing SMARK
 // At last, be able to parse data in 64-bit length
 // 2nd has 2 fifo for dual channel mode
+//
+// Interesting simulation bug
+// When SMARK happens locate at the end of FIFO,
+// cur_data cannot get rollback data start from address 0->
 //////////////////////////////////
 
 

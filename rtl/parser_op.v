@@ -14,7 +14,7 @@
 
 
 module parser_op #(
-	parameter MSIZE = 9,
+	parameter MSIZE = 8,
 	parameter SMARK = 8'h01
 )(
   input wire clk,

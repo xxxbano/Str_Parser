@@ -10,7 +10,7 @@ SVUNIT: Creating instances for:
 SVUNIT:   __testsuite
 cd .; vlib work; vlog -l compile.log  -f .svunit.f +define+SVUNIT_VERSION='"SVUnit v3.26"' ; vsim -sdfnoerror -c -lib work -do "run -all; quit" -l run.log testrunner
 Model Technology ModelSim SE-64 vlog 10.3 Compiler 2014.01 Jan  6 2014
-Start time: 11:47:50 on Sep 04,2019
+Start time: 16:17:20 on Sep 04,2019
 vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26" 
 -- Compiling package svunit_pkg
 -- Compiling module fifo
@@ -29,17 +29,18 @@ vlog -l compile.log -f .svunit.f +define+SVUNIT_VERSION="SVUnit v3.26"
 
 Top level modules:
 	testrunner
-End time: 11:47:50 on Sep 04,2019
+End time: 16:17:20 on Sep 04,2019
 Errors: 0, Warnings: 1
 Reading pref.tcl 
 
 # 10.3
 
 # vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
-# Start time: 11:47:52 on Sep 04,2019
+# Start time: 16:17:21 on Sep 04,2019
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: parser_op_dual.v(221): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
-# ** Warning: parser_op_dual.v(321): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
+# ** Warning: parser_op_dual.v(225): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
+# ** Warning: parser_op_dual.v(325): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
+# ** Warning: parser_op.v(210): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
 # //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
 # //
 # //  Copyright 1991-2014 Mentor Graphics Corporation
@@ -65,48 +66,50 @@ Reading pref.tcl
 # INFO:  [190][parser_op_dual_ut]: test_3_continus_case_empty_7::PASSED
 # INFO:  [190][parser_op_dual_ut]: test_4_continus_case_empty_3::RUNNING
 # INFO:  [360][parser_op_dual_ut]: test_4_continus_case_empty_3::PASSED
-# INFO:  [360][parser_op_ut]: RUNNING
-# INFO:  [360][parser_op_ut]: test_rst::RUNNING
-# INFO:  [400][parser_op_ut]: test_rst::PASSED
-# INFO:  [400][parser_op_ut]: test_2_continus_case_empty_0::RUNNING
-# INFO:  [520][parser_op_ut]: test_2_continus_case_empty_0::PASSED
-# INFO:  [520][parser_op_ut]: test_2_continus_case_empty_1::RUNNING
-# INFO:  [640][parser_op_ut]: test_2_continus_case_empty_1::PASSED
-# INFO:  [640][parser_op_ut]: test_2_continus_case_empty_3::RUNNING
-# INFO:  [750][parser_op_ut]: test_2_continus_case_empty_3::PASSED
-# INFO:  [750][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
-# INFO:  [870][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
-# INFO:  [870][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
-# INFO:  [990][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
-# INFO:  [990][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
-# INFO:  [1110][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
-# INFO:  [1110][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
-# INFO:  [1230][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
-# INFO:  [1230][parser_ut]: RUNNING
-# INFO:  [1230][parser_ut]: test_rst::RUNNING
-# INFO:  [1270][parser_ut]: test_rst::PASSED
-# INFO:  [1270][parser_ut]: test_2_continus_case_empty_0::RUNNING
-# INFO:  [1720][parser_ut]: test_2_continus_case_empty_0::PASSED
-# INFO:  [1720][parser_ut]: test_2_continus_case_empty_1::RUNNING
-# INFO:  [2160][parser_ut]: test_2_continus_case_empty_1::PASSED
-# INFO:  [2160][parser_ut]: test_2_continus_case_empty_3::RUNNING
-# INFO:  [2580][parser_ut]: test_2_continus_case_empty_3::PASSED
-# INFO:  [2580][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
-# INFO:  [3020][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
-# INFO:  [3020][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
-# INFO:  [3530][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
-# INFO:  [3530][parser_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
-# INFO:  [4000][parser_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
-# INFO:  [4000][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
-# INFO:  [4490][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
-# INFO:  [4490][parser_ut]: test_random_200::RUNNING
-# INFO:  [41130][parser_ut]: test_random_200::PASSED
-# INFO:  [41130][parser_op_dual_ut]: PASSED (3 of 3 tests passing)
-# INFO:  [41130][parser_op_ut]: PASSED (8 of 8 tests passing)
-# INFO:  [41130][parser_ut]: PASSED (9 of 9 tests passing)
+# INFO:  [360][parser_op_dual_ut]: test_4_continus_case_random_200::RUNNING
+# INFO:  [30250][parser_op_dual_ut]: test_4_continus_case_random_200::PASSED
+# INFO:  [30250][parser_op_ut]: RUNNING
+# INFO:  [30250][parser_op_ut]: test_rst::RUNNING
+# INFO:  [30290][parser_op_ut]: test_rst::PASSED
+# INFO:  [30290][parser_op_ut]: test_2_continus_case_empty_0::RUNNING
+# INFO:  [30410][parser_op_ut]: test_2_continus_case_empty_0::PASSED
+# INFO:  [30410][parser_op_ut]: test_2_continus_case_empty_1::RUNNING
+# INFO:  [30530][parser_op_ut]: test_2_continus_case_empty_1::PASSED
+# INFO:  [30530][parser_op_ut]: test_2_continus_case_empty_3::RUNNING
+# INFO:  [30640][parser_op_ut]: test_2_continus_case_empty_3::PASSED
+# INFO:  [30640][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
+# INFO:  [30760][parser_op_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
+# INFO:  [30760][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
+# INFO:  [30880][parser_op_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
+# INFO:  [30880][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
+# INFO:  [31000][parser_op_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
+# INFO:  [31000][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
+# INFO:  [31120][parser_op_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
+# INFO:  [31120][parser_ut]: RUNNING
+# INFO:  [31120][parser_ut]: test_rst::RUNNING
+# INFO:  [31160][parser_ut]: test_rst::PASSED
+# INFO:  [31160][parser_ut]: test_2_continus_case_empty_0::RUNNING
+# INFO:  [31610][parser_ut]: test_2_continus_case_empty_0::PASSED
+# INFO:  [31610][parser_ut]: test_2_continus_case_empty_1::RUNNING
+# INFO:  [32050][parser_ut]: test_2_continus_case_empty_1::PASSED
+# INFO:  [32050][parser_ut]: test_2_continus_case_empty_3::RUNNING
+# INFO:  [32470][parser_ut]: test_2_continus_case_empty_3::PASSED
+# INFO:  [32470][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::RUNNING
+# INFO:  [32910][parser_ut]: test_2_continus_case_igonore_1st_for_5B_tag::PASSED
+# INFO:  [32910][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::RUNNING
+# INFO:  [33420][parser_ut]: test_2_continus_case_igonore_2nd_for_5B_tag::PASSED
+# INFO:  [33420][parser_ut]: test_2_continus_case_1st_ignore_17B_value::RUNNING
+# INFO:  [33890][parser_ut]: test_2_continus_case_1st_ignore_17B_value::PASSED
+# INFO:  [33890][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::RUNNING
+# INFO:  [34380][parser_ut]: test_2_continus_case_2nd_ignore_17B_value::PASSED
+# INFO:  [34380][parser_ut]: test_random_200::RUNNING
+# INFO:  [70010][parser_ut]: test_random_200::PASSED
+# INFO:  [70010][parser_op_dual_ut]: PASSED (4 of 4 tests passing)
+# INFO:  [70010][parser_op_ut]: PASSED (8 of 8 tests passing)
+# INFO:  [70010][parser_ut]: PASSED (9 of 9 tests passing)
 # 
-# INFO:  [41130][__ts]: PASSED (3 of 3 testcases passing)
+# INFO:  [70010][__ts]: PASSED (3 of 3 testcases passing)
 # 
-# INFO:  [41130][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
+# INFO:  [70010][testrunner]: PASSED (1 of 1 suites passing) [SVUnit v3.26]
 # ** Note: $finish    : .testrunner.sv(40)
-#    Time: 41130 ns  Iteration: 1  Instance: /testrunner
+#    Time: 70010 ns  Iteration: 1  Instance: /testrunner

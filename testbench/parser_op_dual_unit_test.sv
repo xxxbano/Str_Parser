@@ -43,7 +43,8 @@ module parser_op_dual_unit_test;
 	logic [31:0] res_t1;
 	logic [31:0] res_t2;
 	logic [31:0] res_t3;
-	logic [32*32-1:0] wdata;
+	parameter WSIZE = 128;
+	logic [32*WSIZE-1:0] wdata;
 
 	parameter CH_SIZE = 1000;  
 	logic [7:0] str[CH_SIZE];
@@ -55,6 +56,8 @@ module parser_op_dual_unit_test;
 	integer j;
 	integer eq_pos;
 	integer sp_pos;
+	integer eq_pos_sum;
+	integer sp_pos_sum;
 	integer rd_cnt;
 
 	initial avl_st_rx_valid = 0;
@@ -71,7 +74,7 @@ module parser_op_dual_unit_test;
   // This is the UUT that we're 
   // running the Unit Tests on
   //===================================
-  parser_op_dual my_parser_op_dual(.*);
+  parser_op_dual #(.MSIZE(20)) my_parser_op_dual(.*);
 
 
   //===================================
@@ -223,259 +226,160 @@ module parser_op_dual_unit_test;
 	step(1);
   `SVTEST_END
 
-  //`SVTEST(test_2_continus_case_empty_1)
-  //// initial test data
-  //res_t0 = 32'h12345678; 
-  //res_v0 = 128'h0123456789abcdef1123456789abcdef;
-  //res_t1 = 32'h00001234;
-  //res_v1 = 128'h0001456789abcdef1123456789abcdef; 
-  //wdata = 512'h0001456789abcdef1123456789abcdef3d12340123456789abcdef1123456789abcdef3d12345678;
-  //avl_st_rx_empty = 1;
+  `SVTEST(test_4_continus_case_random_200)
+	// initial test data
+	//while(eq_pos<1) eq_pos = $random%4; 
+	for(j=0;j<200;j=j+1) begin
+		// 1st
+		eq_pos = 0; sp_pos = 0; 
+		res_t0 = 0; res_v0 = 0;
+		while(eq_pos<1) eq_pos = $random%5; 
+		while(sp_pos<1) sp_pos = $random%20; 
+		eq_pos_sum = eq_pos; sp_pos_sum = sp_pos;
+		res_t0 = 0; res_v0 = 0; rd_cnt=0;
+		for(i=0;i<eq_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			res_t0={tmp8,res_t0[31:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+  	res_t0=res_t0>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*WSIZE-1:8]};
+		for(i=0;i<sp_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			if(i<16) res_v0={tmp8,res_v0[127:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+		wdata={8'h01,wdata[32*WSIZE-1:8]};
+		if(sp_pos<16) begin
+  		res_v0={8'h01,res_v0[127:8]}; res_v0=res_v0>>(16-sp_pos-1)*8; 
+		end
+		// 2nd 
+		eq_pos = 0; sp_pos = 0; 
+		res_t1 = 0; res_v1 = 0;
+		while(eq_pos<1) eq_pos = $random%5; 
+		while(sp_pos<1) sp_pos = $random%20; 
+		eq_pos_sum = eq_pos_sum+eq_pos; sp_pos_sum = sp_pos_sum+sp_pos;
+		res_t1 = 0; res_v1 = 0; rd_cnt=0;
+		for(i=0;i<eq_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			res_t1={tmp8,res_t1[31:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+  	res_t1=res_t1>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*WSIZE-1:8]};
+  	//wdata={8'h3d,wdata[32*8-1:8]};
+		for(i=0;i<sp_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			if(i<16) res_v1={tmp8,res_v1[127:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+		wdata={8'h01,wdata[32*WSIZE-1:8]};
+		if(sp_pos<16) begin
+  		res_v1={8'h01,res_v1[127:8]}; res_v1=res_v1>>(16-sp_pos-1)*8; 
+		end
+		// 3rd 
+		eq_pos = 0; sp_pos = 0; 
+		res_t2 = 0; res_v2 = 0;
+		while(eq_pos<1) eq_pos = $random%5; 
+		while(sp_pos<1) sp_pos = $random%20; 
+		eq_pos_sum = eq_pos_sum+eq_pos; sp_pos_sum = sp_pos_sum+sp_pos;
+		res_t2 = 0; res_v2 = 0; rd_cnt=0;
+		for(i=0;i<eq_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			res_t2={tmp8,res_t2[31:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+  	res_t2=res_t2>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*WSIZE-1:8]};
+  	//wdata={8'h3d,wdata[32*8-1:8]};
+		for(i=0;i<sp_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			if(i<16) res_v2={tmp8,res_v2[127:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+		wdata={8'h01,wdata[32*WSIZE-1:8]};
+		if(sp_pos<16) begin
+  		res_v2={8'h01,res_v2[127:8]}; res_v2=res_v2>>(16-sp_pos-1)*8; 
+		end
+		// 4th 
+		eq_pos = 0; sp_pos = 0; 
+		res_t3 = 0; res_v3 = 0;
+		while(eq_pos<1) eq_pos = $random%5; 
+		while(sp_pos<1) sp_pos = $random%20; 
+		eq_pos_sum = eq_pos_sum+eq_pos; sp_pos_sum = sp_pos_sum+sp_pos;
+		res_t3 = 0; res_v3 = 0; rd_cnt=0;
+		for(i=0;i<eq_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			res_t3={tmp8,res_t3[31:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+  	res_t3=res_t3>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*WSIZE-1:8]};
+  	//wdata={8'h3d,wdata[32*8-1:8]};
+		for(i=0;i<sp_pos;i=i+1) begin
+			tmp8=$random;
+			while(tmp8==8'h3d || tmp8==8'h01 || tmp8==8'h00) tmp8=$random;
+			if(i<16) res_v3={tmp8,res_v3[127:8]};
+			wdata={tmp8,wdata[32*WSIZE-1:8]};
+		end
+		if(sp_pos<16) begin
+  		res_v3={8'h01,res_v3[127:8]}; res_v3=res_v3>>(16-sp_pos-1)*8; 
+		end
+		wdata={8'h01,wdata[32*WSIZE-1:8]}; wdata = wdata >> (4*WSIZE-2*4-sp_pos_sum-eq_pos_sum)*8;
 
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 1;  avl_st_rx_eop = 0; 
-  //avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//for(i=0;i<3;i=i+1) begin
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//end
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 1; 
-  //avl_st_rx_data = wdata[63:0]; 
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-  //while(out1_valid!=1) step(1);
-  //`FAIL_UNLESS_EQUAL(out1_valid,1);
-  //`FAIL_UNLESS_EQUAL(out1_tag,res_t0);
-  //`FAIL_UNLESS_EQUAL(out1_value,res_v0);
-  //while(out2_valid!=1) step(1);
-  //`FAIL_UNLESS_EQUAL(out2_valid,1);
-  //`FAIL_UNLESS_EQUAL(out2_tag,res_t1);
-  //`FAIL_UNLESS_EQUAL(out2_value,res_v1);
-  //`SVTEST_END
+		fork
+			begin
+				// setup first write 
+				step(1); nextSamplePoint(); 
+				avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
+				avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+				if(rd_cnt >= sp_pos_sum+eq_pos_sum+2*4) begin
+					avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos_sum-eq_pos_sum-2*4;
+				end
+				// setup first write 
+				while(rd_cnt < sp_pos_sum+eq_pos_sum +2*4) begin
+					step(1); nextSamplePoint(); 
+					avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
+					avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
+					if(rd_cnt >= sp_pos_sum+eq_pos_sum+2*4) begin
+						avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos_sum-eq_pos_sum-2*4;
+					end
+				end
+				step(1); nextSamplePoint(); 
+				avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
+			end
+			begin
+				while(out2_valid!=1) step(1);
+	  		`FAIL_UNLESS_EQUAL(out2_valid,1);
+	  		`FAIL_UNLESS_EQUAL(out2_tag,res_t0);
+	  		`FAIL_UNLESS_EQUAL(out2_value,res_v0);
+				while(out1_valid!=1) step(1);
+				`FAIL_UNLESS_EQUAL(out1_valid,1);
+				`FAIL_UNLESS_EQUAL(out1_tag,res_t1);
+				`FAIL_UNLESS_EQUAL(out1_value,res_v1);
+				while(out2_valid!=1) step(1);
+	  		`FAIL_UNLESS_EQUAL(out2_valid,1);
+	  		`FAIL_UNLESS_EQUAL(out2_tag,res_t2);
+	  		`FAIL_UNLESS_EQUAL(out2_value,res_v2);
+				while(out1_valid!=1) step(1);
+				`FAIL_UNLESS_EQUAL(out1_valid,1);
+				`FAIL_UNLESS_EQUAL(out1_tag,res_t3);
+				`FAIL_UNLESS_EQUAL(out1_value,res_v3);
+			end
+		join
+		step(1);
+	end
+  `SVTEST_END
 
-  //`SVTEST(test_2_continus_case_empty_3)
-  //// initial test data
-  //res_t0 = 32'h12345678; 
-  //res_v0 = 128'h0123456789abcdef1123456789abcdef; 
-  //res_t1 = 32'h00001234; 
-  //res_v1 = 128'h0000000189abcdef1123456789abcdef; 
-  //wdata = 512'h0000000189abcdef1123456789abcdef3d12340123456789abcdef1123456789abcdef3d12345678;
-  //avl_st_rx_empty = 3;
-
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 1;  avl_st_rx_eop = 0; 
-  //avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//for(i=0;i<3;i=i+1) begin
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//end
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 1; 
-  //avl_st_rx_data = wdata[63:0]; 
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-  //while(out1_valid!=1) step(1);
-  //`FAIL_UNLESS_EQUAL(out1_valid,1);
-  //`FAIL_UNLESS_EQUAL(out1_tag,res_t0);
-  //`FAIL_UNLESS_EQUAL(out1_value,res_v0);
-  //while(out2_valid!=1) step(1);
-  //`FAIL_UNLESS_EQUAL(out2_valid,1);
-  //`FAIL_UNLESS_EQUAL(out2_tag,res_t1);
-  //`FAIL_UNLESS_EQUAL(out2_value,res_v1);
-  //`SVTEST_END
-
-  //`SVTEST(test_2_continus_case_igonore_1st_for_5B_tag)
-  //// initial test data
-  //res_t0 = 32'h12345678; 
-  //res_v0 = 128'h0123456789abcdef1123456789abcdef; 
-  //res_t1 = 32'h00001234; 
-  //res_v1 = 128'h0001456789abcdef2123456789abcdef; 
-  //wdata = 512'h0001456789abcdef2123456789abcdef3d12340123456789abcdef2123456789abcd3def12345678;
-  //avl_st_rx_empty = 1;
-
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 1;  avl_st_rx_eop = 0; 
-  //avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//for(i=0;i<3;i=i+1) begin
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//end
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 1; 
-  //avl_st_rx_data = wdata[63:0]; 
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-
-  //while(out2_valid!=1) step(1);
-  //`FAIL_UNLESS_EQUAL(out2_valid,1);
-  //`FAIL_UNLESS_EQUAL(out2_tag,res_t1);
-  //`FAIL_UNLESS_EQUAL(out2_value,res_v1);
-  //`SVTEST_END
-
-  //`SVTEST(test_2_continus_case_igonore_2nd_for_5B_tag)
-  //// initial test data
-  //res_t0 = 32'h00001234; 
-  //res_v0 = 128'h0123456789abcdef1123456789abcdef; 
-  //res_t1 = 32'h12345678; 
-  //res_v1 = 128'h0001456789abcdef1123456789abcdef; 
-  //wdata = 512'h0001456789abcdef1123456789abcd3def123456780123456789abcdef1123456789abcdef3d1234;
-  //avl_st_rx_empty = 1;
-
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 1;  avl_st_rx_eop = 0; 
-  //avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//for(i=0;i<3;i=i+1) begin
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//end
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 1; 
-  //avl_st_rx_data = wdata[63:0]; 
-  //step(1); nextSamplePoint(); 
-  //avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-
-  //while(out1_valid!=1) step(1);
-  //`FAIL_UNLESS_EQUAL(out1_valid,1);
-  //`FAIL_UNLESS_EQUAL(out1_tag,res_t0);
-  //`FAIL_UNLESS_EQUAL(out1_value,res_v0);
-  //step(4);
-  //`SVTEST_END
-
-  //`SVTEST(test_2_continus_case_1st_ignore_17B_value)
-	//// initial test data
-	//res_t0 = 32'h12345678; 
-	//res_v0 = 128'h1123456789abcdef1123456789abcdef; 
-	//res_t1 = 32'h00001234; 
-	//res_v1 = 128'h0123456789abcdef1123456789abcdef; 
-	//wdata = 512'h0123456789abcdef1123456789abcdef3d123401ff1123456789abcdef1123456789abcdef3d12345678;
-	//avl_st_rx_empty = 6;
-
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 1;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//for(i=0;i<4;i=i+1) begin
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//end
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 1; 
-	//avl_st_rx_data = wdata[63:0]; 
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//while(out1_valid!=1) step(1);
-	//`FAIL_UNLESS_EQUAL(out1_valid,1);
-	//`FAIL_UNLESS_EQUAL(out1_tag,res_t0);
-	//`FAIL_UNLESS_EQUAL(out1_value,res_v0);
-	//while(out2_valid!=1) step(1);
-	//`FAIL_UNLESS_EQUAL(out2_valid,1);
-	//`FAIL_UNLESS_EQUAL(out2_tag,res_t1);
-	//`FAIL_UNLESS_EQUAL(out2_value,res_v1);
-  //`SVTEST_END
-
-  //`SVTEST(test_2_continus_case_2nd_ignore_17B_value)
-	//// initial test data
-	////while(rdy!=1) step(1);
-	//res_t0 = 32'h12345678; 
-	//res_v0 = 128'h0123456789abcdef1123456789abcdef;
-	//res_t1 = 32'h00001234; 
-	//res_v1 = 128'h1123456789abcdef1123456789abcdef; 
-	//wdata = 512'h01ff1123456789abcdef1123456789abcdef3d12340123456789abcdef1123456789abcdef3d12345678;
-	//avl_st_rx_empty = 6;
-
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 1;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//for(i=0;i<4;i=i+1) begin
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//end
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 1; avl_st_rx_sop = 0;  avl_st_rx_eop = 1; 
-	//avl_st_rx_data = wdata[63:0]; 
-	//step(1); nextSamplePoint(); 
-	//avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//while(out1_valid!=1) step(1);
-	//`FAIL_UNLESS_EQUAL(out1_valid,1);
-	//`FAIL_UNLESS_EQUAL(out1_tag,res_t0);
-	//`FAIL_UNLESS_EQUAL(out1_value,res_v0);
-	//while(out2_valid!=1) step(1);
-	//`FAIL_UNLESS_EQUAL(out2_valid,1);
-	//`FAIL_UNLESS_EQUAL(out2_tag,res_t1);
-	//`FAIL_UNLESS_EQUAL(out2_value,res_v1);
-  //`SVTEST_END
-
-  //`SVTEST(test_random_400)
-	//// initial test data
-	////while(eq_pos<1) eq_pos = $random%4; 
-	//for(j=0;j<200;j=j+1) begin
-	//	eq_pos = 0; sp_pos = 0; 
-	//	while(eq_pos<1) eq_pos = $random%5; 
-	//	while(sp_pos<1) sp_pos = $random%16; 
-	//	res_tag = 0; res_value = 0; rd_cnt=0;
-	//	for(i=0;i<eq_pos;i=i+1) begin
-	//		tmp8=$random;
-	//		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-	//		res_tag={tmp8,res_tag[31:8]};
-	//		wdata={tmp8,wdata[32*8-1:8]};
-	//	end
-  //	res_tag=res_tag>>(4-eq_pos)*8; wdata={8'h3d,wdata[32*8-1:8]};
-  //	//wdata={8'h3d,wdata[32*8-1:8]};
-	//	for(i=0;i<sp_pos;i=i+1) begin
-	//		tmp8=$random;
-	//		while(tmp8==8'h3d || tmp8==8'h20) tmp8=$random;
-	//		res_value={tmp8,res_value[127:8]};
-	//		//res_value={res_value[119:0],tmp8};
-	//		wdata={tmp8,wdata[32*8-1:8]};
-	//	end
-  //	res_value={8'h20,res_value[127:8]}; res_value=res_value>>(16-sp_pos-1)*8; 
-	//	wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
-	//	//wdata={8'h20,wdata[32*8-1:8]}; wdata = wdata >> (30-sp_pos-eq_pos)*8;
-
-	//	// setup first write 
-	//	step(1); nextSamplePoint(); 
-	//	avl_st_rx_valid = 1; avl_st_rx_sop = 1;  
-	//	avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//	if(rd_cnt >= sp_pos+eq_pos+2) begin
-	//		avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-	//	end
-	//	// setup first write 
-	//	while(rd_cnt < sp_pos+eq_pos +2) begin
-	//		step(1); nextSamplePoint(); 
-	//		avl_st_rx_valid = 1; avl_st_rx_sop = 0;  
-	//		avl_st_rx_data = wdata[63:0]; wdata = wdata >> 64; rd_cnt = rd_cnt + 8;
-	//		if(rd_cnt >= sp_pos+eq_pos+2) begin
-	//			avl_st_rx_eop = 1; avl_st_rx_empty = rd_cnt-sp_pos-eq_pos-2;
-	//		end
-	//	end
-	//	step(1); nextSamplePoint(); 
-	//	avl_st_rx_valid = 0; avl_st_rx_sop = 0;  avl_st_rx_eop = 0; 
-	//	if(j%2) begin
-	//	while(out2_valid!=1) step(1);
-	//  `FAIL_UNLESS_EQUAL(out2_valid,1);
-	//  `FAIL_UNLESS_EQUAL(out2_tag,res_tag);
-	//  `FAIL_UNLESS_EQUAL(out2_value,res_value);
-	//	end else begin
-	//	while(out1_valid!=1) step(1);
-	//	`FAIL_UNLESS_EQUAL(out1_valid,1);
-	//	`FAIL_UNLESS_EQUAL(out1_tag,res_tag);
-	//	`FAIL_UNLESS_EQUAL(out1_value,res_value);
-	//	end
-	//	step(1);
-	//end
-  //`SVTEST_END
 
   `SVUNIT_TESTS_END
-//
+
 //	initial begin
 //		//$monitor("%d, %b, %x, %x, %x, %x,%d,%d",$stime,clk, res_tag, res_value, wdata,tmp8,eq_pos,sp_pos);
-//		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%x,%x,%d,%x,%x,%d,%d,%d,%d",$stime,my_parser_op_dual.clk, my_parser_op_dual.rst, my_parser_op_dual.avl_st_rx_valid,my_parser_op_dual.avl_st_rx_data,my_parser_op_dual.avl_st_rx_sop,my_parser_op_dual.avl_st_rx_eop,my_parser_op_dual.avl_st_rx_empty,my_parser_op_dual.out1_valid,my_parser_op_dual.out1_tag,my_parser_op_dual.out1_value,my_parser_op_dual.out2_valid,my_parser_op_dual.out2_tag,my_parser_op_dual.out2_value, rd_cnt,my_parser_op_dual.state1,my_parser_op_dual.op1_cnt,my_parser_op_dual.buf1_rdata,res_tag,my_parser_op_dual.tmp1_data,my_parser_op_dual.tmp2_data,res_tag,res_value,my_parser_op_dual.buf1_wr,my_parser_op_dual.state2,my_parser_op_dual.buf_wdata,my_parser_op_dual.buf1_rd);
+//		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%x,%x,%d,%x,%x,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",$stime,my_parser_op_dual.clk, my_parser_op_dual.rst, my_parser_op_dual.avl_st_rx_valid,my_parser_op_dual.avl_st_rx_data,my_parser_op_dual.avl_st_rx_sop,my_parser_op_dual.avl_st_rx_eop,my_parser_op_dual.avl_st_rx_empty,my_parser_op_dual.out1_valid,my_parser_op_dual.out1_tag,my_parser_op_dual.out1_value,my_parser_op_dual.out2_valid,my_parser_op_dual.out2_tag,my_parser_op_dual.out2_value, rd_cnt,my_parser_op_dual.state1,my_parser_op_dual.op1_cnt,my_parser_op_dual.buf1_rdata,res_tag,my_parser_op_dual.tmp1_data,my_parser_op_dual.tmp2_data,res_tag,res_value,my_parser_op_dual.buf1_wr,my_parser_op_dual.state2,my_parser_op_dual.buf_wdata,my_parser_op_dual.buf1_rd,my_parser_op_dual.buf2_wr,my_parser_op_dual.fifo_wr,my_parser_op_dual.pos,my_parser_op_dual.cur_data,my_parser_op_dual.rd_cnt,my_parser_op_dual.wr_cnt);
 //		//$monitor("%d, %b, %b, %b, %b",$stime,clk, rst, en,wr);
 //		$dumpfile("parser.vcd");
 //		$dumpvars(0,parser_op_dual_unit_test.my_parser_op_dual);
