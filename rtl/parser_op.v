@@ -49,6 +49,9 @@ wire fifo_rd;
 wire equal;  
 wire full;  
 wire empty;  
+// mask address for overflow
+reg [MSIZE:0] mask;
+initial mask = {1'b0,{MSIZE{1'b1}}};
 
 assign equal= wr_cnt[MSIZE-1:0] == rd_cnt[MSIZE-1:0]; 
 assign fifo_cnt= wr_cnt - rd_cnt;
@@ -89,14 +92,14 @@ assign fifo_wdata = (avl_st_rx_eop)? eog_wdata:avl_st_rx_data;
 wire [63:0] cur_data;
 wire [3:0] pos;
 wire mem_zero;
-assign cur_data[ 7:0 ]=m[rd_cnt[MSIZE-1:0]+0];
-assign cur_data[15:8 ]=m[rd_cnt[MSIZE-1:0]+1];
-assign cur_data[23:16]=m[rd_cnt[MSIZE-1:0]+2];
-assign cur_data[31:24]=m[rd_cnt[MSIZE-1:0]+3];
-assign cur_data[39:32]=m[rd_cnt[MSIZE-1:0]+4];
-assign cur_data[47:40]=m[rd_cnt[MSIZE-1:0]+5];
-assign cur_data[55:48]=m[rd_cnt[MSIZE-1:0]+6];
-assign cur_data[63:56]=m[rd_cnt[MSIZE-1:0]+7];
+assign cur_data[ 7:0 ]=m[rd_cnt[MSIZE-1:0]+0&mask];
+assign cur_data[15:8 ]=m[rd_cnt[MSIZE-1:0]+1&mask];
+assign cur_data[23:16]=m[rd_cnt[MSIZE-1:0]+2&mask];
+assign cur_data[31:24]=m[rd_cnt[MSIZE-1:0]+3&mask];
+assign cur_data[39:32]=m[rd_cnt[MSIZE-1:0]+4&mask];
+assign cur_data[47:40]=m[rd_cnt[MSIZE-1:0]+5&mask];
+assign cur_data[55:48]=m[rd_cnt[MSIZE-1:0]+6&mask];
+assign cur_data[63:56]=m[rd_cnt[MSIZE-1:0]+7&mask];
 assign pos = sm_pos(cur_data);// check SMARK position 
 assign mem_zero = m[rd_cnt[MSIZE-1:0]]===0;// check mem data is zero
 
@@ -141,63 +144,63 @@ end
 	always @(*) begin
 		case(pos)
 			4'b0001: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
 				buf_wdata[63:8 ] = 0;
 			end
 			4'b0010: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
-				buf_wdata[15:8 ] = m[rd_cnt[MSIZE-1:0]+1];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
+				buf_wdata[15:8 ] = cur_data[15:8 ];
 				buf_wdata[63:16] = 0;
 			end
 			4'b0011: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
-				buf_wdata[15:8 ] = m[rd_cnt[MSIZE-1:0]+1];
-				buf_wdata[23:16] = m[rd_cnt[MSIZE-1:0]+2];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
+				buf_wdata[15:8 ] = cur_data[15:8 ];
+				buf_wdata[23:16] = cur_data[23:16];
 				buf_wdata[63:24] = 0;
 			end
 			4'b0100: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
-				buf_wdata[15:8 ] = m[rd_cnt[MSIZE-1:0]+1];
-				buf_wdata[23:16] = m[rd_cnt[MSIZE-1:0]+2];
-				buf_wdata[31:24] = m[rd_cnt[MSIZE-1:0]+3];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
+				buf_wdata[15:8 ] = cur_data[15:8 ];
+				buf_wdata[23:16] = cur_data[23:16];
+				buf_wdata[31:24] = cur_data[31:24];
 				buf_wdata[63:32] = 0;
 			end
 			4'b0101: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
-				buf_wdata[15:8 ] = m[rd_cnt[MSIZE-1:0]+1];
-				buf_wdata[23:16] = m[rd_cnt[MSIZE-1:0]+2];
-				buf_wdata[31:24] = m[rd_cnt[MSIZE-1:0]+3];
-				buf_wdata[39:32] = m[rd_cnt[MSIZE-1:0]+4];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
+				buf_wdata[15:8 ] = cur_data[15:8 ];
+				buf_wdata[23:16] = cur_data[23:16];
+				buf_wdata[31:24] = cur_data[31:24];
+				buf_wdata[39:32] = cur_data[39:32];
 				buf_wdata[63:40] = 0;
 			end
 			4'b0110: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
-				buf_wdata[15:8 ] = m[rd_cnt[MSIZE-1:0]+1];
-				buf_wdata[23:16] = m[rd_cnt[MSIZE-1:0]+2];
-				buf_wdata[31:24] = m[rd_cnt[MSIZE-1:0]+3];
-				buf_wdata[39:32] = m[rd_cnt[MSIZE-1:0]+4];
-				buf_wdata[47:40] = m[rd_cnt[MSIZE-1:0]+5];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
+				buf_wdata[15:8 ] = cur_data[15:8 ];
+				buf_wdata[23:16] = cur_data[23:16];
+				buf_wdata[31:24] = cur_data[31:24];
+				buf_wdata[39:32] = cur_data[39:32];
+				buf_wdata[47:40] = cur_data[47:40];
 				buf_wdata[63:48] = 0;
 			end
 			4'b0111: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
-				buf_wdata[15:8 ] = m[rd_cnt[MSIZE-1:0]+1];
-				buf_wdata[23:16] = m[rd_cnt[MSIZE-1:0]+2];
-				buf_wdata[31:24] = m[rd_cnt[MSIZE-1:0]+3];
-				buf_wdata[39:32] = m[rd_cnt[MSIZE-1:0]+4];
-				buf_wdata[47:40] = m[rd_cnt[MSIZE-1:0]+5];
-				buf_wdata[55:48] = m[rd_cnt[MSIZE-1:0]+6];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
+				buf_wdata[15:8 ] = cur_data[15:8 ];
+				buf_wdata[23:16] = cur_data[23:16];
+				buf_wdata[31:24] = cur_data[31:24];
+				buf_wdata[39:32] = cur_data[39:32];
+				buf_wdata[47:40] = cur_data[47:40];
+				buf_wdata[55:48] = cur_data[55:48];
 				buf_wdata[63:56] = 0;
 			end
 			4'b1000: begin
-				buf_wdata[ 7:0 ] = m[rd_cnt[MSIZE-1:0]+0];
-				buf_wdata[15:8 ] = m[rd_cnt[MSIZE-1:0]+1];
-				buf_wdata[23:16] = m[rd_cnt[MSIZE-1:0]+2];
-				buf_wdata[31:24] = m[rd_cnt[MSIZE-1:0]+3];
-				buf_wdata[39:32] = m[rd_cnt[MSIZE-1:0]+4];
-				buf_wdata[47:40] = m[rd_cnt[MSIZE-1:0]+5];
-				buf_wdata[55:48] = m[rd_cnt[MSIZE-1:0]+6];
-				buf_wdata[63:56] = m[rd_cnt[MSIZE-1:0]+7];
+				buf_wdata[ 7:0 ] = cur_data[ 7:0 ];
+				buf_wdata[15:8 ] = cur_data[15:8 ];
+				buf_wdata[23:16] = cur_data[23:16];
+				buf_wdata[31:24] = cur_data[31:24];
+				buf_wdata[39:32] = cur_data[39:32];
+				buf_wdata[47:40] = cur_data[47:40];
+				buf_wdata[55:48] = cur_data[55:48];
+				buf_wdata[63:56] = cur_data[63:56];
 			end
 			default: buf_wdata[63:0] = 0;
 		endcase

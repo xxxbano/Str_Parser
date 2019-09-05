@@ -74,7 +74,7 @@ module parser_op_dual_unit_test;
   // This is the UUT that we're 
   // running the Unit Tests on
   //===================================
-  parser_op_dual #(.MSIZE(20)) my_parser_op_dual(.*);
+  parser_op_dual #(.MSIZE(8)) my_parser_op_dual(.*);
 
 
   //===================================
@@ -379,7 +379,8 @@ module parser_op_dual_unit_test;
 
 //	initial begin
 //		//$monitor("%d, %b, %x, %x, %x, %x,%d,%d",$stime,clk, res_tag, res_value, wdata,tmp8,eq_pos,sp_pos);
-//		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%x,%x,%d,%x,%x,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",$stime,my_parser_op_dual.clk, my_parser_op_dual.rst, my_parser_op_dual.avl_st_rx_valid,my_parser_op_dual.avl_st_rx_data,my_parser_op_dual.avl_st_rx_sop,my_parser_op_dual.avl_st_rx_eop,my_parser_op_dual.avl_st_rx_empty,my_parser_op_dual.out1_valid,my_parser_op_dual.out1_tag,my_parser_op_dual.out1_value,my_parser_op_dual.out2_valid,my_parser_op_dual.out2_tag,my_parser_op_dual.out2_value, rd_cnt,my_parser_op_dual.state1,my_parser_op_dual.op1_cnt,my_parser_op_dual.buf1_rdata,res_tag,my_parser_op_dual.tmp1_data,my_parser_op_dual.tmp2_data,res_tag,res_value,my_parser_op_dual.buf1_wr,my_parser_op_dual.state2,my_parser_op_dual.buf_wdata,my_parser_op_dual.buf1_rd,my_parser_op_dual.buf2_wr,my_parser_op_dual.fifo_wr,my_parser_op_dual.pos,my_parser_op_dual.cur_data,my_parser_op_dual.rd_cnt,my_parser_op_dual.wr_cnt);
+//		$monitor("%d, %b, %b, %b, %x, %b, %b, %d, %b, %x, %x, %b,%x,%x,%d,%d,%d,%d,%x,%x,%d,%x,%x,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",$stime,my_parser_op_dual.clk, my_parser_op_dual.rst, my_parser_op_dual.avl_st_rx_valid,my_parser_op_dual.avl_st_rx_data,my_parser_op_dual.avl_st_rx_sop,my_parser_op_dual.avl_st_rx_eop,my_parser_op_dual.avl_st_rx_empty,my_parser_op_dual.out1_valid,my_parser_op_dual.out1_tag,my_parser_op_dual.out1_value,my_parser_op_dual.out2_valid,my_parser_op_dual.out2_tag,my_parser_op_dual.out2_value, rd_cnt,my_parser_op_dual.state1,my_parser_op_dual.op1_cnt,my_parser_op_dual.buf1_rdata,res_tag,my_parser_op_dual.tmp1_data,my_parser_op_dual.tmp2_data,res_tag,res_value,my_parser_op_dual.buf1_wr,my_parser_op_dual.state2,my_parser_op_dual.buf_wdata,my_parser_op_dual.buf1_rd,my_parser_op_dual.buf2_wr,my_parser_op_dual.fifo_wr,my_parser_op_dual.pos,my_parser_op_dual.cur_data,my_parser_op_dual.rd_cnt,my_parser_op_dual.wr_cnt,my_parser_op_dual.fifo_wdata,my_parser_op_dual.buf1_full,my_parser_op_dual.buf2_full,my_parser_op_dual.channel_sel,my_parser_op_dual.fifo_cnt,my_parser_op_dual.mem_zero);
+//
 //		//$monitor("%d, %b, %b, %b, %b",$stime,clk, rst, en,wr);
 //		$dumpfile("parser.vcd");
 //		$dumpvars(0,parser_op_dual_unit_test.my_parser_op_dual);

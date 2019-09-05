@@ -1,9 +1,8 @@
 # vsim -do "run -all; quit" -l run.log -lib work -c -sdfnoerror testrunner 
-# Start time: 16:17:21 on Sep 04,2019
+# Start time: 15:10:06 on Sep 05,2019
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: parser_op_dual.v(225): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
-# ** Warning: parser_op_dual.v(325): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
-# ** Warning: parser_op.v(210): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
+# ** Warning: parser_op_dual.v(330): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
+# ** Warning: parser_op.v(213): (vopt-2241) Connection width does not match width of port 'count'. The port definition is at: fifo.v(15).
 # //  ModelSim SE-64 10.3 Jan  6 2014 Linux 4.9.0-0.bpo.9-amd64
 # //
 # //  Copyright 1991-2014 Mentor Graphics Corporation
